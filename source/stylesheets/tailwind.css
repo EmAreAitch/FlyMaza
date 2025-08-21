@@ -1,0 +1,148 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  /* Colors derived from FlyMaza logo */
+  --color-primary-50: #f0f4ff;
+  --color-primary-100: #e0e8ff;
+  --color-primary-200: #c7d4fe;
+  --color-primary-300: #a5b6fc;
+  --color-primary-400: #8792f8;
+  --color-primary-500: #6c7ef2;
+  --color-primary-600: #4a5a96; /* Main logo blue */
+  --color-primary-700: #3d4a7a;
+  --color-primary-800: #333d64;
+  --color-primary-900: #2e3454;
+
+  --color-secondary-50: #fff7ed;
+  --color-secondary-100: #ffedd5;
+  --color-secondary-200: #fed7aa;
+  --color-secondary-300: #fdba74;
+  --color-secondary-400: #fb923c;
+  --color-secondary-500: #ff6b35; /* Main logo orange */
+  --color-secondary-600: #ea5a2b;
+  --color-secondary-700: #c2441f;
+  --color-secondary-800: #9a3412;
+  --color-secondary-900: #7c2d12;
+
+  --color-accent-50: #f0fdfa;
+  --color-accent-100: #ccfbf1;
+  --color-accent-200: #99f6e4;
+  --color-accent-300: #5eead4;
+  --color-accent-400: #2dd4bf;
+  --color-accent-500: #20b2aa; /* Logo teal */
+  --color-accent-600: #0d9488;
+  --color-accent-700: #0f766e;
+  --color-accent-800: #115e59;
+  --color-accent-900: #134e4a;
+
+  --color-golden-50: #fffbeb;
+  --color-golden-100: #fef3c7;
+  --color-golden-200: #fde68a;
+  --color-golden-300: #fcd34d;
+  --color-golden-400: #fbbf24;
+  --color-golden-500: #f59e0b; /* Logo golden */
+  --color-golden-600: #d97706;
+  --color-golden-700: #b45309;
+  --color-golden-800: #92400e;
+  --color-golden-900: #78350f;
+
+  /* Typography */
+  --font-family-primary: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-family-heading: 'Inter', ui-sans-serif, system-ui, sans-serif;
+
+  /* Custom spacing for travel layouts */
+  --spacing-section: 6rem;
+  --spacing-section-sm: 4rem;
+
+  /* Border radius following modern travel site aesthetics */
+  --radius-card: 1rem;
+  --radius-image: 0.75rem;
+  --radius-button: 0.5rem;
+
+  /* Shadows for depth */
+  --shadow-card: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-card-hover: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --shadow-hero: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+
+  /* Animation durations */
+  --duration-fast: 150ms;
+  --duration-normal: 300ms;
+  --duration-slow: 500ms;
+}
+
+/* Custom utilities for travel website */
+.section-spacing {
+  @apply py-24 lg:py-32;
+}
+
+.section-spacing-sm {
+  @apply py-16 lg:py-20;
+}
+
+.container-custom {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.gradient-hero {
+  background: linear-gradient(135deg, 
+    rgb(74, 90, 150) 0%, 
+    rgb(32, 178, 170) 50%, 
+    rgb(255, 107, 53) 100%);
+}
+
+.gradient-overlay {
+  background: linear-gradient(to bottom, 
+    rgba(0, 0, 0, 0.1) 0%, 
+    rgba(0, 0, 0, 0.6) 100%);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, 
+    rgb(74, 90, 150) 0%, 
+    rgb(255, 107, 53) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Card hover effects */
+.card-hover {
+  @apply transition-all duration-300 ease-out;
+}
+
+.card-hover:hover {
+  @apply transform -translate-y-2;
+  box-shadow: var(--shadow-card-hover);
+}
+
+/* Button styles */
+.btn-primary {
+  @apply bg-primary-600 hover:bg-primary-700 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200 ease-out transform hover:scale-105;
+}
+
+.btn-secondary {
+  @apply bg-secondary-500 hover:bg-secondary-600 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200 ease-out transform hover:scale-105;
+}
+
+.btn-outline {
+  @apply border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200 ease-out;
+}
+
+/* Image overlays for destination cards */
+.image-overlay {
+  @apply absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent;
+}
+
+/* Responsive text utilities */
+.heading-hero {
+  @apply text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight;
+}
+
+.heading-section {
+  @apply text-3xl md:text-4xl lg:text-5xl font-bold;
+}
+
+.heading-card {
+  @apply text-xl md:text-2xl font-semibold;
+}
