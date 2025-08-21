@@ -130,34 +130,34 @@
   ]
 %>
 
-<!-- Hero Section Wrapper with Padding -->
-<section class="p-1">
+<!-- Hero Section Wrapper -->
+<section>
   <!-- Rounded Hero Section -->
-  <div class="relative min-h-screen flex items-center justify-center overflow-hidden rounded-3xl">
+  <div class="relative min-h-screen flex items-center justify-center overflow-hidden">
     <!-- Background Image -->
     <div class="absolute inset-0 z-0">
-      <img src=<%= responsive_image("hero.jpg") %> class="w-full h-full object-cover rounded-3xl">      
-      <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/50 rounded-3xl"></div>
+      <img src=<%= responsive_image("hero.jpg") %> class="w-full h-full object-cover">      
+      <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/50"></div>
     </div>
     
     <!-- Hero Content -->
     <div class="relative z-10 container-custom text-center text-white">
       <div class="max-w-5xl mx-auto fade-in">
-        <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+        <h1 class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
           <%= hero_title %>
         </h1>
-        <p class="text-lg md:text-xl mb-16 text-white/90 max-w-2xl mx-auto font-medium">
+        <p class="text-base sm:text-lg md:text-xl mb-12 text-white/90 max-w-2xl mx-auto font-medium">
           Exploring Indonesia is an unforgettable adventure.
         </p>
         
         <!-- Simple Search Bar -->
-        <div class="max-w-2xl mx-auto mb-20">
+        <div class="max-w-2xl mx-auto mb-16">
           <div class="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-6 shadow-2xl">
-            <div class="flex flex-col md:flex-row gap-4">
+            <div class="flex flex-col sm:flex-row gap-4">
               <input type="text" 
                      placeholder="Search destinations, packages, experiences..."
-                     class="flex-1 px-6 py-4 text-white placeholder-white/70 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl focus:ring-2 focus:ring-white/30 focus:outline-none">
-              <button class="bg-white hover:bg-gray-100 text-gray-900 font-semibold py-4 px-8 rounded-xl transition-all duration-200 transform hover:scale-105 shadow-lg whitespace-nowrap">
+                     class="flex-1 px-4 py-3 sm:px-6 sm:py-4 text-white placeholder-white/70 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl focus:ring-2 focus:ring-white/30 focus:outline-none">
+              <button class="bg-white hover:bg-gray-100 text-gray-900 font-semibold py-3 sm:py-4 px-6 sm:px-8 rounded-xl transition-all duration-200 transform hover:scale-105 shadow-lg whitespace-nowrap">
                 Search
               </button>
             </div>
@@ -169,52 +169,51 @@
 </section>
 
 <!-- Stats Section - Half Overlapping -->
-<section class="-mt-20 relative z-30 pb-16">
-  <div class="container-custom">
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 px-4">
+<section class="-mt-30 md:-mt-20 relative z-30 pb-16">
+  <div class="container-custom px-6 sm:px-8 md:px-12">
+    <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4">
       <div class="bg-white rounded-2xl p-6 text-center shadow-xl">
-        <div class="text-3xl md:text-4xl font-bold mb-2 text-gray-900">10M+</div>
+        <div class="text-2xl md:text-4xl font-bold mb-2 text-gray-900">10M+</div>
         <div class="text-sm text-gray-600 font-medium">Total Customers</div>
       </div>
       <div class="bg-white rounded-2xl p-6 text-center shadow-xl">
-        <div class="text-3xl md:text-4xl font-bold mb-2 text-gray-900">09+</div>
+        <div class="text-2xl md:text-4xl font-bold mb-2 text-gray-900">09+</div>
         <div class="text-sm text-gray-600 font-medium">Years Of Experience</div>
       </div>
       <div class="bg-white rounded-2xl p-6 text-center shadow-xl">
-        <div class="text-3xl md:text-4xl font-bold mb-2 text-gray-900">12K</div>
+        <div class="text-2xl md:text-4xl font-bold mb-2 text-gray-900">12K</div>
         <div class="text-sm text-gray-600 font-medium">Total Destinations</div>
       </div>
       <div class="bg-white rounded-2xl p-6 text-center shadow-xl">
-        <div class="text-3xl md:text-4xl font-bold mb-2 text-gray-900">5.0</div>
+        <div class="text-2xl md:text-4xl font-bold mb-2 text-gray-900">5.0</div>
         <div class="text-sm text-gray-600 font-medium">Average Rating</div>
       </div>
     </div>
   </div>
 </section>
 
+
 <!-- Indonesian Tourism Section -->
 <section class="section-spacing">
-  <div class="container-custom">
+  <div class="container-custom px-4">
     <!-- Section Header -->
-    <div class="mb-16 fade-in">
-      <div class="text-left">
-        <p class="text-gray-400 text-sm font-medium mb-2 uppercase tracking-wide">Best location</p>
-        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-          <%= tourism_title %>
-        </h2>
-        <p class="text-lg text-gray-500 max-w-md ml-auto">
-          <%= tourism_subtitle %>
-        </p>
-      </div>
+    <div class="mb-16 fade-in text-left">
+      <p class="text-gray-400 text-sm font-medium mb-2 uppercase tracking-wide">Best location</p>
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+        <%= tourism_title %>
+      </h2>
+      <p class="text-lg text-gray-500 max-w-md">
+        <%= tourism_subtitle %>
+      </p>
     </div>
-    
+
     <!-- Tourism Cards Grid -->
     <div class="space-y-6">
       <% tourism_cards.each_slice(2).with_index do |(card1, card2), row| %>
-        <div class="grid grid-cols-10 gap-6 items-stretch">
+        <div class="grid gap-6 items-stretch grid-cols-1 md:grid-cols-2 lg:grid-cols-10">
           <% if row.even? %>
-            <!-- 70% + 30% -->
-            <div class="col-span-6 fade-in">
+            <!-- 70% + 30% on lg, stacked on md -->
+            <div class="lg:col-span-6 fade-in">
               <div class="relative h-80 rounded-3xl overflow-hidden group cursor-pointer">
                 <img src="<%= card1[:image] %>" alt="<%= card1[:title] %>" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
@@ -225,7 +224,7 @@
               </div>
             </div>
             <% if card2 %>
-              <div class="col-span-4 fade-in">
+              <div class="lg:col-span-4 fade-in">
                 <div class="relative h-80 rounded-3xl overflow-hidden group cursor-pointer">
                   <img src="<%= card2[:image] %>" alt="<%= card2[:title] %>" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                   <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
@@ -237,8 +236,8 @@
               </div>
             <% end %>
           <% else %>
-            <!-- 30% + 70% -->
-            <div class="col-span-4 fade-in">
+            <!-- 30% + 70% on lg, stacked on md -->
+            <div class="lg:col-span-4 fade-in">
               <div class="relative h-80 rounded-3xl overflow-hidden group cursor-pointer">
                 <img src="<%= card1[:image] %>" alt="<%= card1[:title] %>" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
@@ -249,7 +248,7 @@
               </div>
             </div>
             <% if card2 %>
-              <div class="col-span-6 fade-in">
+              <div class="lg:col-span-6 fade-in">
                 <div class="relative h-80 rounded-3xl overflow-hidden group cursor-pointer">
                   <img src="<%= card2[:image] %>" alt="<%= card2[:title] %>" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                   <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
@@ -414,30 +413,55 @@
 
 <!-- Testimonial Section -->
 <section class="section-spacing bg-gray-50">
-  <div class="container-custom">
+  <div class="container-custom px-4">
     <div class="max-w-6xl mx-auto">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-        
-        <!-- Left Side: Avatar, Name, Role & Navigation -->
-        <div class="fade-in lg:col-span-4">
+      <div class="grid grid-cols-1 lg:grid-cols-12 lg:gap-16 items-start">
+
+        <!-- Left Side: Avatar, Name, Role -->
+        <div class="fade-in lg:col-span-4 flex flex-col lg:items-start items-start">
           <!-- Author info -->
-          <div class="flex items-center space-x-6 mb-8">
-            <div class="w-20 h-20 rounded-full overflow-hidden flex-shrink-0">
+          <div class="flex items-center space-x-4 lg:mb-8">
+            <div class="w-16 h-16 lg:w-20 lg:h-20 rounded-full overflow-hidden flex-shrink-0">
               <img src="https://placehold.co/80x80/4A5A96/FFFFFF?text=<%= (testimonial[:name] || 'Donald Sullivan')[0] %>" 
                    alt="<%= testimonial[:name] || 'Donald Sullivan' %>" 
                    class="w-full h-full object-cover">
             </div>
             <div>
-              <div class="font-bold text-gray-900 text-2xl mb-1">
+              <div class="font-bold text-xl lg:text-2xl mb-1 text-gray-900">
                 <%= testimonial[:name] || "Donald Sullivan" %>
               </div>
-              <div class="text-gray-500 text-lg">
+              <div class="text-sm lg:text-lg text-gray-500">
                 <%= testimonial[:role] || "Founder Fiko" %>
               </div>
             </div>
           </div>
-          
-          <!-- Navigation arrows -->
+        </div>
+
+        <!-- Right Side: Testimonial Content -->
+        <div class="fade-in lg:col-span-8 mt-6 lg:mt-0 flex flex-col">
+          <div class="pt-2 lg:pt-4">
+            <p class="text-gray-700 text-base md:text-lg lg:text-xl leading-relaxed font-normal">
+              <%= testimonial[:content] || "This travel website is very informative and easy to use. I like how they present various destination options and travel packages with clear details. Offering pictures and destination descriptions helps me decide where I want to visit. Additionally, the ability to compare prices and reviews from other users is very helpful in decision making." %>
+            </p>
+          </div>
+
+          <!-- Navigation arrows (mobile only: below content) -->
+          <div class="flex items-center justify-start space-x-4 mt-6 lg:hidden">
+            <button class="w-10 h-10 rounded-full border border-gray-200 hover:border-gray-300 flex items-center justify-center transition-all duration-300 hover:bg-gray-50 group">
+              <svg class="w-4 h-4 text-gray-400 group-hover:text-gray-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+              </svg>
+            </button>
+            <button class="w-10 h-10 rounded-full bg-gray-900 hover:bg-gray-800 flex items-center justify-center transition-all duration-300 group">
+              <svg class="w-4 h-4 text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Navigation arrows (desktop only: next to avatar) -->
+        <div class="hidden lg:flex lg:col-span-4 mt-4 lg:mt-0">
           <div class="flex items-center space-x-4">
             <button class="w-12 h-12 rounded-full border border-gray-200 hover:border-gray-300 flex items-center justify-center transition-all duration-300 hover:bg-gray-50 group">
               <svg class="w-5 h-5 text-gray-400 group-hover:text-gray-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -451,20 +475,12 @@
             </button>
           </div>
         </div>
-        
-        <!-- Right Side: Testimonial Content -->
-        <div class="fade-in lg:col-span-8">
-          <div class="pt-4">
-            <p class="text-gray-700 text-xl lg:text-2xl leading-relaxed font-normal">
-              <%= testimonial[:content] || "This travel website is very informative and easy to use. I like how they present various destination options and travel packages with clear details. Offering pictures and destination descriptions helps me decide where I want to visit. Additionally, the ability to compare prices and reviews from other users is very helpful in decision making." %>
-            </p>
-          </div>
-        </div>
-        
+
       </div>
     </div>
   </div>
 </section>
+
 
 <!-- Travel Memories Section -->
 <section class="section-spacing bg-gray-50">
@@ -483,7 +499,7 @@
         <article class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group">
           <!-- Image Container -->
           <div class="relative h-72 overflow-hidden rounded-t-2xl">
-            <img src=<%= memory[:image] %> alt=<%= memory[:title] %> class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">            
+            <img src=<%= responsive_image(memory[:image]) %> alt=<%= memory[:title] %> class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">            
           </div>
           
           <!-- Content -->
@@ -515,10 +531,3 @@
     </div>
   </div>
 </section>
-
-<script>
-  // Initialize stats counter when page loads
-  document.addEventListener('DOMContentLoaded', function() {
-    initStatsCounter();
-  });
-</script>

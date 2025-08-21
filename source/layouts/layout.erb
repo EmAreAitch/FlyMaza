@@ -18,7 +18,7 @@
 %>
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -41,65 +41,66 @@
   </head>
 
   <body class="antialiased bg-white text-gray-900">
-    <!-- Header/Navigation -->
-    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 pt-1">
+    <header class="fixed top-0 left-0 right-0 z-50 pt-1">
       <nav class="container-custom">
-        <div class="flex items-center justify-between h-16 lg:h-20">
+        <!-- Shared background wrapper -->
+        <div class="flex items-center justify-between h-16 lg:h-20 
+                    bg-white/40 backdrop-blur-sm rounded-full 
+                    border border-white/20 px-6">
+          
           <!-- Logo -->
-          <div class="flex items-center bg-white/40 backdrop-blur-sm px-6 rounded-full border border-white/20">
+          <div class="flex items-center">
             <a href="/" class="flex items-center space-x-2">
               <img src=<%= responsive_image("logo-flymaza.png") %> class="h-16 w-auto">
             </a>
           </div>
-
+    
           <!-- Desktop Navigation -->
-          <div class="hidden lg:flex items-center space-x-8 bg-white/40 backdrop-blur-sm rounded-full px-6 py-2 border border-white/20">
+          <div class="hidden lg:flex items-center space-x-8">
             <% nav_items.each do |item| %>
               <a href="<%= item[:url] %>" 
-                 class="<%= item[:active] ? 'text-black font-semibold' : 'text-black/70 hover:text-white' %> transition-colors duration-200 px-3 py-2 text-sm">
+                 class="<%= item[:active] ? 'text-black font-semibold' : 'text-black/70 hover:text-black' %> px-3 py-2 text-sm">
                 <%= item[:name] %>
               </a>
             <% end %>
           </div>
-
+    
           <!-- Right side items -->
           <div class="hidden lg:flex items-center space-x-4">
-            <!-- Login Button -->
-            <button class="px-6 py-2 bg-white/40 backdrop-blur-sm text-black rounded-full text-sm font-medium hover:bg-white/30 transition-all duration-200 border border-white/20">
+            <button class="px-6 py-2 bg-white/30 text-black rounded-full text-sm font-medium hover:bg-white/20 border border-white/20">
               Login
             </button>
           </div>
-            
+    
           <!-- Mobile Menu Button -->
-          <button id="mobile-menu-btn" class="lg:hidden p-2 text-white hover:text-white/70 transition-colors">
+          <button id="mobile-menu-btn" class="lg:hidden p-2 text-black">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
           </button>
         </div>
-
+    
         <!-- Mobile Navigation Menu -->
-        <div id="mobile-menu" class="lg:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-lg border-b border-white/20 shadow-lg transform -translate-y-full opacity-0 transition-all duration-300">
-          <div class="px-4 py-6 space-y-4">
-            <% nav_items.each do |item| %>
-              <a href="<%= item[:url] %>" 
-                 class="block <%= item[:active] ? 'text-primary-600 font-semibold' : 'text-gray-700' %> hover:text-primary-600 transition-colors duration-200 py-2">
-                <%= item[:name] %>
-              </a>
-            <% end %>
-            <div class="pt-4 border-t border-gray-200">
-              <div class="flex items-center space-x-2 mb-4">
-                <button class="px-3 py-1 text-sm text-gray-600 hover:text-gray-900 transition-colors duration-200">De</button>
-                <button class="px-3 py-1 text-sm bg-primary-600 text-white rounded-full">En</button>
-              </div>
-              <button class="w-full bg-primary-600 text-white py-3 rounded-xl font-medium hover:bg-primary-700 transition-colors duration-200">
-                Login
-              </button>
-            </div>
-          </div>
+        <div id="mobile-menu" 
+             class="lg:hidden fixed top-0 right-0 h-full w-64 bg-white/40 backdrop-blur-sm border-l border-gray-200 shadow-lg 
+                    hidden p-6 flex flex-col space-y-4 z-50">
+          <% nav_items.each do |item| %>
+            <a href="<%= item[:url] %>" 
+               class="<%= item[:active] ? 'text-primary-600 font-semibold' : 'text-gray-700' %> hover:text-primary-600 py-2">
+              <%= item[:name] %>
+            </a>
+          <% end %>
+    
+          <button class="mt-auto w-full bg-primary-600 text-white py-3 rounded-xl font-medium hover:bg-primary-700">
+            Login
+          </button>
         </div>
       </nav>
     </header>
+    
+
+
+
 
     <!-- Main Content -->
     <main class="bg-gray-50">

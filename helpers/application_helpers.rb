@@ -1,11 +1,12 @@
 module ApplicationHelpers
   def responsive_image(path, fm: "avif", fit: nil, w: nil, h: nil, position: nil, q: 50)
     # Development: return normal asset path
-    if development?
+    if development?      
       image_path(path)
     else
       # Production: serve via Netlify Image CDN
-      image = image_path(path)
+      image = image_path(path)      
+      return image unless image.start_with?("/") or image.start_with?(config[:root_url])
 
       query_params = {
         fm: fm,
