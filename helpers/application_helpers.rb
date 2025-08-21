@@ -1,5 +1,5 @@
 module ApplicationHelpers
-  def responsive_image(path, fm: "avif", fit: nil, w: nil, h: nil, position: nil, q: 80)
+  def responsive_image(path, fm: "avif", fit: nil, w: nil, h: nil, position: nil, q: 50)
     # Development: return normal asset path
     if development?
       image_path(path)
