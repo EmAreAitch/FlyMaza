@@ -1,13 +1,23 @@
 module ApplicationHelpers
-  def responsive_image(path, **options)
-    # In development: return normal path
-    # In production: will use Netlify image CDN with AVIF format
-    if build?
-      # Production logic for Netlify CDN will be added here
-      image_tag(path, **options)
+  def responsive_image(path, fm: "avif", fit: nil, w: nil, h: nil, position: nil, q: 80)
+    # Development: return normal asset path
+    if development?
+      image_path(path)
     else
-      # Development logic
-      image_tag(path, **options)
+      # Production: serve via Netlify Image CDN
+      image = image_path(path)
+
+      query_params = {
+        fm: fm,
+        fit: fit,
+        w: w,
+        h: h,
+        position: position,
+        q: q,
+        url: image
+      }.compact
+
+      "/.netlify/images?#{query_params.to_query}"
     end
   end
 end

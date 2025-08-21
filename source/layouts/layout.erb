@@ -15,19 +15,6 @@
   # Contact info
   phone = "+62 XXX XXX XXXX"
   email = "info@flymaza.com"
-  
-  # Helper function for responsive images (dev/production logic)
-  def responsive_image(path, alt_text = "", css_classes = "")
-    # In development: return normal path
-    # In production: will use Netlify image CDN with AVIF format
-    if ENV['NETLIFY']
-      # Production logic for Netlify CDN will be added here
-      image_tag(path, alt: alt_text, class: css_classes)
-    else
-      # Development logic
-      image_tag(path, alt: alt_text, class: css_classes)
-    end
-  end
 %>
 
 <!doctype html>
@@ -55,13 +42,13 @@
 
   <body class="antialiased bg-white text-gray-900">
     <!-- Header/Navigation -->
-    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 pt-1">
       <nav class="container-custom">
         <div class="flex items-center justify-between h-16 lg:h-20">
           <!-- Logo -->
           <div class="flex items-center bg-white/40 backdrop-blur-sm px-6 rounded-full border border-white/20">
             <a href="/" class="flex items-center space-x-2">
-              <%= responsive_image("logo-flymaza.png", class: "h-16 w-auto") %>
+              <img src=<%= responsive_image("logo-flymaza.png") %> class="h-16 w-auto">
             </a>
           </div>
 
@@ -115,7 +102,7 @@
     </header>
 
     <!-- Main Content -->
-    <main class="">
+    <main class="bg-gray-50">
       <%= yield %>
     </main>
 
@@ -126,7 +113,7 @@
           <!-- Company Info -->
           <div class="lg:col-span-2">
             <div class="flex items-center space-x-2 mb-4">
-              <%= responsive_image("logo-flymaza.png", class: "h-10 w-auto") %>
+              <img src=<%= responsive_image("logo-flymaza.png") %> class="h-20 w-auto">
             </div>
             <p class="text-gray-400 mb-6 max-w-md">
               Discover Indonesia's extraordinary natural beauty and rich cultural heritage. 

@@ -3,9 +3,11 @@
 
 document.addEventListener('DOMContentLoaded', function() {
   initMobileMenu();
-  initScrollEffects();
+  // initScrollEffects();
   initSmoothScrolling();
   initLazyLoading();
+  initStatsCounter();
+  initFormHandling();
 });
 
 // Mobile Menu Functionality
@@ -254,14 +256,16 @@ function initFormHandling() {
     form.addEventListener('submit', function(e) {
       const submitButton = form.querySelector('button[type="submit"]');
       if (submitButton) {
+        const originalText = submitButton.textContent;
         submitButton.disabled = true;
         submitButton.textContent = 'Sending...';
         
         // Re-enable after 5 seconds as fallback
         setTimeout(() => {
           submitButton.disabled = false;
-          submitButton.textContent = 'Send Message';
+          submitButton.textContent = originalText;
         }, 5000);
       }
     });
-  });// This is where it all goes :)
+  });
+}
