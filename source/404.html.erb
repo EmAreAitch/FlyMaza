@@ -1,0 +1,344 @@
+<%
+  # 404 Page Variables
+  page_title = "Page Not Found"
+  error_code = "404"
+  error_title = "Oops! Looks like you're off the beaten path"
+  error_subtitle = "The page you're looking for seems to have wandered off on its own adventure. Don't worry - let's get you back on track to discover Indonesia's amazing destinations."
+  
+  # Quick Links for Navigation
+  quick_links = [
+    {
+      title: "Popular Destinations",
+      description: "Explore our most loved travel packages",
+      icon: "map",
+      url: "/destinations",
+      color: "primary"
+    },
+    {
+      title: "Tour Packages", 
+      description: "Browse all available travel experiences",
+      icon: "package",
+      url: "/packages",
+      color: "secondary"
+    },
+    {
+      title: "About FlyMaza",
+      description: "Learn more about our travel expertise",
+      icon: "info",
+      url: "/about", 
+      color: "accent"
+    },
+    {
+      title: "Contact Support",
+      description: "Get help from our travel experts",
+      icon: "support",
+      url: "/contact",
+      color: "golden"
+    }
+  ]
+  
+  # Popular destinations for suggestions
+  suggested_destinations = [
+    {
+      name: "Bali Paradise",
+      image: "https://placehold.co/300x200/20B2AA/FFFFFF?text=Bali+Beach",
+      url: "/destinations/bali",
+      price: "$285"
+    },
+    {
+      name: "Java Cultural Tour",
+      image: "https://placehold.co/300x200/FF6B35/FFFFFF?text=Java+Temple", 
+      url: "/destinations/java",
+      price: "$218"
+    },
+    {
+      name: "Raja Ampat Diving",
+      image: "https://placehold.co/300x200/F59E0B/FFFFFF?text=Raja+Ampat",
+      url: "/destinations/raja-ampat", 
+      price: "$456"
+    }
+  ]
+  
+  # Search suggestions
+  search_suggestions = [
+    "Bali beaches", "Borobudur temple", "Raja Ampat diving", "Yogyakarta culture", 
+    "Komodo dragons", "Mount Bromo", "Lake Toba", "Lombok islands"
+  ]
+%>
+
+<!-- 404 Hero Section -->
+<section class="min-h-screen flex items-center justify-center bg-gray-50 relative overflow-hidden">
+  <!-- Background Pattern -->
+  <div class="absolute inset-0 opacity-5">
+    <svg class="w-full h-full" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+          <path d="M 10 0 L 0 0 0 10" fill="none" stroke="currentColor" stroke-width="0.5"/>
+        </pattern>
+      </defs>
+      <rect width="100" height="100" fill="url(#grid)" class="text-gray-400"/>
+    </svg>
+  </div>
+  
+  <!-- Floating Elements -->
+  <div class="absolute top-20 left-10 w-16 h-16 bg-primary-200 rounded-full opacity-30 animate-pulse"></div>
+  <div class="absolute top-40 right-20 w-12 h-12 bg-secondary-200 rounded-full opacity-40 animate-bounce"></div>
+  <div class="absolute bottom-40 left-20 w-20 h-20 bg-accent-200 rounded-full opacity-25 animate-pulse delay-300"></div>
+  <div class="absolute bottom-20 right-10 w-14 h-14 bg-golden-200 rounded-full opacity-35 animate-bounce delay-500"></div>
+  
+  <div class="container-custom text-center relative z-10">
+    <div class="max-w-4xl mx-auto">
+      <!-- Large 404 Number -->
+      <div class="mb-8 fade-in">
+        <div class="text-9xl md:text-[12rem] lg:text-[16rem] font-bold text-gradient opacity-20 leading-none select-none">
+          <%= error_code %>
+        </div>
+        <div class="text-6xl md:text-8xl lg:text-9xl font-bold text-gray-900 -mt-16 md:-mt-24 lg:-mt-32">
+          <%= error_code %>
+        </div>
+      </div>
+      
+      <!-- Error Message -->
+      <div class="mb-12 fade-in">
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+          <%= error_title %>
+        </h1>
+        <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto">
+          <%= error_subtitle %>
+        </p>
+      </div>
+      
+      <!-- Search Bar -->
+      <div class="mb-16 fade-in">
+        <div class="max-w-2xl mx-auto">
+          <div class="bg-white rounded-2xl p-6 shadow-xl border border-gray-100">
+            <form class="flex flex-col sm:flex-row gap-4">
+              <div class="flex-1 relative">
+                <input type="text" 
+                       placeholder="Search for destinations, packages, or experiences..."
+                       class="w-full px-6 py-4 text-gray-900 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 focus:bg-white transition-all">
+                <div class="absolute right-4 top-4">
+                  <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                  </svg>
+                </div>
+              </div>
+              <button type="submit" class="bg-primary-600 hover:bg-primary-700 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 whitespace-nowrap">
+                Search
+              </button>
+            </form>
+            
+            <!-- Search Suggestions -->
+            <div class="mt-4 flex flex-wrap gap-2 justify-center">
+              <span class="text-sm text-gray-500 mr-2">Popular searches:</span>
+              <% search_suggestions.first(4).each do |suggestion| %>
+                <button class="text-sm text-primary-600 hover:text-primary-700 bg-primary-50 hover:bg-primary-100 px-3 py-1 rounded-full transition-colors">
+                  <%= suggestion %>
+                </button>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Action Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16 fade-in">
+        <a href="/" class="bg-primary-600 hover:bg-primary-700 text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105">
+          <svg class="w-5 h-5 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+          </svg>
+          Go Home
+        </a>
+        <button onclick="history.back()" class="border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white font-semibold px-8 py-4 rounded-full transition-all duration-300">
+          <svg class="w-5 h-5 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+          </svg>
+          Go Back
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Quick Navigation Links -->
+<section class="section-spacing-sm">
+  <div class="container-custom">
+    <!-- Section Header -->
+    <div class="text-center mb-12 fade-in">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        Where would you like to go?
+      </h2>
+      <p class="text-lg text-gray-600">
+        Explore these popular sections to find what you're looking for
+      </p>
+    </div>
+    
+    <!-- Quick Links Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <% quick_links.each do |link| %>
+        <a href="<%= link[:url] %>" class="group bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 fade-in">
+          <div class="mb-6">
+            <div class="w-16 h-16 bg-<%= link[:color] %>-100 group-hover:bg-<%= link[:color] %>-200 rounded-2xl flex items-center justify-center transition-all duration-300">
+              <% case link[:icon]
+                 when "map" %>
+                <svg class="w-8 h-8 text-<%= link[:color] %>-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+                </svg>
+              <% when "package" %>
+                <svg class="w-8 h-8 text-<%= link[:color] %>-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+                </svg>
+              <% when "info" %>
+                <svg class="w-8 h-8 text-<%= link[:color] %>-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              <% when "support" %>
+                <svg class="w-8 h-8 text-<%= link[:color] %>-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 6v6m0 0v6m6-6H6"/>
+                </svg>
+              <% end %>
+            </div>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-<%= link[:color] %>-700 transition-colors">
+            <%= link[:title] %>
+          </h3>
+          <p class="text-gray-600 group-hover:text-gray-700 transition-colors">
+            <%= link[:description] %>
+          </p>
+          <div class="mt-4 flex items-center text-<%= link[:color] %>-600 group-hover:text-<%= link[:color] %>-700 font-medium">
+            <span class="mr-2">Explore</span>
+            <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+          </div>
+        </a>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<!-- Popular Destinations -->
+<section class="section-spacing-sm bg-gray-50">
+  <div class="container-custom">
+    <!-- Section Header -->
+    <div class="text-center mb-12 fade-in">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        Popular Destinations
+      </h2>
+      <p class="text-lg text-gray-600">
+        Maybe one of these amazing places is what you were looking for
+      </p>
+    </div>
+    
+    <!-- Destinations Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <% suggested_destinations.each_with_index do |destination, index| %>
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 fade-in group">
+          <div class="relative h-48 overflow-hidden">
+            <img src="<%= destination[:image] %>" alt="<%= destination[:name] %>" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+            <div class="absolute bottom-4 left-4">
+              <div class="text-white font-bold text-lg"><%= destination[:name] %></div>
+            </div>
+            <div class="absolute top-4 right-4">
+              <div class="bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm font-semibold">
+                <%= destination[:price] %>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <a href="<%= destination[:url] %>" class="inline-flex items-center text-primary-600 hover:text-primary-700 font-semibold transition-colors">
+              <span>View Details</span>
+              <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<!-- Help Section -->
+<section class="section-spacing">
+  <div class="container-custom">
+    <div class="bg-gradient-to-br from-primary-600 via-accent-500 to-secondary-500 rounded-3xl p-12 text-center">
+      <div class="max-w-3xl mx-auto fade-in">
+        <div class="mb-8">
+          <svg class="w-16 h-16 text-white mx-auto mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+        </div>
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+          Still can't find what you're looking for?
+        </h2>
+        <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+          Our travel experts are here to help! Contact us directly and we'll assist you in finding the perfect Indonesian adventure.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/contact" class="bg-white hover:bg-gray-100 text-gray-900 font-semibold px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105">
+            Contact Support
+          </a>
+          <a href="tel:+62XXXXXXXXX" class="border-2 border-white text-white hover:bg-white hover:text-gray-900 font-semibold px-8 py-4 rounded-full transition-all duration-300">
+            Call Us Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Animation Styles -->
+<style>
+.fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
+
+.delay-500 {
+  animation-delay: 500ms;
+}
+</style>

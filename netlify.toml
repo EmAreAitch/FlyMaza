@@ -1,0 +1,95 @@
+# netlify.toml (at repo root)
+
+[build]
+  command = "middleman build"
+  publish = "build"
+  environment = {NODE_ENV = "production", NETLIFY_IMAGE_CDN = "true"}
+
+[dev]
+  # command to run your Middleman server in “live‐reload” mode
+  command = "foreman start"
+  # the port Middleman opens on by default
+  port    = 3000
+  # netlify-dev will proxy this into its own 8888 endpoint
+  targetPort = 4567
+  
+[[headers]]
+  for = "/images/*.avif"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/images/*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/images/*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/images/*.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# ───────────────────────────────────────────────────────────
+# 3) Hashed images under /images/uploads/ (treated the same as other hashed assets)
+#    – All filenames in uploads/ are content‐hashed, so they get 1 year.
+# ───────────────────────────────────────────────────────────
+[[headers]]
+  for = "/images/uploads/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# ───────────────────────────────────────────────────────────
+# 4) Fingerprinted JS bundles
+# ───────────────────────────────────────────────────────────
+[[headers]]
+  for = "/javascripts/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# ───────────────────────────────────────────────────────────
+# 5) Fingerprinted CSS bundles
+# ───────────────────────────────────────────────────────────
+[[headers]]
+  for = "/stylesheets/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# ───────────────────────────────────────────────────────────
+# 6) HTML pages (root and all subdirectories) 
+#    – Always revalidate so users get the latest content.
+# ───────────────────────────────────────────────────────────
+[[headers]]
+  for = "/**/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# ───────────────────────────────────────────────────────────
+# 7) Admin config (YAML) – revalidate on each request
+# ───────────────────────────────────────────────────────────
+[[headers]]
+  for = "/admin/config.yml"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# ───────────────────────────────────────────────────────────
+# 8) Any other JSON/XML or non‐hashed static assets
+#    – Short cache (1 hour), revalidate after that
+# ───────────────────────────────────────────────────────────
+[[headers]]
+  for = "/**/*.json"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/**/*.xml"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[redirects]]
+  from   = "*"
+  to     = "/404"
+  status = 404  
