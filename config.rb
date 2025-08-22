@@ -47,6 +47,7 @@ page '/*.txt', layout: false
 #   activate :minify_javascript, compressor: Terser.new
 # end
 set :port, 3000
+set :trailing_slash, false
 
 configure :build do
   activate :asset_hash do |opts|

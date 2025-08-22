@@ -1,0 +1,138 @@
+<%# /source/packages/package.html.erb %>
+
+<% package = {
+  id: "paris-luxury-escape",
+  title: "Paris Luxury Escape",
+  destination: "Paris",
+  hero: "https://placehold.co/1600x600?text=Paris+Luxury+Escape",
+  duration: "7 Days / 6 Nights",
+  price: "$2,499",
+  description: "Experience the ultimate Parisian luxury with curated stays, fine dining, and guided tours to iconic landmarks.",
+  highlights: [
+    "Stay at a 5-star luxury hotel in the heart of Paris",
+    "Private guided tour of the Louvre and Eiffel Tower",
+    "Seine River dinner cruise with champagne",
+    "Day trip to the Champagne region with tastings"
+  ],
+  inclusions: [
+    "Round-trip airfare",
+    "Luxury accommodation",
+    "Daily breakfast",
+    "Airport transfers",
+    "Local SIM card with data"
+  ],
+  exclusions: [
+    "Personal expenses",
+    "Travel insurance",
+    "Visa fees (if applicable)"
+  ],
+  gallery: [
+    "https://placehold.co/600x400?text=Gallery+1",
+    "https://placehold.co/600x400?text=Gallery+2",
+    "https://placehold.co/600x400?text=Gallery+3",
+    "https://placehold.co/600x400?text=Gallery+4",
+    "https://placehold.co/600x400?text=Gallery+5",
+    "https://placehold.co/600x400?text=Gallery+6"
+  ]
+} %>
+
+  <%# Hero Section %>
+  <section class="relative h-[550px] bg-center bg-cover gradient-hero" style="background-image: url('<%= package[:hero] %>')">
+    <div class="absolute inset-0 gradient-overlay"></div>
+    <div class="absolute bottom-0 w-full h-24 bg-gradient-to-t from-black/60 to-transparent"></div>
+    <div class="container-custom relative z-10 h-full flex flex-col justify-center">
+      <h1 class="heading-hero text-white drop-shadow-lg"><%= package[:title] %></h1>
+      <p class="mt-4 text-lg md:text-xl text-white/80 drop-shadow"><%= package[:duration] %> — <span class="text-golden-400 font-bold"><%= package[:price] %></span></p>
+    </div>
+  </section>
+
+<section class="section-spacing relative" style="background: linear-gradient(to right, #f0f4ff, #e0e8ff);">
+  <div class="container-custom">
+    <div class="grid lg:grid-cols-3 gap-12">
+      <div class="lg:col-span-2">
+        <h2 class="heading-section text-gray-900 mb-6">About This Package</h2>
+        <p class="text-lg text-gray-700 leading-relaxed"><%= package[:description] %></p>
+      </div>
+      <div>
+        <%# Quick Info (glassmorphic visible) %>
+        <div class="bg-white/30 backdrop-blur-xl rounded-2xl shadow-card p-6 border border-white/20">
+          <h3 class="heading-card mb-4 text-primary-600">Quick Info</h3>
+          <ul class="space-y-3 text-gray-900">
+            <li><strong>Destination:</strong> <%= package[:destination] %></li>
+            <li><strong>Duration:</strong> <%= package[:duration] %></li>
+            <li><strong>Price:</strong> <%= package[:price] %></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <%# Highlights in funky staggered grid with gradient cards %>
+<section class="section-spacing bg-gray-50">
+      <div class="container-custom">
+        <h2 class="heading-section text-center text-gray-900 mb-12">Highlights</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <% package[:highlights].each_with_index do |highlight, i| %>
+            <div class="relative overflow-hidden rounded-xl p-8 shadow-card card-hover
+                        <%= i.even? ? 'bg-gradient-to-br from-primary-600 to-accent-500' : 'bg-gradient-to-br from-secondary-500 to-golden-500' %>">
+              <div class="absolute inset-0 bg-black/20"></div>
+              <p class="relative z-10 text-white font-semibold"><%= highlight %></p>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </section>
+
+  <%# Inclusions & Exclusions %>
+  <section class="section-spacing relative">
+    <div class="absolute inset-0 bg-gradient-to-r from-primary-50 to-secondary-50"></div>
+    <div class="container-custom relative z-10 grid md:grid-cols-2 gap-12">
+      <div class="bg-white/60 backdrop-blur-md rounded-xl shadow-card p-8 border border-white/20">
+        <h2 class="heading-card text-primary-700 mb-6">Inclusions</h2>
+        <ul class="space-y-3">
+          <% package[:inclusions].each do |inc| %>
+            <li class="flex items-start gap-3 text-gray-800">
+              <span class="w-6 h-6 flex-shrink-0 bg-primary-600 text-white rounded-full flex items-center justify-center">✓</span>
+              <%= inc %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+      <div class="bg-white/60 backdrop-blur-md rounded-xl shadow-card p-8 border border-white/20">
+        <h2 class="heading-card text-secondary-700 mb-6">Exclusions</h2>
+        <ul class="space-y-3">
+          <% package[:exclusions].each do |exc| %>
+            <li class="flex items-start gap-3 text-gray-800">
+              <span class="w-6 h-6 flex-shrink-0 bg-secondary-500 text-white rounded-full flex items-center justify-center">✗</span>
+              <%= exc %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <%# Gallery: simple uniform grid %>
+  <section class="section-spacing bg-gray-50">
+    <div class="container-custom">
+      <h2 class="heading-section text-center text-gray-900 mb-12">Gallery</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <% package[:gallery].each do |img| %>
+          <img src="<%= img %>" alt="Gallery" class="rounded-xl shadow-card w-full card-hover">
+        <% end %>
+      </div>
+    </div>
+  </section>
+
+<%# CTA Section (consistent with your reference) %>
+<section class="py-32 bg-primary-600">
+  <div class="container-custom px-4 text-center">
+    <div class="inline-block bg-white/20 backdrop-blur-lg rounded-2xl p-12 shadow-card border border-white/30">
+      <h2 class="heading-section text-white mb-4">Ready for Your Next Adventure?</h2>
+      <p class="text-white/80 mb-8">Book "<%= package[:title] %>" today and enjoy a once-in-a-lifetime trip to <%= package[:destination] %>.</p>
+      <a href="/contact" class="btn-secondary">Book Now</a>
+    </div>
+  </div>
+</section>
+

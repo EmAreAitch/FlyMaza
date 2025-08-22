@@ -1,0 +1,70 @@
+<%# /source/packages.html.erb %>
+
+<% destinations = [
+  {
+    id: "paris",
+    name: "Paris",
+    hero: "https://placehold.co/1200x400?text=Paris+Hero",
+    packages: [
+      { title: "Paris Luxury Escape", days: "7D / 6N", price: "$2,499", image: "https://placehold.co/600x400?text=Luxury+Escape" },
+      { title: "Romantic Paris Getaway", days: "5D / 4N", price: "$1,499", image: "https://placehold.co/600x400?text=Romantic+Getaway" },
+      { title: "Family Fun in Paris", days: "6D / 5N", price: "$1,999", image: "https://placehold.co/600x400?text=Family+Fun" }
+    ]
+  },
+  {
+    id: "dubai",
+    name: "Dubai",
+    hero: "https://placehold.co/1200x400?text=Dubai+Hero",
+    packages: [
+      { title: "Dubai Adventure", days: "6D / 5N", price: "$1,799", image: "https://placehold.co/600x400?text=Adventure" },
+      { title: "Luxury Desert Escape", days: "4D / 3N", price: "$1,299", image: "https://placehold.co/600x400?text=Desert+Escape" },
+      { title: "Dubai Family Fun", days: "5D / 4N", price: "$1,499", image: "https://placehold.co/600x400?text=Family+Fun" }
+    ]
+  },
+  {
+    id: "tokyo",
+    name: "Tokyo",
+    hero: "https://placehold.co/1200x400?text=Tokyo+Hero",
+    packages: [
+      { title: "Tokyo Explorer", days: "7D / 6N", price: "$2,199", image: "https://placehold.co/600x400?text=Tokyo+Explorer" },
+      { title: "Cultural Tokyo", days: "5D / 4N", price: "$1,599", image: "https://placehold.co/600x400?text=Cultural+Trip" },
+      { title: "Tokyo Food Tour", days: "4D / 3N", price: "$1,299", image: "https://placehold.co/600x400?text=Food+Tour" }
+    ]
+  }
+] %>
+
+
+  <% destinations.each do |dest| %>
+    <%# Destination Hero Section %>
+    <section class="relative h-[400px] bg-cover bg-center overflow-hidden" style="background-image: url('<%= dest[:hero] %>')">
+      <div class="absolute inset-0 gradient-overlay"></div>
+      <div class="relative z-10 container-custom flex flex-col justify-center h-full text-white">
+        <h2 class="heading-hero mb-4">Packages for <%= dest[:name] %></h2>
+        <p class="text-lg md:text-xl max-w-2xl">Handpicked packages to explore <%= dest[:name] %> in style.</p>
+      </div>
+    </section>
+
+    <%# Packages Grid Section %>
+    <section class="section-spacing bg-gray-50">
+      <div class="container-custom">
+        <div class="mb-12 text-center">
+          <h3 class="heading-section text-gray-900">Explore <%= dest[:name] %> Packages</h3>
+          <p class="text-gray-600">Choose from our curated selection of travel experiences.</p>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <% dest[:packages].each do |pkg| %>
+            <div class="relative rounded-2xl overflow-hidden group card-hover shadow-card">
+              <img src="<%= pkg[:image] %>" alt="<%= pkg[:title] %>" class="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-105">
+              <div class="image-overlay"></div>
+              <div class="absolute bottom-6 left-6 text-white">
+                <h4 class="heading-card mb-1"><%= pkg[:title] %></h4>
+                <p class="text-white/80 text-sm mb-1"><%= pkg[:days] %></p>
+                <p class="font-semibold"><%= pkg[:price] %></p>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </section>
+  <% end %>
