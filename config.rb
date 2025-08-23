@@ -62,7 +62,7 @@ set :markdown,
     input:  "GFM",        # use GitHub‑Flavored Markdown parser
     hard_wrap: false       # treat single newlines as <br/>
 
-set :root_url, ENV['URL'] || 'http://localhost:4567'
+set :root_url, ENV['URL'] || 'http://localhost:3000'
 
 configure :development do
   module Rack
