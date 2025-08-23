@@ -1,12 +1,22 @@
-<%# Dummy Data Arrays %>
-<% destinations = [
-  { title: "Paris", subtitle: "City of Lights", image: "https://placehold.co/600x400?text=Paris" },
-  { title: "Tokyo", subtitle: "Vibrant Culture", image: "https://placehold.co/600x400?text=Tokyo" },
-  { title: "New York", subtitle: "City That Never Sleeps", image: "https://placehold.co/600x400?text=New+York" },
-  { title: "Sydney", subtitle: "Beaches & Opera House", image: "https://placehold.co/600x400?text=Sydney" },
-  { title: "Rome", subtitle: "Historic Streets & Food", image: "https://placehold.co/600x400?text=Rome" },
-  { title: "London", subtitle: "History & Modern Life", image: "https://placehold.co/600x400?text=London" }
-] %>
+<%# Dummy Data Arrays with Categories %>
+<% destinations = {
+  domestic: [
+    { title: "Goa", subtitle: "Beaches & Nightlife", image: "https://placehold.co/600x400?text=Goa" },
+    { title: "Kerala", subtitle: "Backwaters & Hills", image: "https://placehold.co/600x400?text=Kerala" },
+    { title: "Rajasthan", subtitle: "Palaces & Deserts", image: "https://placehold.co/600x400?text=Rajasthan" },
+    { title: "Himachal Pradesh", subtitle: "Mountains & Adventure", image: "https://placehold.co/600x400?text=Himachal" },
+    { title: "Tamil Nadu", subtitle: "Temples & Culture", image: "https://placehold.co/600x400?text=Tamil+Nadu" },
+    { title: "Kashmir", subtitle: "Paradise on Earth", image: "https://placehold.co/600x400?text=Kashmir" }
+  ],
+  international: [
+    { title: "Paris", subtitle: "City of Lights", image: "https://placehold.co/600x400?text=Paris" },
+    { title: "Tokyo", subtitle: "Vibrant Culture", image: "https://placehold.co/600x400?text=Tokyo" },
+    { title: "New York", subtitle: "City That Never Sleeps", image: "https://placehold.co/600x400?text=New+York" },
+    { title: "Sydney", subtitle: "Beaches & Opera House", image: "https://placehold.co/600x400?text=Sydney" },
+    { title: "Rome", subtitle: "Historic Streets & Food", image: "https://placehold.co/600x400?text=Rome" },
+    { title: "London", subtitle: "History & Modern Life", image: "https://placehold.co/600x400?text=London" }
+  ]
+} %>
 
 <% featured_packages = [
   { title: "Paris Luxury Escape", image: "https://placehold.co/600x400?text=Package+1" },
@@ -23,29 +33,77 @@
   </div>
 </section>
 
-<!-- Destinations Grid Section -->
-<section class="section-spacing bg-gray-50">
-  <div class="container-custom px-4">
-    <div class="mb-12 text-left">
-      <p class="text-gray-400 text-sm font-medium mb-2 uppercase tracking-wide">Top Destinations</p>
-      <h2 class="text-4xl md:text-5xl font-bold text-gray-900">Discover Our Destinations</h2>
-      <p class="text-lg text-gray-500 max-w-md mt-2">Explore a curated list of destinations with unique experiences and rich culture.</p>
-    </div>
-
-    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-      <% destinations.each do |dest| %>
-        <div class="relative rounded-3xl overflow-hidden group cursor-pointer h-80">
-          <img src="<%= dest[:image] %>" alt="<%= dest[:title] %>" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-          <div class="absolute bottom-6 left-6 text-white">
-            <p class="text-white/80 text-sm font-medium mb-1"><%= dest[:subtitle] %></p>
-            <h3 class="text-2xl font-bold"><%= dest[:title] %></h3>
-          </div>
+<%# Tab Navigation Section %>
+<section class="section-spacing-sm bg-white">
+  <div class="container-custom">
+    <div class="text-center mb-8">
+      <div class="mb-6 text-left">
+        <p class="text-gray-400 text-sm font-medium mb-2 uppercase tracking-wide">Top Destinations</p>
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900">Discover Our Destinations</h2>
+        <p class="text-lg text-gray-500 max-w-md mt-2">Explore a curated list of destinations with unique experiences and rich culture.</p>
+      </div>
+      
+      <div class="flex justify-center">
+        <div class="flex space-x-2 bg-gray-100 rounded-lg p-1">
+          <button 
+            class="tab-button px-6 py-2 text-sm font-semibold rounded-md bg-primary-600 text-white transition-all duration-200 focus:outline-none cursor-pointer" 
+            data-tab="domestic"
+            onclick="showTab('domestic', this)"
+          >
+            Domestic Destinations
+          </button>
+          <button 
+            class="tab-button px-6 py-2 text-sm font-semibold rounded-md bg-transparent text-gray-600 transition-all duration-200 focus:outline-none cursor-pointer" 
+            data-tab="international"
+            onclick="showTab('international', this)"
+          >
+            International Destinations
+          </button>
         </div>
-      <% end %>
+      </div>
     </div>
   </div>
 </section>
+
+<%# Domestic Destinations Content %>
+<div id="domestic-content" class="tab-content">
+  <section class="pb-24 bg-gray-50">
+    <div class="container-custom px-4">
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <% destinations[:domestic].each do |dest| %>
+          <div class="relative rounded-3xl overflow-hidden group cursor-pointer h-80">
+            <img src="<%= dest[:image] %>" alt="<%= dest[:title] %>" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+            <div class="absolute bottom-6 left-6 text-white">
+              <p class="text-white/80 text-sm font-medium mb-1"><%= dest[:subtitle] %></p>
+              <h3 class="text-2xl font-bold"><%= dest[:title] %></h3>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </section>
+</div>
+
+<%# International Destinations Content %>
+<div id="international-content" class="tab-content hidden">
+  <section class="pb-24 bg-gray-50">
+    <div class="container-custom px-4">
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <% destinations[:international].each do |dest| %>
+          <div class="relative rounded-3xl overflow-hidden group cursor-pointer h-80">
+            <img src="<%= dest[:image] %>" alt="<%= dest[:title] %>" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+            <div class="absolute bottom-6 left-6 text-white">
+              <p class="text-white/80 text-sm font-medium mb-1"><%= dest[:subtitle] %></p>
+              <h3 class="text-2xl font-bold"><%= dest[:title] %></h3>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </section>
+</div>
 
 <!-- Featured Packages Section -->
 <section class="section-spacing">
@@ -79,3 +137,28 @@
     </div>
   </div>
 </section>
+
+<%# JavaScript for Tab Functionality %>
+<script>
+  function showTab(tabName, clickedButton) {
+    // Hide all tab contents
+    const contents = document.querySelectorAll('.tab-content');
+    contents.forEach(content => {
+      content.classList.add('hidden');
+    });
+    
+    // Reset all buttons to inactive state
+    const buttons = document.querySelectorAll('.tab-button');
+    buttons.forEach(button => {
+      button.classList.remove('bg-primary-600', 'text-white');
+      button.classList.add('bg-transparent', 'text-gray-600');
+    });
+    
+    // Show selected tab content
+    document.getElementById(tabName + '-content').classList.remove('hidden');
+    
+    // Set clicked button to active state
+    clickedButton.classList.remove('bg-transparent', 'text-gray-600');
+    clickedButton.classList.add('bg-primary-600', 'text-white');
+  }
+</script>
