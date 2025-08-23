@@ -1,30 +1,14 @@
 <%# /source/destinations/paris.html.erb %>
 
-<% destination = {
-  id: "paris",
-  name: "Paris",
-  hero: "https://placehold.co/1600x600?text=Paris+Hero",
-  description: "The city of lights and love, Paris is the ultimate destination for romance, culture, and world-class cuisine.",
-  highlights: [
-    "Visit the Eiffel Tower and marvel at the city skyline",
-    "Stroll through the Louvre and see the Mona Lisa",
-    "Enjoy a Seine River cruise at sunset",
-    "Indulge in French pastries at authentic Parisian cafés"
-  ],
-  packages: [
-    { title: "Paris Luxury Escape", days: "7D / 6N", price: "$2,499", image: "https://placehold.co/600x400?text=Luxury+Escape" },
-    { title: "Romantic Paris Getaway", days: "5D / 4N", price: "$1,499", image: "https://placehold.co/600x400?text=Romantic+Getaway" },
-    { title: "Family Fun in Paris", days: "6D / 5N", price: "$1,999", image: "https://placehold.co/600x400?text=Family+Fun" }
-  ]
-} %>
+<% destination = data.travel.destinations.domestic.first %>
 
 <main>
   <%# Hero Section %>
-  <section class="relative h-[500px] bg-cover bg-center" style="background-image: url('<%= destination[:hero] %>')">
+  <section class="relative h-[500px] bg-cover bg-center" style="background-image: url('<%= destination.hero %>')">
     <div class="absolute inset-0 gradient-overlay"></div>
     <div class="container-custom relative z-10 h-full flex flex-col justify-center">
-      <h1 class="heading-hero text-white mb-4"><%= destination[:name] %></h1>
-      <p class="text-white/80 max-w-2xl text-lg md:text-xl"><%= destination[:description] %></p>
+      <h1 class="heading-hero text-white mb-4"><%= destination.name %></h1>
+      <p class="text-white/80 max-w-2xl text-lg md:text-xl"><%= destination.description %></p>
     </div>
   </section>
 
@@ -32,9 +16,9 @@
   <section class="section-spacing bg-white">
     <div class="container-custom grid lg:grid-cols-2 gap-12 items-center">
       <div>
-        <h2 class="heading-section mb-6 text-gray-900">Why Visit <%= destination[:name] %>?</h2>
+        <h2 class="heading-section mb-6 text-gray-900">Why Visit <%= destination.name %>?</h2>
         <ul class="space-y-4 text-gray-700">
-          <% destination[:highlights].each do |highlight| %>
+          <% destination.highlights.each do |highlight| %>
             <li class="flex items-start gap-3">
               <span class="flex-shrink-0 w-6 h-6 bg-primary-600 text-white flex items-center justify-center rounded-full">✓</span>
               <span><%= highlight %></span>
@@ -43,28 +27,46 @@
         </ul>
       </div>
       <div>
-        <img src="https://placehold.co/600x400?text=<%= destination[:name] %>+Highlight" alt="<%= destination[:name] %> highlight" class="rounded-xl shadow-card">
+        <img src="<%= destination.gallery.first %>" alt="<%= destination.name %> highlight" class="rounded-xl shadow-card">
+      </div>
+    </div>
+  </section>
+
+  <%# Gallery Section %>
+  <section class="section-spacing bg-gray-50">
+    <div class="container-custom">
+      <div class="mb-12 text-center">
+        <h2 class="heading-section text-gray-900"><%= destination.name %> Gallery</h2>
+        <p class="text-gray-600">A glimpse of the beauty you’ll experience.</p>
+      </div>
+
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <% destination.gallery.each do |image| %>
+          <div class="rounded-2xl overflow-hidden shadow-card">
+            <img src="<%= image %>" alt="<%= destination.name %> gallery image" class="w-full h-64 object-cover">
+          </div>
+        <% end %>
       </div>
     </div>
   </section>
 
   <%# Popular Packages Section %>
-  <section class="section-spacing bg-gray-50">
+  <section class="section-spacing bg-white">
     <div class="container-custom">
       <div class="mb-12 text-center">
-        <h2 class="heading-section text-gray-900">Popular Packages for <%= destination[:name] %></h2>
-        <p class="text-gray-600">Handpicked packages to make your Paris experience unforgettable.</p>
+        <h2 class="heading-section text-gray-900">Popular Packages for <%= destination.name %></h2>
+        <p class="text-gray-600">Handpicked packages to make your <%= destination.name %> experience unforgettable.</p>
       </div>
 
       <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        <% destination[:packages].each do |pkg| %>
+        <% destination.packages.each do |pkg| %>
           <div class="relative rounded-2xl overflow-hidden group card-hover shadow-card">
-            <img src="<%= pkg[:image] %>" alt="<%= pkg[:title] %>" class="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-105">
+            <img src="<%= pkg.hero %>" alt="<%= pkg.title %>" class="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-105">
             <div class="image-overlay"></div>
             <div class="absolute bottom-6 left-6 text-white">
-              <h3 class="heading-card mb-1"><%= pkg[:title] %></h3>
-              <p class="text-white/80 text-sm mb-1"><%= pkg[:days] %></p>
-              <p class="font-semibold"><%= pkg[:price] %></p>
+              <h3 class="heading-card mb-1"><%= pkg.title %></h3>
+              <p class="text-white/80 text-sm mb-1"><%= pkg.days %>D / <%= pkg.nights %>N</p>
+              <p class="font-semibold">$<%= pkg.price %></p>
             </div>
           </div>
         <% end %>
@@ -76,8 +78,8 @@
   <section class="py-32 bg-primary-600">
     <div class="container-custom text-center">
       <div class="inline-block bg-white/10 backdrop-blur-lg rounded-2xl p-12 shadow-card">
-        <h2 class="heading-section text-white mb-4">Book Your <%= destination[:name] %> Adventure</h2>
-        <p class="text-white/80 mb-8">Turn your Paris dreams into reality with our curated packages.</p>
+        <h2 class="heading-section text-white mb-4">Book Your <%= destination.name %> Adventure</h2>
+        <p class="text-white/80 mb-8">Turn your <%= destination.name %> dreams into reality with our curated packages.</p>
         <a href="/packages" class="btn-secondary">Explore Packages</a>
       </div>
     </div>

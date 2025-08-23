@@ -1,0 +1,95 @@
+destinations:
+  domestic:
+    - name: Goa
+      hero: https://placehold.co/1600x600?text=Goa+Hero
+      description: A tropical paradise with golden beaches, vibrant nightlife, and
+        rich Portuguese heritage.
+      highlights:
+        - Relaxy at Baga and Calangute beaches
+        - Explore the Portuguese forts and churches
+        - Enjoy vibrant nightlife and beach parties
+        - Taste authentic Goan seafood curries
+      gallery:
+        - https://placehold.co/600x400?text=Goa+1
+        - https://placehold.co/600x400?text=Goa+2
+        - https://placehold.co/600x400?text=Goa+3
+        - https://placehold.co/600x400?text=Goa+4
+      packages:
+        - exclusions:
+            - Personal expenses
+            - Travel insurance
+          price: "799"
+          itinerary:
+            - title: Arrival in Goa
+              details: Check-in at your resort and relax by the beach.
+            - title: Heritage Tour
+              details: Guided tour of Old Goa churches and forts.
+            - title: Beach Day & Cruise
+              details: Leisure at the beach followed by a sunset Mandovi River cruise.
+            - title: Departure
+              details: Checkout and transfer to the airport.
+          gallery:
+            - https://placehold.co/600x400?text=Goa+Package+1
+            - https://placehold.co/600x400?text=Goa+Package+2
+            - https://placehold.co/600x400?text=Goa+Package+3
+          days: 4
+          inclusions:
+            - Accommodation
+            - Breakfast
+            - Airport transfers
+          title: Goa Beach Retreat
+          hero: https://placehold.co/1600x600?text=Goa+Beach+Retreat
+          nights: 3
+          description: Unwind with a relaxing beach holiday in Goa, complete with resort
+            stays and local tours.
+          highlights:
+            - Stay in a beachfront resort
+            - Guided tour of Old Goa heritage sites
+            - Sunset cruise on the Mandovi River
+  international:
+    - name: Paris
+      hero: https://placehold.co/1600x600?text=Paris+Hero
+      description: The city of lights and love, Paris is the ultimate destination for
+        romance, culture, and world-class cuisine.
+      highlights:
+        - Visit the Eiffel Tower and marvel at the city skyline
+        - Stroll through the Louvre and see the Mona Lisa
+        - Enjoy a Seine River cruise at sunset
+        - Indulge in French pastries at authentic Parisian cafés
+      gallery:
+        - https://placehold.co/600x400?text=Paris+1
+        - https://placehold.co/600x400?text=Paris+2
+        - https://placehold.co/600x400?text=Paris+3
+        - https://placehold.co/600x400?text=Paris+4
+      packages:
+        - exclusions:
+            - Personal expenses
+            - Visa fees
+          price: 2,499
+          itinerary:
+            - title: Arrival in Paris
+              details: Private transfer to your hotel and evening free.
+            - title: City Highlights
+              details: Guided tour of Louvre and Eiffel Tower.
+            - title: Seine Cruise
+              details: Dinner cruise with champagne.
+            - title: Departure
+              details: Transfer to airport after breakfast.
+          gallery:
+            - https://placehold.co/600x400?text=Paris+Package+1
+            - https://placehold.co/600x400?text=Paris+Package+2
+            - https://placehold.co/600x400?text=Paris+Package+3
+          days: 7
+          inclusions:
+            - Round-trip airfare
+            - Luxury accommodation
+            - Daily breakfast
+          title: Paris Luxury Escape
+          hero: https://placehold.co/1600x600?text=Paris+Luxury+Escape
+          nights: 6
+          description: Experience the ultimate Parisian luxury with curated stays, fine
+            dining, and guided tours to iconic landmarks.
+          highlights:
+            - Stay at a 5-star luxury hotel in the heart of Paris
+            - Private guided tour of the Louvre and Eiffel Tower
+            - Seine River dinner cruise with champagne

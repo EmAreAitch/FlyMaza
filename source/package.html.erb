@@ -1,49 +1,6 @@
 <%# /source/packages/package.html.erb %>
 
-<% package = {
-  id: "paris-luxury-escape",
-  title: "Paris Luxury Escape",
-  destination: "Paris",
-  hero: "https://placehold.co/1600x600?text=Paris+Luxury+Escape",
-  duration: "7 Days / 6 Nights",
-  price: "$2,499",
-  description: "Experience the ultimate Parisian luxury with curated stays, fine dining, and guided tours to iconic landmarks.",
-  highlights: [
-    "Stay at a 5-star luxury hotel in the heart of Paris",
-    "Private guided tour of the Louvre and Eiffel Tower",
-    "Seine River dinner cruise with champagne",
-    "Day trip to the Champagne region with tastings"
-  ],
-  inclusions: [
-    "Round-trip airfare",
-    "Luxury accommodation",
-    "Daily breakfast",
-    "Airport transfers",
-    "Local SIM card with data"
-  ],
-  exclusions: [
-    "Personal expenses",
-    "Travel insurance",
-    "Visa fees (if applicable)"
-  ],
-  gallery: [
-    "https://placehold.co/600x400?text=Gallery+1",
-    "https://placehold.co/600x400?text=Gallery+2",
-    "https://placehold.co/600x400?text=Gallery+3",
-    "https://placehold.co/600x400?text=Gallery+4",
-    "https://placehold.co/600x400?text=Gallery+5",
-    "https://placehold.co/600x400?text=Gallery+6"
-  ],
-  itinerary: [
-    { day: "Day 1", title: "Arrival in Paris", details: "Private transfer to your 5-star hotel. Evening at leisure to explore the surroundings." },
-    { day: "Day 2", title: "Louvre & Eiffel Tower", details: "Private guided tour of the Louvre followed by a skip-the-line Eiffel Tower experience." },
-    { day: "Day 3", title: "Versailles Excursion", details: "Half-day guided trip to the Palace of Versailles with royal gardens tour." },
-    { day: "Day 4", title: "Seine River Dinner Cruise", details: "Relax during a champagne dinner cruise on the Seine with live music." },
-    { day: "Day 5", title: "Champagne Region", details: "Full-day excursion to Reims & Épernay with tastings at prestigious Champagne houses." },
-    { day: "Day 6", title: "Hidden Gems of Paris", details: "Walking tour of Montmartre, Le Marais, and local patisserie visits." },
-    { day: "Day 7", title: "Departure", details: "Private airport transfer after breakfast. Farewell to Paris!" }
-  ]
-} %>
+<% package = data.travel.destinations.domestic.first.packages.first %>
 
 <%# Hero Section %>
 <section class="relative h-[550px] bg-center bg-cover gradient-hero" style="background-image: url('<%= package[:hero] %>')">
@@ -51,7 +8,10 @@
   <div class="absolute bottom-0 w-full h-24 bg-gradient-to-t from-black/60 to-transparent"></div>
   <div class="container-custom relative z-10 h-full flex flex-col justify-center">
     <h1 class="heading-hero text-white drop-shadow-lg"><%= package[:title] %></h1>
-    <p class="mt-4 text-lg md:text-xl text-white/80 drop-shadow"><%= package[:duration] %> — <span class="text-golden-400 font-bold"><%= package[:price] %></span></p>
+    <p class="mt-4 text-lg md:text-xl text-white/80 drop-shadow">
+      <%= package[:days] %> Days / <%= package[:nights] %> Nights —
+      <span class="text-golden-400 font-bold">$<%= package[:price] %></span>
+    </p>
   </div>
 </section>
 
@@ -69,8 +29,8 @@
           <h3 class="heading-card mb-4 text-primary-600">Quick Info</h3>
           <ul class="space-y-3 text-gray-900">
             <li><strong>Destination:</strong> <%= package[:destination] %></li>
-            <li><strong>Duration:</strong> <%= package[:duration] %></li>
-            <li><strong>Price:</strong> <%= package[:price] %></li>
+            <li><strong>Duration:</strong> <%= package[:days] %>D / <%= package[:nights] %>N</li>
+            <li><strong>Price:</strong> $<%= package[:price] %></li>
           </ul>
         </div>
       </div>
@@ -126,7 +86,6 @@
 <%# Itinerary Section (Timeline Style) %>
 <section class="section-spacing bg-gray-50">
   <div class="container-custom">
-    <!-- Section Header -->
     <div class="text-center mb-16 fade-in">
       <p class="text-gray-500 text-lg mb-4">Your Luxury Journey</p>
       <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
@@ -137,35 +96,25 @@
       </p>
     </div>
 
-    <!-- Timeline -->
     <div class="max-w-4xl mx-auto">
       <div class="space-y-12">
         <% package[:itinerary].each_with_index do |day, index| %>
           <div class="relative fade-in">
-            <!-- Timeline Connector -->
             <% unless index == package[:itinerary].length - 1 %>
               <div class="absolute left-8 top-16 w-0.5 h-20 bg-gray-200"></div>
             <% end %>
-
             <div class="flex items-start space-x-8">
-              <!-- Day Badge -->
               <div class="flex-shrink-0">
                 <div class="w-16 h-16 bg-primary-600 text-white rounded-full flex items-center justify-center font-bold text-lg shadow-lg">
-                  <%= day[:day].split.last %>
+                  <%= index + 1 %>
                 </div>
               </div>
-
-              <!-- Itinerary Card -->
               <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 flex-1">
                 <div class="mb-2 text-sm font-semibold text-primary-600 uppercase tracking-wide">
-                  <%= day[:day] %>
+                  Day <%= index + 1 %>
                 </div>
-                <h3 class="text-2xl font-bold text-gray-900 mb-4">
-                  <%= day[:title] %>
-                </h3>
-                <p class="text-gray-600 leading-relaxed text-lg">
-                  <%= day[:details] %>
-                </p>
+                <h3 class="text-2xl font-bold text-gray-900 mb-4"><%= day[:title] %></h3>
+                <p class="text-gray-600 leading-relaxed text-lg"><%= day[:details] %></p>
               </div>
             </div>
           </div>
@@ -174,7 +123,6 @@
     </div>
   </div>
 </section>
-
 
 <%# Gallery Section %>
 <section class="section-spacing bg-gray-50">

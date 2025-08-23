@@ -1,0 +1,116 @@
+<% if development? %>
+local_backend: true
+
+<% end %>
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "source/images/uploads"
+public_folder: "/images/uploads"
+
+site_url: "<%= config[:root_url] %>"
+logo_url: "<%= image_path 'logo.png' %>"
+
+editor:
+  preview: false
+
+collections:
+  - name: "travel"
+    label: "Travel Destinations"    
+    create: false
+    delete: false
+    files:
+      - name: "travel"
+        label: "Travel Data"
+        file: "data/travel.yml"
+        fields:
+          - label: "Destinations"
+            name: "destinations"
+            widget: "object"
+            collapsed: false
+            fields:
+              - label: "Domestic"
+                name: "domestic"
+                widget: "list"
+                collapsed: true
+                required: true
+                fields:
+                  - {label: "Name", name: "name", widget: "string"}
+                  - {label: "Hero Image", name: "hero", widget: "image"}
+                  - {label: "Description", name: "description", widget: "text"}
+                  - {label: "Highlights", name: "highlights", widget: "list", collapsed: true, field: {label: "Highlight", name: "", widget: "string"}}
+                  - label: "Gallery"
+                    name: "gallery"
+                    widget: "list"
+                    collapsed: true
+                    field: {label: "Image", name: "", widget: "image"}
+                  - label: "Packages"
+                    name: "packages"
+                    widget: "list"
+                    collapsed: true
+                    fields:
+                      - {label: "Title", name: "title", widget: "string"}
+                      - {label: "Hero Image", name: "hero", widget: "image"}
+                      - {label: "Days", name: "days", widget: "number"}
+                      - {label: "Nights", name: "nights", widget: "number"}
+                      - {label: "Price", name: "price", widget: "string"}
+                      - {label: "Description", name: "description", widget: "text"}
+                      - {label: "Highlights", name: "highlights", widget: "list", collapsed: true, field: {label: "Highlight", name: "", widget: "string"}}
+                      - {label: "Inclusions", name: "inclusions", widget: "list", collapsed: true, field: {label: "Inclusion", name: "", widget: "string"}}
+                      - {label: "Exclusions", name: "exclusions", widget: "list", collapsed: true, field: {label: "Exclusion", name: "", widget: "string"}}
+                      - label: "Itinerary"
+                        name: "itinerary"
+                        widget: "list"
+                        collapsed: true
+                        fields:
+                          - {label: "Title", name: "title", widget: "string"}
+                          - {label: "Details", name: "details", widget: "text"}
+                      - label: "Gallery"
+                        name: "gallery"
+                        widget: "list"
+                        collapsed: true
+                        field: {label: "Image", name: "", widget: "image"}
+
+              - label: "International"
+                name: "international"
+                widget: "list"
+                collapsed: true
+                required: true
+                fields:
+                  - {label: "Name", name: "name", widget: "string"}
+                  - {label: "Hero Image", name: "hero", widget: "image"}
+                  - {label: "Description", name: "description", widget: "text"}
+                  - {label: "Highlights", name: "highlights", widget: "list", collapsed: true, field: {label: "Highlight", name: "", widget: "string"}}
+                  - label: "Gallery"
+                    name: "gallery"
+                    widget: "list"
+                    collapsed: true
+                    field: {label: "Image", name: "", widget: "image"}
+                  - label: "Packages"
+                    name: "packages"
+                    widget: "list"
+                    collapsed: true
+                    fields:
+                      - {label: "Title", name: "title", widget: "string"}
+                      - {label: "Hero Image", name: "hero", widget: "image"}
+                      - {label: "Days", name: "days", widget: "number"}
+                      - {label: "Nights", name: "nights", widget: "number"}
+                      - {label: "Price", name: "price", widget: "string"}
+                      - {label: "Description", name: "description", widget: "text"}
+                      - {label: "Highlights", name: "highlights", widget: "list", collapsed: true, field: {label: "Highlight", name: "", widget: "string"}}
+                      - {label: "Inclusions", name: "inclusions", widget: "list", collapsed: true, field: {label: "Inclusion", name: "", widget: "string"}}
+                      - {label: "Exclusions", name: "exclusions", widget: "list", collapsed: true, field: {label: "Exclusion", name: "", widget: "string"}}
+                      - label: "Itinerary"
+                        name: "itinerary"
+                        widget: "list"
+                        collapsed: true
+                        fields:
+                          - {label: "Title", name: "title", widget: "string"}
+                          - {label: "Details", name: "details", widget: "text"}
+                      - label: "Gallery"
+                        name: "gallery"
+                        widget: "list"
+                        collapsed: true
+                        field: {label: "Image", name: "", widget: "image"}
+
