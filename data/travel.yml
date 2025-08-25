@@ -1,7 +1,7 @@
 destinations:
   domestic:
     - name: Goa
-      hero: https://placehold.co/1600x600?text=Goa+Hero
+      hero: /images/uploads/facebook-cover-1.png
       description: A tropical paradise with golden beaches, vibrant nightlife, and
         rich Portuguese heritage.
       highlights:
@@ -37,6 +37,7 @@ destinations:
             - Accommodation
             - Breakfast
             - Airport transfers
+            - car
           title: Goa Beach Retreat
           hero: https://placehold.co/1600x600?text=Goa+Beach+Retreat
           nights: 3
