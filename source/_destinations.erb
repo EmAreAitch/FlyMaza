@@ -1,0 +1,9 @@
+<% destinations.each_slice(2).with_index do |pair, row| %>
+  <div class="grid gap-6 items-stretch grid-cols-1 md:grid-cols-2 lg:grid-cols-10">
+    <% pair.each_with_index do |destination, i| %>
+      <% size = (row.even? && i == 0) || (row.odd? && i == 1) ? :large : :small %>
+      <% size = :full if pair.length == 1 %>
+      <%= partial 'destination', locals: {destination:, size:} %>
+    <% end %>
+  </div>
+<% end %>

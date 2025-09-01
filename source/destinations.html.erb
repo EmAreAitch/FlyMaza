@@ -1,134 +1,61 @@
-<%# Dummy Data Arrays with Categories %>
-<% destinations = {
-  domestic: [
-    { title: "Goa", subtitle: "Beaches & Nightlife", image: "https://placehold.co/600x400?text=Goa" },
-    { title: "Kerala", subtitle: "Backwaters & Hills", image: "https://placehold.co/600x400?text=Kerala" },
-    { title: "Rajasthan", subtitle: "Palaces & Deserts", image: "https://placehold.co/600x400?text=Rajasthan" },
-    { title: "Himachal Pradesh", subtitle: "Mountains & Adventure", image: "https://placehold.co/600x400?text=Himachal" },
-    { title: "Tamil Nadu", subtitle: "Temples & Culture", image: "https://placehold.co/600x400?text=Tamil+Nadu" },
-    { title: "Kashmir", subtitle: "Paradise on Earth", image: "https://placehold.co/600x400?text=Kashmir" }
-  ],
-  international: [
-    { title: "Paris", subtitle: "City of Lights", image: "https://placehold.co/600x400?text=Paris" },
-    { title: "Tokyo", subtitle: "Vibrant Culture", image: "https://placehold.co/600x400?text=Tokyo" },
-    { title: "New York", subtitle: "City That Never Sleeps", image: "https://placehold.co/600x400?text=New+York" },
-    { title: "Sydney", subtitle: "Beaches & Opera House", image: "https://placehold.co/600x400?text=Sydney" },
-    { title: "Rome", subtitle: "Historic Streets & Food", image: "https://placehold.co/600x400?text=Rome" },
-    { title: "London", subtitle: "History & Modern Life", image: "https://placehold.co/600x400?text=London" }
-  ]
-} %>
+<% destinations = data.travel.destinations %>
+<% categories = { domestic: "Domestic Destinations", international: "International Destinations" } %>
 
-<% featured_packages = [
-  { title: "Paris Luxury Escape", image: "https://placehold.co/600x400?text=Package+1" },
-  { title: "Tokyo Culinary Tour", image: "https://placehold.co/600x400?text=Package+2" },
-  { title: "NYC Weekend Adventure", image: "https://placehold.co/600x400?text=Package+3" }
-] %>
+<!-- Tab Navigation -->
+<section class="py-12 pt-32 bg-white">
+  <div class="container-custom text-center mb-8">    
+    <h1 class="heading-section text-gray-900 mb-3">Discover Our Destinations</h1>
+    <p class="text-gray-600 max-w-2xl mx-auto mb-4">
+      Explore a curated list of destinations with unique experiences and rich culture.
+    </p>
 
-<!-- Hero Section -->
-<section class="relative h-[500px] bg-cover bg-center overflow-hidden" style="background-image: url('https://placehold.co/1200x500?text=Destinations+Hero')">
-  <div class="absolute inset-0 bg-black/50"></div>
-  <div class="relative z-10 container-custom px-4 flex flex-col justify-center h-full text-white">
-    <h1 class="text-5xl md:text-6xl font-bold mb-4">Explore Destinations</h1>
-    <p class="text-lg md:text-xl max-w-xl">Find your next adventure and explore top destinations around the world.</p>
-  </div>
-</section>
-
-<%# Tab Navigation Section %>
-<section class="section-spacing-sm bg-white">
-  <div class="container-custom">
-    <div class="text-center mb-8">
-      <div class="mb-6 text-left">
-        <p class="text-gray-400 text-sm font-medium mb-2 uppercase tracking-wide">Top Destinations</p>
-        <h2 class="text-4xl md:text-5xl font-bold text-gray-900">Discover Our Destinations</h2>
-        <p class="text-lg text-gray-500 max-w-md mt-2">Explore a curated list of destinations with unique experiences and rich culture.</p>
-      </div>
-      
-      <div class="flex justify-center">
-        <div class="flex space-x-2 bg-gray-100 rounded-lg p-1">
+    <div class="flex justify-center">
+      <div class="flex space-x-2 bg-gray-100 rounded-lg p-1">
+        <% categories.each_with_index do |(key, label), index| %>
           <button 
-            class="tab-button px-6 py-2 text-sm font-semibold rounded-md bg-primary-600 text-white transition-all duration-200 focus:outline-none cursor-pointer" 
-            data-tab="domestic"
-            onclick="showTab('domestic', this)"
+            class="tab-button px-6 py-2 text-sm font-semibold rounded-md transition-all duration-200 focus:outline-none cursor-pointer <%= index.zero? ? 'bg-primary-600 text-white' : 'bg-transparent text-gray-600' %>" 
+            data-tab="<%= key %>"
+            onclick="showTab('<%= key %>', this)"
           >
-            Domestic Destinations
+            <%= label %>
           </button>
-          <button 
-            class="tab-button px-6 py-2 text-sm font-semibold rounded-md bg-transparent text-gray-600 transition-all duration-200 focus:outline-none cursor-pointer" 
-            data-tab="international"
-            onclick="showTab('international', this)"
-          >
-            International Destinations
-          </button>
-        </div>
+        <% end %>
       </div>
     </div>
   </div>
 </section>
 
-<%# Domestic Destinations Content %>
-<div id="domestic-content" class="tab-content">
-  <section class="pb-24 bg-gray-50">
-    <div class="container-custom px-4">
-      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        <% destinations[:domestic].each do |dest| %>
-          <div class="relative rounded-3xl overflow-hidden group cursor-pointer h-80">
-            <img src="<%= dest[:image] %>" alt="<%= dest[:title] %>" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-            <div class="absolute bottom-6 left-6 text-white">
-              <p class="text-white/80 text-sm font-medium mb-1"><%= dest[:subtitle] %></p>
-              <h3 class="text-2xl font-bold"><%= dest[:title] %></h3>
-            </div>
-          </div>
-        <% end %>
+<!-- Destinations Grid (Domestic + International) -->
+<% categories.each do |key, label| %>
+  <div id="<%= key %>-content" class="tab-content <%= 'hidden' unless key == :domestic %>">
+    <section class="py-16 <%= key == :domestic ? 'bg-gray-50' : 'bg-gray-50' %>">
+      <div class="container-custom px-4">
+        <%= partial "destinations", locals: { destinations: destinations[key] } %>
       </div>
-    </div>
-  </section>
-</div>
+    </section>
+  </div>
+<% end %>
 
-<%# International Destinations Content %>
-<div id="international-content" class="tab-content hidden">
-  <section class="pb-24 bg-gray-50">
-    <div class="container-custom px-4">
-      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        <% destinations[:international].each do |dest| %>
-          <div class="relative rounded-3xl overflow-hidden group cursor-pointer h-80">
-            <img src="<%= dest[:image] %>" alt="<%= dest[:title] %>" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-            <div class="absolute bottom-6 left-6 text-white">
-              <p class="text-white/80 text-sm font-medium mb-1"><%= dest[:subtitle] %></p>
-              <h3 class="text-2xl font-bold"><%= dest[:title] %></h3>
-            </div>
-          </div>
-        <% end %>
-      </div>
-    </div>
-  </section>
-</div>
-
-<!-- Featured Packages Section -->
-<section class="section-spacing">
+<!-- Featured Packages -->
+<section class="py-16 bg-white">
   <div class="container-custom px-4">
-    <div class="mb-12 text-left">
+    <div class="mb-8 text-left">
       <p class="text-gray-400 text-sm font-medium mb-2 uppercase tracking-wide">Highlights</p>
       <h2 class="text-4xl md:text-5xl font-bold text-gray-900">Featured Travel Packages</h2>
     </div>
 
     <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-      <% featured_packages.each do |pkg| %>
-        <div class="relative rounded-3xl overflow-hidden group cursor-pointer h-80">
-          <img src="<%= pkg[:image] %>" alt="<%= pkg[:title] %>" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-          <div class="absolute bottom-6 left-6 text-white">
-            <h3 class="text-2xl font-bold"><%= pkg[:title] %></h3>
-          </div>
-        </div>
+      <% destinations.values.flatten.each do |dest| %>
+        <% dest.packages.each do |package| %>
+          <%= partial "package", locals: {package:} %>
+        <% end %>
       <% end %>
     </div>
   </div>
 </section>
 
-<!-- CTA Section -->
-<section class="py-32 bg-primary-600">
+<!-- CTA -->
+<section class="py-24 bg-primary-600">
   <div class="container-custom px-4 text-center">
     <div class="inline-block bg-white/10 backdrop-blur-sm rounded-2xl p-12 shadow-card">
       <h2 class="heading-section text-white mb-4">Ready for Your Next Adventure?</h2>
@@ -138,27 +65,12 @@
   </div>
 </section>
 
-<%# JavaScript for Tab Functionality %>
 <script>
   function showTab(tabName, clickedButton) {
-    // Hide all tab contents
-    const contents = document.querySelectorAll('.tab-content');
-    contents.forEach(content => {
-      content.classList.add('hidden');
-    });
-    
-    // Reset all buttons to inactive state
-    const buttons = document.querySelectorAll('.tab-button');
-    buttons.forEach(button => {
-      button.classList.remove('bg-primary-600', 'text-white');
-      button.classList.add('bg-transparent', 'text-gray-600');
-    });
-    
-    // Show selected tab content
-    document.getElementById(tabName + '-content').classList.remove('hidden');
-    
-    // Set clicked button to active state
-    clickedButton.classList.remove('bg-transparent', 'text-gray-600');
-    clickedButton.classList.add('bg-primary-600', 'text-white');
+    document.querySelectorAll('.tab-content').forEach(c => c.classList.add('hidden'));
+    document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('bg-primary-600','text-white') || b.classList.add('bg-transparent','text-gray-600'));
+    document.getElementById(tabName+'-content').classList.remove('hidden');
+    clickedButton.classList.remove('bg-transparent','text-gray-600');
+    clickedButton.classList.add('bg-primary-600','text-white');
   }
 </script>

@@ -15,6 +15,27 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
+["domestic", "international"].each do |type|
+  data.travel.destinations[type].each do |destination|
+    slug = destination.name.parameterize
+    destination.url = "destinations/#{type}/#{slug}/"
+    
+    proxy destination.url + "index.html", "destination.html", locals: { 
+      destination: destination      
+    }, ignore: true
+    
+    destination.packages.each do |package|
+      package_slug = package.title.parameterize
+      package.url = "/#{type}/#{slug}/packages/#{package_slug}/"
+      
+      proxy package.url + "index.html", "package.html", locals: { 
+        package: package,
+        destination_name: destination.name        
+      }, ignore: true
+    end
+  end
+end
+
 # With alternative layout
 # page '/path/to/file.html', layout: 'other_layout'
 

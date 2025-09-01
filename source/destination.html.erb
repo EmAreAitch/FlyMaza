@@ -1,7 +1,4 @@
 <%# /source/destinations/paris.html.erb %>
-
-<% destination = data.travel.destinations.domestic.first %>
-
 <main>
   <%# Hero Section %>
   <section class="relative h-[500px] bg-cover bg-center" style="background-image: url('<%= destination.hero %>')">
@@ -11,12 +8,12 @@
       <p class="text-white/80 max-w-2xl text-lg md:text-xl"><%= destination.description %></p>
     </div>
   </section>
-
+  
   <%# Highlights Section %>
   <section class="section-spacing bg-white">
-    <div class="container-custom grid lg:grid-cols-2 gap-12 items-center">
-      <div>
-        <h2 class="heading-section mb-6 text-gray-900">Why Visit <%= destination.name %>?</h2>
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="heading-section mb-6 text-gray-900 text-center">Why Visit <%= destination.name %>?</h2>
         <ul class="space-y-4 text-gray-700">
           <% destination.highlights.each do |highlight| %>
             <li class="flex items-start gap-3">
@@ -26,30 +23,28 @@
           <% end %>
         </ul>
       </div>
-      <div>
-        <img src="<%= destination.gallery.first %>" alt="<%= destination.name %> highlight" class="rounded-xl shadow-card">
-      </div>
     </div>
   </section>
-
+  
   <%# Gallery Section %>
-  <section class="section-spacing bg-gray-50">
-    <div class="container-custom">
-      <div class="mb-12 text-center">
-        <h2 class="heading-section text-gray-900"><%= destination.name %> Gallery</h2>
-        <p class="text-gray-600">A glimpse of the beauty you’ll experience.</p>
+  <% if destination.gallery.present? %>
+    <section class="section-spacing bg-gray-50">
+      <div class="container-custom">
+        <div class="mb-12 text-center">
+          <h2 class="heading-section text-gray-900"><%= destination.name %> Gallery</h2>
+          <p class="text-gray-600">A glimpse of the beauty you'll experience.</p>
+        </div>
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <% destination.gallery.each do |image| %>
+            <div class="rounded-2xl overflow-hidden shadow-card">
+              <img src="<%= image %>" alt="<%= destination.name %> gallery image" class="w-full h-64 object-cover">
+            </div>
+          <% end %>
+        </div>
       </div>
-
-      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        <% destination.gallery.each do |image| %>
-          <div class="rounded-2xl overflow-hidden shadow-card">
-            <img src="<%= image %>" alt="<%= destination.name %> gallery image" class="w-full h-64 object-cover">
-          </div>
-        <% end %>
-      </div>
-    </div>
-  </section>
-
+    </section>
+  <% end %>
+  
   <%# Popular Packages Section %>
   <section class="section-spacing bg-white">
     <div class="container-custom">
@@ -57,23 +52,14 @@
         <h2 class="heading-section text-gray-900">Popular Packages for <%= destination.name %></h2>
         <p class="text-gray-600">Handpicked packages to make your <%= destination.name %> experience unforgettable.</p>
       </div>
-
       <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        <% destination.packages.each do |pkg| %>
-          <div class="relative rounded-2xl overflow-hidden group card-hover shadow-card">
-            <img src="<%= pkg.hero %>" alt="<%= pkg.title %>" class="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-105">
-            <div class="image-overlay"></div>
-            <div class="absolute bottom-6 left-6 text-white">
-              <h3 class="heading-card mb-1"><%= pkg.title %></h3>
-              <p class="text-white/80 text-sm mb-1"><%= pkg.days %>D / <%= pkg.nights %>N</p>
-              <p class="font-semibold">$<%= pkg.price %></p>
-            </div>
-          </div>
+        <% destination.packages.each do |package| %>
+          <%= partial "package", locals: {package:} %>
         <% end %>
       </div>
     </div>
   </section>
-
+  
   <%# CTA Section %>
   <section class="py-32 bg-primary-600">
     <div class="container-custom text-center">

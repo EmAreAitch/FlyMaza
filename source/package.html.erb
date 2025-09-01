@@ -1,7 +1,5 @@
 <%# /source/packages/package.html.erb %>
 
-<% package = data.travel.destinations.domestic.first.packages.first %>
-
 <%# Hero Section %>
 <section class="relative h-[550px] bg-center bg-cover gradient-hero" style="background-image: url('<%= package[:hero] %>')">
   <div class="absolute inset-0 gradient-overlay"></div>
@@ -10,7 +8,7 @@
     <h1 class="heading-hero text-white drop-shadow-lg"><%= package[:title] %></h1>
     <p class="mt-4 text-lg md:text-xl text-white/80 drop-shadow">
       <%= package[:days] %> Days / <%= package[:nights] %> Nights —
-      <span class="text-golden-400 font-bold">$<%= package[:price] %></span>
+      <span class="text-golden-400 font-bold">₹<%= package[:price] %></span>
     </p>
   </div>
 </section>
@@ -28,9 +26,9 @@
         <div class="bg-white/30 backdrop-blur-xl rounded-2xl shadow-card p-6 border border-white/20">
           <h3 class="heading-card mb-4 text-primary-600">Quick Info</h3>
           <ul class="space-y-3 text-gray-900">
-            <li><strong>Destination:</strong> <%= package[:destination] %></li>
+            <li><strong>Destination:</strong> <%= destination_name %></li>
             <li><strong>Duration:</strong> <%= package[:days] %>D / <%= package[:nights] %>N</li>
-            <li><strong>Price:</strong> $<%= package[:price] %></li>
+            <li><strong>Price:</strong> ₹<%= package[:price] %></li>
           </ul>
         </div>
       </div>
@@ -124,17 +122,18 @@
   </div>
 </section>
 
-<%# Gallery Section %>
-<section class="section-spacing bg-gray-50">
-  <div class="container-custom">
-    <h2 class="heading-section text-center text-gray-900 mb-12">Gallery</h2>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <% package[:gallery].each do |img| %>
-        <img src="<%= img %>" alt="Gallery" class="rounded-xl shadow-card w-full card-hover">
-      <% end %>
+<% if package.gallery.present? %>
+  <section class="section-spacing bg-gray-50">
+    <div class="container-custom">
+      <h2 class="heading-section text-center text-gray-900 mb-12">Gallery</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <% package[:gallery].each do |img| %>
+          <img src="<%= img %>" alt="Gallery" class="rounded-xl shadow-card w-full card-hover">
+        <% end %>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+<% end %>
 
 <%# CTA Section %>
 <section class="py-32 bg-primary-600">
