@@ -18,7 +18,7 @@ page '/*.txt', layout: false
 ["domestic", "international"].each do |type|
   data.travel.destinations[type].each do |destination|
     slug = destination.name.parameterize
-    destination.url = "destinations/#{type}/#{slug}/"
+    destination.url = "/destinations/#{type}/#{slug}/"
     
     proxy destination.url + "index.html", "destination.html", locals: { 
       destination: destination      
@@ -26,7 +26,7 @@ page '/*.txt', layout: false
     
     destination.packages.each do |package|
       package_slug = package.title.parameterize
-      package.url = "/#{type}/#{slug}/packages/#{package_slug}/"
+      package.url = "/destinations/#{type}/#{slug}/packages/#{package_slug}/"
       
       proxy package.url + "index.html", "package.html", locals: { 
         package: package,
