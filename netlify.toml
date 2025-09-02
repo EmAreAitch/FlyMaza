@@ -65,7 +65,7 @@
 [[headers]]
   for = "/**/*.html"
   [headers.values]
-    Cache-Control = "public, max-age=0, must-revalidate"
+    Cache-Control = "public, max-age=60, must-revalidate"
 
 # ───────────────────────────────────────────────────────────
 # 7) Admin config (YAML) – revalidate on each request
