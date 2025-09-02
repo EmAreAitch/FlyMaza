@@ -20,7 +20,7 @@ document.querySelectorAll('.travel-radio').forEach(radio => {
     
     if (type && travelData[type]) {
       travelData[type].forEach((dest, i) => {
-        destSelect.innerHTML += `<option value="${i}">${dest.name}</option>`;
+        destSelect.innerHTML += `<option value="${dest.name}">${dest.name}</option>`;
       });
     }
     
@@ -39,7 +39,7 @@ document.getElementById('destination').onchange = function() {
   if (destIndex !== '' && type && travelData[type]) {
     const packages = travelData[type][destIndex].packages;
     packages.forEach((pkg, i) => {
-      pkgSelect.innerHTML += `<option value="${i}">${pkg.title} - ₹${pkg.price}</option>`;
+      pkgSelect.innerHTML += `<option value="${pkg.name}">${pkg.title} - ₹${pkg.price}</option>`;
     });
   }
   
