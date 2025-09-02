@@ -19,7 +19,7 @@ document.querySelectorAll('.travel-radio').forEach(radio => {
     pkgSelect.innerHTML = '<option value="">Choose a package</option>';
     
     if (type && travelData[type]) {
-      travelData[type].forEach((dest, i) => {
+      travelData[type].forEach(dest => {
         destSelect.innerHTML += `<option value="${dest.name}">${dest.name}</option>`;
       });
     }
@@ -30,17 +30,19 @@ document.querySelectorAll('.travel-radio').forEach(radio => {
 
 // Destination change
 document.getElementById('destination').onchange = function() {
-  const destIndex = this.value;
+  const destName = this.value;
   const type = document.querySelector('.travel-radio:checked')?.value;
   const pkgSelect = document.getElementById('package');
   
   pkgSelect.innerHTML = '<option value="">Choose a package</option>';
   
-  if (destIndex !== '' && type && travelData[type]) {
-    const packages = travelData[type][destIndex].packages;
-    packages.forEach((pkg, i) => {
-      pkgSelect.innerHTML += `<option value="${pkg.name}">${pkg.title} - ₹${pkg.price}</option>`;
-    });
+  if (destName !== '' && type && travelData[type]) {
+    const dest = travelData[type].find(d => d.name === destName);
+    if (dest) {
+      dest.packages.forEach(pkg => {
+        pkgSelect.innerHTML += `<option value="${pkg.title}">${pkg.title} - ₹${pkg.price}</option>`;
+      });
+    }
   }
   
   document.getElementById('detailsContent').innerHTML = '<p class="text-gray-500 text-center">Select a package to see details</p>';
@@ -48,17 +50,22 @@ document.getElementById('destination').onchange = function() {
 
 // Package change
 document.getElementById('package').onchange = function() {
-  const pkgIndex = this.value;
-  const destIndex = document.getElementById('destination').value;
+  const pkgTitle = this.value;
+  const destName = document.getElementById('destination').value;
   const type = document.querySelector('.travel-radio:checked')?.value;
   
-  if (pkgIndex !== '' && destIndex !== '' && type && travelData[type]) {
-    const pkg = travelData[type][destIndex].packages[pkgIndex];
-    document.getElementById('detailsContent').innerHTML = `
-      <h3 class="text-xl font-bold mb-2">${pkg.title}</h3>
-      <p class="text-gray-600 mb-4">${pkg.days} Days / ${pkg.nights} Nights • ₹${pkg.price}</p>
-      <p class="text-gray-600">${pkg.description}</p>
-    `;
+  if (pkgTitle !== '' && destName !== '' && type && travelData[type]) {
+    const dest = travelData[type].find(d => d.name === destName);
+    if (dest) {
+      const pkg = dest.packages.find(p => p.title === pkgTitle);
+      if (pkg) {
+        document.getElementById('detailsContent').innerHTML = `
+          <h3 class="text-xl font-bold mb-2">${pkg.title}</h3>
+          <p class="text-gray-600 mb-4">${pkg.days} Days / ${pkg.nights} Nights • ₹${pkg.price}</p>
+          <p class="text-gray-600">${pkg.description}</p>
+        `;
+      }
+    }
   } else {
     document.getElementById('detailsContent').innerHTML = '<p class="text-gray-500 text-center">Select a package to see details</p>';
   }
@@ -71,4 +78,3 @@ tomorrow.setDate(tomorrow.getDate() + 1);
 const minDate = tomorrow.toISOString().split('T')[0];
 travelDateInput.setAttribute('min', minDate);
 travelDateInput.setAttribute('value', minDate);
-
