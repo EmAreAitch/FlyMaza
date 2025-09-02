@@ -40,6 +40,8 @@
     <!-- Styles -->
     <%= stylesheet_link_tag "tailwind" %>
     <%= stylesheet_link_tag "site" %>
+    <%= javascript_include_tag "site", defer: true %>
+    <%= javascript_include_tag "contact", defer: true %>
     <script src="//instant.page/5.2.0" type="module" integrity="sha384-jnZyxPjiipYXnSU0ygqeac2q7CVYMbh84q0uHVRRxEtvFPiQYbXWUorga2aqZJ0z"></script>
   </head>
 
@@ -94,7 +96,7 @@
             </a>
           <% end %>
     
-          <a href="/admin/" class="mt-auto w-full bg-primary-600 text-white py-3 rounded-xl font-medium hover:bg-primary-700">
+          <a href="/admin/" class="mt-auto w-full bg-primary-600 text-white py-3 rounded-xl font-medium hover:bg-primary-700 text-center">
             Admin
           </a>
         </div>
@@ -181,8 +183,5 @@
         </div>
       </div>
     </footer>
-
-    <!-- JavaScript -->
-    <%= javascript_include_tag "site" %>
   </body>
 </html>
