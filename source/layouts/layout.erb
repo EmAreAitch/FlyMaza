@@ -6,13 +6,11 @@
   # Navigation items
   nav_items = [
     { name: "Home", url: "/" },
-    { name: "Destinations", url: "/destinations" },
-    { name: "Packages", url: "/packages" },
-    { name: "About", url: "/about" },
-    { name: "Contact", url: "/contact" }
-  ]
-
-  
+    { name: "Destinations", url: "/destinations/" },
+    { name: "Packages", url: "/packages/" },
+    { name: "About", url: "/about/" },
+    { name: "Contact", url: "/contact/" }
+  ]  
 
   active = nav_items.find { it[:url] == current_page.url }
   active[:active] = true if active
