@@ -1,0 +1,31 @@
+# _headers file (in your build directory)
+
+# Fingerprinted images
+/images/*.avif
+  Cache-Control: public, max-age=31536000, immutable
+/images/*.png  
+  Cache-Control: public, max-age=31536000, immutable
+/images/*.jpg
+  Cache-Control: public, max-age=31536000, immutable
+/images/*.svg
+  Cache-Control: public, max-age=31536000, immutable
+/images/uploads/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Fingerprinted JS & CSS
+/javascripts/*.js
+  Cache-Control: public, max-age=31536000, immutable
+/stylesheets/*.css
+  Cache-Control: public, max-age=31536000, immutable
+
+# Non-fingerprinted files
+/admin/config.yml
+  Cache-Control: public, max-age=0, must-revalidate
+/*.xml
+  Cache-Control: public, max-age=300, must-revalidate
+/*.json
+  Cache-Control: public, max-age=300, must-revalidate
+
+# HTML pages (catch-all at the end)
+/*
+  Cache-Control: public, max-age=60, must-revalidate
