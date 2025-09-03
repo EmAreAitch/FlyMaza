@@ -31,7 +31,7 @@ document.querySelectorAll('.travel-radio').forEach(radio => {
 // Destination change
 document.getElementById('destination').onchange = function() {
   const destName = this.value;
-  const type = document.querySelector('.travel-radio:checked')?.value;
+  const type = document.querySelector('.travel-radio:checked')?.value.toLowerCase();
   const pkgSelect = document.getElementById('package');
   
   pkgSelect.innerHTML = '<option value="">Choose a package</option>';
@@ -52,7 +52,7 @@ document.getElementById('destination').onchange = function() {
 document.getElementById('package').onchange = function() {
   const pkgTitle = this.value;
   const destName = document.getElementById('destination').value;
-  const type = document.querySelector('.travel-radio:checked')?.value;
+  const type = document.querySelector('.travel-radio:checked')?.value.toLowerCase();
   
   if (pkgTitle !== '' && destName !== '' && type && travelData[type]) {
     const dest = travelData[type].find(d => d.name === destName);
