@@ -10,7 +10,7 @@ fetch('/json/travel.json')
 // Travel type change using radio buttons
 document.querySelectorAll('.travel-radio').forEach(radio => {
   radio.addEventListener('change', function() {
-    const type = this.value;
+    const type = this.value.toLowerCase();
     const destSelect = document.getElementById('destination');
     const pkgSelect = document.getElementById('package');
     
