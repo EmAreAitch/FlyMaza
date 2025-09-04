@@ -3,56 +3,63 @@ let travelData = {};
 // Fetch travel data
 fetch('/json/travel.json')
   .then(res => res.json())
-  .then(data => { 
-    travelData = data; 
-  });
+  .then(data => { travelData = data; });
 
-// Travel type change
+// Elements
+const destSelect = document.getElementById('destinationSelect');
+const destInput = document.getElementById('destination');
+const pkgSelect = document.getElementById('packageSelect');
+const pkgDays = document.getElementById('packageDays');
+const pkgNights = document.getElementById('packageNights');
+const pkgDesc = document.getElementById('packageDescription');
+const customFields = document.getElementById('customPackageFields');
+const detailsContent = document.getElementById("detailsContent")
+
+// Travel Type Change
 document.querySelectorAll('.travel-radio').forEach(radio => {
-  radio.addEventListener('change', function() {
-    const type = this.value.toLowerCase();
-    const destSelect = document.getElementById('destination');
-    const pkgSelect = document.getElementById('package');
-    
-    // Reset dropdowns
-    destSelect.innerHTML = '<option value="">Choose your destination</option>';
-    pkgSelect.innerHTML = '<option value="">Choose a package</option>';
+  radio.addEventListener('change', () => {
+    const type = document.querySelector('.travel-radio:checked')?.value.toLowerCase();
+    destSelect.innerHTML = '<option value="" disabled selected hidden>Choose your destination</option>';
+    pkgSelect.innerHTML = '<option value="" disabled selected hidden>Choose a package</option>';
+    destInput.classList.add('hidden');
+    customFields.classList.add('hidden');
+    destInput.value = '';
+    pkgDays.value = '';
+    pkgNights.value = '';
+    pkgDesc.value = '';
+    [destInput, pkgDays, pkgNights, pkgDesc].forEach(e => e.required = false)
+    detailsContent.innerHTML = '<p class="text-gray-500 text-center">Select a package to see details</p>';
 
-    // Hide custom fields
-    document.getElementById('customDestination').classList.add('hidden');
-    document.getElementById('customPackageFields').classList.add('hidden');
-    
     if (type && travelData[type]) {
       travelData[type].forEach(dest => {
         destSelect.innerHTML += `<option value="${dest.name}">${dest.name}</option>`;
       });
-      // Add custom option
-      destSelect.innerHTML += `<option value="Other">Other (Custom)</option>`;
+      destSelect.innerHTML += `<option value="Custom">Custom Destination</option>`;
     }
-    
-    document.getElementById('detailsContent').innerHTML = '<p class="text-gray-500 text-center">Select a package to see details</p>';
   });
 });
 
-// Destination change
-document.getElementById('destination').onchange = function() {
-  const destName = this.value;
-  const customDestInput = document.getElementById('customDestination');
-  const pkgSelect = document.getElementById('package');
-  const customPkgFields = document.getElementById('customPackageFields');
+// Destination Change
+destSelect.addEventListener('change', () => {
+  const destName = destSelect.value;
   const type = document.querySelector('.travel-radio:checked')?.value.toLowerCase();
-
-  pkgSelect.innerHTML = '<option value="">Choose a package</option>';
-  customDestInput.classList.add('hidden');
-  customPkgFields.classList.add('hidden');
-
-  if (destName === "Other") {
-    customDestInput.classList.remove('hidden');
-    customPkgFields.classList.remove('hidden');
-    pkgSelect.innerHTML = '<option value="Other">Other (Custom)</option>';
-    document.getElementById('detailsContent').innerHTML = `
-      <p class="text-gray-500 text-center">Fill in your custom package details above</p>
-    `;
+  
+  pkgSelect.innerHTML = '<option value="" disabled selected hidden>Choose a package</option>';
+  destInput.classList.add('hidden');
+  customFields.classList.add('hidden');
+  destInput.value = destName;
+  destInput.required = false;
+  
+  if (destName === "Custom") {
+    destInput.classList.remove('hidden');        
+    destInput.value = "";
+    destInput.required = true;
+    pkgSelect.innerHTML += '<option value="Custom Package">Custom Package</option>';    
+    
+    // Show custom package fields immediately
+    customFields.classList.remove('hidden');    
+    
+    detailsContent.innerHTML = '<p class="text-gray-500 text-center">Enter your custom destination & package</p>';
     return;
   }
 
@@ -62,26 +69,29 @@ document.getElementById('destination').onchange = function() {
       dest.packages.forEach(pkg => {
         pkgSelect.innerHTML += `<option value="${pkg.title}">${pkg.title} - ₹${pkg.price}</option>`;
       });
-      pkgSelect.innerHTML += `<option value="Other">Other (Custom)</option>`;
+      pkgSelect.innerHTML += `<option value="Custom Package">Custom Package</option>`;
     }
   }
-};
+  detailsContent.innerHTML = '<p class="text-gray-500 text-center">Select a package to see details</p>';
+});
 
-// Package change
-document.getElementById('package').onchange = function() {
-  const pkgTitle = this.value;
-  const customPkgFields = document.getElementById('customPackageFields');
-  const destName = document.getElementById('destination').value;
+// Package Change
+pkgSelect.addEventListener('change', () => {
+  const pkgTitle = pkgSelect.value;
+  const destName = destSelect.value;
   const type = document.querySelector('.travel-radio:checked')?.value.toLowerCase();
 
-  // Hide custom fields initially
-  customPkgFields.classList.add('hidden');
+  customFields.classList.add('hidden');  
+  pkgDays.value = '';
+  pkgNights.value = '';
+  pkgDesc.value = '';  
 
-  if (pkgTitle === "Other") {
-    customPkgFields.classList.remove('hidden');
-    document.getElementById('detailsContent').innerHTML = `
-      <p class="text-gray-500 text-center">Fill in your custom package details above</p>
-    `;
+  [pkgDays, pkgNights, pkgDesc].forEach(e => e.required = false)
+
+  if (pkgTitle === "Custom Package") {
+    customFields.classList.remove('hidden');
+    [pkgDays, pkgNights, pkgDesc].forEach(e => e.required = true)
+    detailsContent.innerHTML = '<p class="text-gray-500 text-center">Fill in your custom package details above</p>';
     return;
   }
 
@@ -90,17 +100,19 @@ document.getElementById('package').onchange = function() {
     if (dest) {
       const pkg = dest.packages.find(p => p.title === pkgTitle);
       if (pkg) {
-        document.getElementById('detailsContent').innerHTML = `
+        pkgDays.value = pkg.days;
+        pkgNights.value = pkg.nights;
+        pkgDesc.value = pkg.description;
+
+        detailsContent.innerHTML = `
           <h3 class="text-xl font-bold mb-2">${pkg.title}</h3>
           <p class="text-gray-600 mb-4">${pkg.days} Days / ${pkg.nights} Nights • ₹${pkg.price}</p>
           <p class="text-gray-600">${pkg.description}</p>
         `;
       }
     }
-  } else {
-    document.getElementById('detailsContent').innerHTML = '<p class="text-gray-500 text-center">Select a package to see details</p>';
   }
-};
+});
 
 // Travel Date: only allow tomorrow onwards
 const travelDateInput = document.getElementById('travelDate');
@@ -110,25 +122,9 @@ const minDate = tomorrow.toISOString().split('T')[0];
 travelDateInput.setAttribute('min', minDate);
 travelDateInput.setAttribute('value', minDate);
 
-// Handle form submission
-document.querySelector('form[name="enquiry"]').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const myForm = event.target;
-    const formData = new FormData(myForm);
-    
-    // Method 1: Filter out empty values
-    const keysToDelete = [];
-    for (let [key, value] of formData.entries()) {
-        if (!value || value.toString().trim() === '') {
-            formData.delete(key);
-        }
-    }    
-    
-    fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData).toString()
-    })
-    .then(() => alert("Thank you for your submission"))
-    .catch(error => alert(error));
-});
+
+
+
+
+
+
