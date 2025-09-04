@@ -1,7 +1,7 @@
 <a href="<%= package.url %>">
   <div class="group relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 package-card fade-in transform hover:-translate-y-2">
     <div class="relative h-100 overflow-hidden">
-      <img src="<%= package.hero %>" alt="<%= package[:title] %>" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+      <img src="<%= responsive_image(package.hero) %>" alt="<%= package[:title] %>" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
       
       <!-- Gradient overlay -->
       <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>

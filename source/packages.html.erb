@@ -29,7 +29,7 @@
   <div id="<%= type %>-content" class="tab-content <%= 'hidden' unless type == 'domestic' %>">
     <% destinations[type].each do |dest| %>
       <%# Hero Section %>
-      <section class="relative h-[400px] bg-cover bg-center overflow-hidden" style="background-image: url('<%= dest[:hero] %>')">
+      <section class="relative h-[400px] bg-cover bg-center overflow-hidden" style="background-image: url('<%= responsive_image(dest[:hero]) %>')">
         <div class="absolute inset-0 gradient-overlay"></div>
         <div class="relative z-10 container-custom flex flex-col justify-center h-full text-white">
           <h2 class="heading-hero mb-4">Packages for <%= dest[:name] %></h2>

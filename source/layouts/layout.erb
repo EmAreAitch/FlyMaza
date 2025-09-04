@@ -15,8 +15,8 @@
   active = nav_items.find { it[:url] == current_page.url }
   active[:active] = true if active
   # Contact info
-  phone = "+62 XXX XXX XXXX"
-  email = "info@flymaza.com"
+  phone = "+91 99993 26874"
+  email = "support@flymaza.in"
 %>
 
 <!doctype html>
@@ -30,7 +30,7 @@
     <meta name="description" content="<%= current_page.data.description || 'Discover Indonesia\'s extraordinary natural beauty and rich cultural heritage with FlyMaza. Expert travel experiences, curated packages, and unforgettable adventures await.' %>">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.jpeg">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -69,13 +69,17 @@
               </a>
             <% end %>
           </div>
-    
+              
           <!-- Right side items -->
           <div class="hidden lg:flex items-center space-x-4">
+            <a href="/#contact" class="px-6 py-2 bg-secondary-500 text-white rounded-full text-sm font-medium hover:bg-golden-400">
+              Book Now
+            </a>
             <a href="/admin/" class="px-6 py-2 bg-white/30 text-black rounded-full text-sm font-medium hover:bg-white/20 border border-white/20">
               Admin
             </a>
           </div>
+          
     
           <!-- Mobile Menu Button -->
           <button id="mobile-menu-btn" class="lg:hidden p-2 text-black">
@@ -96,9 +100,13 @@
             </a>
           <% end %>
     
-          <a href="/admin/" class="mt-auto w-full bg-primary-600 text-white py-3 rounded-xl font-medium hover:bg-primary-700 text-center">
+          <a href="/#contact" class="mt-auto w-full bg-secondary-500 text-white py-3 rounded-xl font-medium hover:bg-golden-400 text-center">
+            Book Now
+          </a>
+          <a href="/admin/" class="mt-4 w-full bg-primary-600 text-white py-3 rounded-xl font-medium hover:bg-primary-700 text-center border border-white/20">
             Admin
           </a>
+          
         </div>
       </nav>
     </header>
@@ -122,7 +130,7 @@
               <img src=<%= responsive_image("logo-flymaza.png") %> class="h-24 w-auto">
             </div>
             <p class="text-gray-400 mb-6 max-w-md">
-              Discover Indonesia's extraordinary natural beauty and rich cultural heritage. 
+              Discover India's extraordinary natural beauty and rich cultural heritage. 
               We create unforgettable travel experiences tailored to your dreams.
             </p>
             <div class="flex space-x-4">
@@ -172,7 +180,7 @@
                   <%= email %>
                 </a>
               </li>
-              <li>Indonesia</li>
+              <li>India</li>
             </ul>
           </div>
         </div>

@@ -1,23 +1,23 @@
 <%
   # Hero Section Variables
-  hero_title = "Extraordinary natural and cultural charm"
-  hero_subtitle = "Exploring Asia made easy with professionally crafted travel experiences designed to fulfill all your wanderlust"
-  hero_cta_primary = "Explore"
-  hero_cta_secondary = "Support"
-  hero_search_placeholder = "Search for destination"
-  hero_image = "https://placehold.co/1920x800/4A5A96/FFFFFF?text=Indonesia+Landscape"
+  hero_title = "Your Journey, Our Expertise"
+  hero_subtitle = "From weekend escapes to international adventures — Fly Maza designs seamless travel experiences that fit your dreams."
+  hero_cta_primary = "Explore Packages"
+  hero_cta_secondary = "Get Support"
+  hero_search_placeholder = "Search destinations, tours, or packages..."
+  hero_image = "https://placehold.co/1920x800/4A5A96/FFFFFF?text=Fly+Maza+Travel"
   
   # Stats Variables
   stats = [
-    { number: "10M", label: "+" },
-    { number: "09", label: "+" },
-    { number: "12K", label: "" },
-    { number: "5.0", label: "" }
+    { number: "500+", label: "Happy Travelers" },
+    { number: "15+", label: "Years of Experience" },
+    { number: "50+", label: "Destinations Covered" },
+    { number: "4.7", label: "Customer Rating" }
   ]
   
-  # Indonesian Tourism Section
-  tourism_title = "Indonesian tourism"
-  tourism_subtitle = "Government programs promoting ways from abroad and domestic tourism in the form of tourism."
+  # Tourism Section
+  tourism_title = "Discover Incredible Destinations"
+  tourism_subtitle = "From the breathtaking beauty of India to unforgettable international tours, Fly Maza brings you journeys crafted with care."
   destinations = data.travel.destinations.values.flatten
   tourism_cards = [
     {
@@ -46,48 +46,62 @@
     }
   ]
   
-  # Process Section - "One click for you"
-  process_title = "One click for you"
+  # Process Section
+  process_title = "How Fly Maza Works"
   process_image = "https://placehold.co/500x600/4A5A96/FFFFFF?text=Travel+Experience"
-  
+
   process_steps = [
     {
       icon: "search",
-      title: "Find your destination",
-      description: "Choose from our curated selection of Indonesia's most beautiful destinations"
+      title: "Explore Destinations",
+      description: "Browse our domestic and international destinations to find your perfect travel spot."
     },
     {
-      icon: "calendar",
-      title: "Book a ticket",
-      description: "Secure your spot with our easy booking system and flexible payment options"
+      icon: "package",
+      title: "Check Packages",
+      description: "View available travel packages for each destination and pick what suits your needs."
     },
     {
-      icon: "credit-card",
-      title: "Make payment",
-      description: "Pay securely with multiple payment methods for your peace of mind"
+      icon: "form",
+      title: "Submit Enquiry",
+      description: "Fill out our detailed enquiry form with your selected destination, package, or custom requests."
     },
     {
-      icon: "map",
-      title: "Explore destination",
-      description: "Embark on your adventure with our expert guides and local experiences"
+      icon: "support",
+      title: "We Make It Possible",
+      description: "Our team receives your request and works to craft a tailored travel experience just for you."
     }
   ]
+
   
   # Tourist Destinations Section
-  destinations_title = "Our tourist destination"
-  destinations_subtitle = "Our list of most visited offers you unexpected beauty of magnificent landscape"
+  destinations_title = "Our Most Popular Packages"
+  destinations_subtitle = "Handpicked trips loved by our travelers, combining comfort, adventure, and value."
   
   packages = data.travel.destinations.values.flatten.map(&:packages).flatten.first(3)
   
-  # Testimonial
-  testimonial = {
-    name: "Daniel Sullivan",
-    role: "Travel Enthusiast",
-    content: "This travel website is very informative and easy to use to help find the cheapest services. Booked online and they package was exact by offering excellent recommendations about where to travel from."
-  }
+  testimonials = [
+    {
+      name: "Daniel Sullivan",
+      role: "Travel Enthusiast",
+      content: "This travel website is very informative and easy to use. Booked online and the package was exactly as described with excellent recommendations."
+    },
+    {
+      name: "Priya Sharma",
+      role: "Adventure Seeker",
+      content: "Fly Maza made my trip to Manali seamless and memorable. From selecting packages to personalized suggestions, everything was perfect."
+    },
+    {
+      name: "Arjun Mehta",
+      role: "Family Traveler",
+      content: "We booked a family vacation to Goa through Fly Maza. The attention to detail and smooth communication made it stress-free and enjoyable."
+    }
+  ]
+  current_testimonial_index = 0
+
   
   # Travel Memories Section
-  memories_title = "Our travel memories"
+  memories_title = "Our Travel Stories"
   
   memories = [
     {
@@ -103,7 +117,6 @@
       image: "https://placehold.co/400x250/FF6B35/FFFFFF?text=Jeep+Adventure",
       excerpt: "Experience thrilling jeep adventures in the beautiful landscapes of Garut",
       date: "Nov 18, 2022"
-      
     }
   ]
 %>
@@ -125,7 +138,7 @@
           <%= hero_title %>
         </h1>
         <p class="text-base sm:text-lg md:text-xl mb-12 text-white/90 max-w-2xl mx-auto font-medium">
-          Exploring Indonesia is an unforgettable adventure.
+          <%= hero_subtitle %>
         </p>
         
         <!-- Simple Search Bar -->
@@ -150,22 +163,12 @@
 <section class="-mt-30 md:-mt-20 relative z-30 pb-16">
   <div class="container-custom px-6 sm:px-8 md:px-12">
     <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4">
+    <% stats.each do |stat| %>
       <div class="bg-white rounded-2xl p-6 text-center shadow-xl">
-        <div class="text-2xl md:text-4xl font-bold mb-2 text-gray-900">10M+</div>
-        <div class="text-sm text-gray-600 font-medium">Total Customers</div>
+        <div class="text-2xl md:text-4xl font-bold mb-2 text-gray-900"><%= stat[:number] %></div>
+        <div class="text-sm text-gray-600 font-medium"><%= stat[:label] %></div>
       </div>
-      <div class="bg-white rounded-2xl p-6 text-center shadow-xl">
-        <div class="text-2xl md:text-4xl font-bold mb-2 text-gray-900">09+</div>
-        <div class="text-sm text-gray-600 font-medium">Years Of Experience</div>
-      </div>
-      <div class="bg-white rounded-2xl p-6 text-center shadow-xl">
-        <div class="text-2xl md:text-4xl font-bold mb-2 text-gray-900">12K</div>
-        <div class="text-sm text-gray-600 font-medium">Total Destinations</div>
-      </div>
-      <div class="bg-white rounded-2xl p-6 text-center shadow-xl">
-        <div class="text-2xl md:text-4xl font-bold mb-2 text-gray-900">5.0</div>
-        <div class="text-sm text-gray-600 font-medium">Average Rating</div>
-      </div>
+    <% end %>
     </div>
   </div>
 </section>
@@ -197,10 +200,11 @@
   </div>
 </section>
 
-<!-- Process Section - One Click For You -->
+<!-- Process Section - Fly Maza Workflow -->
 <section class="section-spacing bg-gray-50">
   <div class="container-custom">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      
       <!-- Process Image -->
       <div class="slide-in-left">
         <div class="relative">
@@ -226,45 +230,58 @@
       <div class="slide-in-right">
         <!-- Section header -->
         <div class="mb-12">
-          <p class="text-gray-500 text-lg mb-4">How it works</p>
+          <p class="text-gray-500 text-lg mb-4">Our Process</p>
           <h2 class="heading-section text-gray-900">
             <%= process_title %>
           </h2>
         </div>
         
         <div class="space-y-10">
-          <% process_steps.each_with_index do |step, index| %>
+          <% process_steps.each do |step| %>
             <div class="flex items-start space-x-6 fade-in group cursor-pointer transition-all duration-300 hover:bg-white hover:shadow-lg hover:-translate-y-1 rounded-2xl p-6 -m-6">
+              
+              <!-- Icon -->
               <div class="flex-shrink-0">
                 <div class="w-16 h-16 bg-gray-100 group-hover:bg-primary-100 rounded-2xl flex items-center justify-center transition-all duration-300">
-                  <% case step[:icon]
-                     when "search" %>
+                  <% case step[:icon] %>
+                  <% when "search" %>
+                    <!-- Magnifying glass -->
                     <svg class="w-8 h-8 text-gray-700 group-hover:text-primary-600 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                     </svg>
-                  <% when "calendar", "ticket" %>
+                  <% when "package" %>
+                    <!-- Suitcase -->
                     <svg class="w-8 h-8 text-gray-700 group-hover:text-primary-600 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10m0 0V6a2 2 0 00-2-2H9a2 2 0 00-2 2v2m10 0v10a2 2 0 01-2 2H9a2 2 0 01-2-2V8m10 0H7m5 5.5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"></path>
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18v14H3V7zm5-4h4v4H8V3z"></path>
                     </svg>
-                  <% when "credit-card", "payment" %>
+                  <% when "form" %>
+                    <!-- Clipboard -->
                     <svg class="w-8 h-8 text-gray-700 group-hover:text-primary-600 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6M9 8h6M4 6h16v14H4V6z"></path>
                     </svg>
-                  <% when "map", "explore" %>
+                  <% when "support" %>
+                    <!-- Compass/Map -->
                     <svg class="w-8 h-8 text-gray-700 group-hover:text-primary-600 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2l3 7 7 3-7 3-3 7-3-7-7-3 7-3 3-7z"></path>
                     </svg>
                   <% end %>
                 </div>
               </div>
+              
+              <!-- Step Text -->
               <div class="pt-2">
-                <h3 class="text-2xl font-bold text-gray-900 group-hover:text-primary-700 mb-3 transition-colors duration-300"><%= step[:title] %></h3>
-                <p class="text-gray-500 group-hover:text-gray-700 text-lg leading-relaxed transition-colors duration-300"><%= step[:description] %></p>
+                <h3 class="text-2xl font-bold text-gray-900 group-hover:text-primary-700 mb-3 transition-colors duration-300">
+                  <%= step[:title] %>
+                </h3>
+                <p class="text-gray-500 group-hover:text-gray-700 text-lg leading-relaxed transition-colors duration-300">
+                  <%= step[:description] %>
+                </p>
               </div>
             </div>
           <% end %>
         </div>
       </div>
+      
     </div>
   </div>
 </section>
@@ -311,20 +328,35 @@
 
         <!-- Left Side: Avatar, Name, Role -->
         <div class="fade-in lg:col-span-4 flex flex-col lg:items-start items-start">
-          <!-- Author info -->
           <div class="flex items-center space-x-4 lg:mb-8">
             <div class="w-16 h-16 lg:w-20 lg:h-20 rounded-full overflow-hidden flex-shrink-0">
-              <img src="https://placehold.co/80x80/4A5A96/FFFFFF?text=<%= (testimonial[:name] || 'Donald Sullivan')[0] %>" 
-                   alt="<%= testimonial[:name] || 'Donald Sullivan' %>" 
+              <img id="testimonialAvatar" src="https://placehold.co/80x80/4A5A96/FFFFFF?text=<%= testimonials[current_testimonial_index][:name][0] %>" 
+                   alt="<%= testimonials[current_testimonial_index][:name] %>" 
                    class="w-full h-full object-cover">
             </div>
             <div>
-              <div class="font-bold text-xl lg:text-2xl mb-1 text-gray-900">
-                <%= testimonial[:name] || "Donald Sullivan" %>
+              <div id="testimonialName" class="font-bold text-xl lg:text-2xl mb-1 text-gray-900">
+                <%= testimonials[current_testimonial_index][:name] %>
               </div>
-              <div class="text-sm lg:text-lg text-gray-500">
-                <%= testimonial[:role] || "Founder Fiko" %>
+              <div id="testimonialRole" class="text-sm lg:text-lg text-gray-500">
+                <%= testimonials[current_testimonial_index][:role] %>
               </div>
+            </div>
+          </div>
+
+          <!-- Desktop navigation arrows -->
+          <div class="hidden lg:flex mt-4 lg:mt-0">
+            <div class="flex items-center space-x-4">
+              <button id="testimonialPrev" class="w-12 h-12 rounded-full border border-gray-200 hover:border-gray-300 flex items-center justify-center transition-all duration-300 hover:bg-gray-50 group">
+                <svg class="w-5 h-5 text-gray-400 group-hover:text-gray-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+              </button>
+              <button id="testimonialNext" class="w-12 h-12 rounded-full bg-gray-900 hover:bg-gray-800 flex items-center justify-center transition-all duration-300 group">
+                <svg class="w-5 h-5 text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+              </button>
             </div>
           </div>
         </div>
@@ -332,36 +364,20 @@
         <!-- Right Side: Testimonial Content -->
         <div class="fade-in lg:col-span-8 mt-6 lg:mt-0 flex flex-col">
           <div class="pt-2 lg:pt-4">
-            <p class="text-gray-700 text-base md:text-lg lg:text-xl leading-relaxed font-normal">
-              <%= testimonial[:content] || "This travel website is very informative and easy to use. I like how they present various destination options and travel packages with clear details. Offering pictures and destination descriptions helps me decide where I want to visit. Additionally, the ability to compare prices and reviews from other users is very helpful in decision making." %>
+            <p id="testimonialContent" class="text-gray-700 text-base md:text-lg lg:text-xl leading-relaxed font-normal">
+              <%= testimonials[current_testimonial_index][:content] %>
             </p>
           </div>
 
-          <!-- Navigation arrows (mobile only: below content) -->
+          <!-- Mobile navigation arrows -->
           <div class="flex items-center justify-start space-x-4 mt-6 lg:hidden">
-            <button class="w-10 h-10 rounded-full border border-gray-200 hover:border-gray-300 flex items-center justify-center transition-all duration-300 hover:bg-gray-50 group">
+            <button id="testimonialPrevMobile" class="w-10 h-10 rounded-full border border-gray-200 hover:border-gray-300 flex items-center justify-center transition-all duration-300 hover:bg-gray-50 group">
               <svg class="w-4 h-4 text-gray-400 group-hover:text-gray-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
               </svg>
             </button>
-            <button class="w-10 h-10 rounded-full bg-gray-900 hover:bg-gray-800 flex items-center justify-center transition-all duration-300 group">
+            <button id="testimonialNextMobile" class="w-10 h-10 rounded-full bg-gray-900 hover:bg-gray-800 flex items-center justify-center transition-all duration-300 group">
               <svg class="w-4 h-4 text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-              </svg>
-            </button>
-          </div>
-        </div>
-
-        <!-- Navigation arrows (desktop only: next to avatar) -->
-        <div class="hidden lg:flex lg:col-span-4 mt-4 lg:mt-0">
-          <div class="flex items-center space-x-4">
-            <button class="w-12 h-12 rounded-full border border-gray-200 hover:border-gray-300 flex items-center justify-center transition-all duration-300 hover:bg-gray-50 group">
-              <svg class="w-5 h-5 text-gray-400 group-hover:text-gray-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-              </svg>
-            </button>
-            <button class="w-12 h-12 rounded-full bg-gray-900 hover:bg-gray-800 flex items-center justify-center transition-all duration-300 group">
-              <svg class="w-5 h-5 text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
               </svg>
             </button>
@@ -372,6 +388,7 @@
     </div>
   </div>
 </section>
+
 
 
 <!-- Travel Memories Section -->
@@ -424,7 +441,7 @@
   </div>
 </section>
 
-<section class="section-spacing bg-white">
+<section class="section-spacing bg-white" id="contact">
   <div class="container-custom">
     <div class="text-center mb-16 fade-in">
       <p class="text-gray-500 text-lg mb-4">Get in touch</p>
@@ -542,3 +559,40 @@
   </div>
 </section>
 
+
+<script>
+  const testimonials = <%= testimonials.to_json %>;
+  let currentIndex = 0;
+
+  const avatarEl = document.getElementById("testimonialAvatar");
+  const nameEl = document.getElementById("testimonialName");
+  const roleEl = document.getElementById("testimonialRole");
+  const contentEl = document.getElementById("testimonialContent");
+
+  function updateTestimonial(index) {
+    const t = testimonials[index];
+    avatarEl.src = `https://placehold.co/80x80/4A5A96/FFFFFF?text=${t.name[0]}`;
+    avatarEl.alt = t.name;
+    nameEl.textContent = t.name;
+    roleEl.textContent = t.role;
+    contentEl.textContent = t.content;
+  }
+
+  function prevTestimonial() {
+    currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+    updateTestimonial(currentIndex);
+  }
+
+  function nextTestimonial() {
+    currentIndex = (currentIndex + 1) % testimonials.length;
+    updateTestimonial(currentIndex);
+  }
+
+  // Desktop arrows
+  document.getElementById("testimonialPrev").addEventListener("click", prevTestimonial);
+  document.getElementById("testimonialNext").addEventListener("click", nextTestimonial);
+
+  // Mobile arrows
+  document.getElementById("testimonialPrevMobile").addEventListener("click", prevTestimonial);
+  document.getElementById("testimonialNextMobile").addEventListener("click", nextTestimonial);
+</script>

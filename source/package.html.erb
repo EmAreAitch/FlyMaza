@@ -1,7 +1,7 @@
 <%# /source/packages/package.html.erb %>
 
 <%# Hero Section %>
-<section class="relative h-[550px] bg-center bg-cover gradient-hero" style="background-image: url('<%= package[:hero] %>')">
+<section class="relative h-[550px] bg-center bg-cover gradient-hero" style="background-image: url('<%= responsive_image(package[:hero]) %>')">
   <div class="absolute inset-0 gradient-overlay"></div>
   <div class="absolute bottom-0 w-full h-24 bg-gradient-to-t from-black/60 to-transparent"></div>
   <div class="container-custom relative z-10 h-full flex flex-col justify-center">
@@ -128,7 +128,7 @@
       <h2 class="heading-section text-center text-gray-900 mb-12">Gallery</h2>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <% package[:gallery].each do |img| %>
-          <img src="<%= img %>" alt="Gallery" class="rounded-xl shadow-card w-full card-hover">
+          <img src="<%= responsive_image(img) %>" alt="Gallery" class="rounded-xl shadow-card w-full card-hover">
         <% end %>
       </div>
     </div>
@@ -141,7 +141,7 @@
     <div class="inline-block bg-white/20 backdrop-blur-lg rounded-2xl p-12 shadow-card border border-white/30">
       <h2 class="heading-section text-white mb-4">Ready for Your Next Adventure?</h2>
       <p class="text-white/80 mb-8">Book "<%= package[:title] %>" today and enjoy a once-in-a-lifetime trip to <%= package[:destination] %>.</p>
-      <a href="/contact" class="btn-secondary">Book Now</a>
+      <a href="/#contact" class="btn-secondary">Book Now</a>
     </div>
   </div>
 </section>

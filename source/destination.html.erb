@@ -1,7 +1,7 @@
 <%# /source/destinations/paris.html.erb %>
 <main>
   <%# Hero Section %>
-  <section class="relative h-[500px] bg-cover bg-center" style="background-image: url('<%= destination.hero %>')">
+  <section class="relative h-[500px] bg-cover bg-center" style="background-image: url('<%= responsive_image(destination.hero) %>')">
     <div class="absolute inset-0 gradient-overlay"></div>
     <div class="container-custom relative z-10 h-full flex flex-col justify-center">
       <h1 class="heading-hero text-white mb-4"><%= destination.name %></h1>
@@ -37,7 +37,7 @@
         <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           <% destination.gallery.each do |image| %>
             <div class="rounded-2xl overflow-hidden shadow-card">
-              <img src="<%= image %>" alt="<%= destination.name %> gallery image" class="w-full h-64 object-cover">
+              <img src="<%= responsive_image(image) %>" alt="<%= destination.name %> gallery image" class="w-full h-64 object-cover">
             </div>
           <% end %>
         </div>
@@ -66,7 +66,7 @@
       <div class="inline-block bg-white/10 backdrop-blur-lg rounded-2xl p-12 shadow-card">
         <h2 class="heading-section text-white mb-4">Book Your <%= destination.name %> Adventure</h2>
         <p class="text-white/80 mb-8">Turn your <%= destination.name %> dreams into reality with our curated packages.</p>
-        <a href="/packages" class="btn-secondary">Explore Packages</a>
+        <a href="/#contact" class="btn-secondary">Book now</a>
       </div>
     </div>
   </section>
