@@ -110,13 +110,25 @@ const minDate = tomorrow.toISOString().split('T')[0];
 travelDateInput.setAttribute('min', minDate);
 travelDateInput.setAttribute('value', minDate);
 
-
-document.querySelector('form[name="enquiry"]').addEventListener('formdata', function(e) {
-    const entries = [...e.formData.entries()];
+// Handle form submission
+document.querySelector('form[name="enquiry"]').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const myForm = event.target;
+    const formData = new FormData(myForm);
     
-    entries.forEach(([key, value]) => {
+    // Method 1: Filter out empty values
+    const keysToDelete = [];
+    for (let [key, value] of formData.entries()) {
         if (!value || value.toString().trim() === '') {
-            e.formData.delete(key);
+            formData.delete(key);
         }
-    });
+    }    
+    
+    fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString()
+    })
+    .then(() => alert("Thank you for your submission"))
+    .catch(error => alert(error));
 });
