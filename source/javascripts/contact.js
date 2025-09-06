@@ -54,12 +54,7 @@ destSelect.addEventListener('change', () => {
     destInput.classList.remove('hidden');        
     destInput.value = "";
     destInput.required = true;
-    pkgSelect.innerHTML += '<option value="Custom Package">Custom Package</option>';    
-    
-    // Show custom package fields immediately
-    customFields.classList.remove('hidden');    
-    
-    detailsContent.innerHTML = '<p class="text-gray-500 text-center">Enter your custom destination & package</p>';
+    pkgSelect.innerHTML += '<option value="Custom Package">Custom Package</option>';        
     return;
   }
 

@@ -18,7 +18,7 @@
   # Tourism Section
   tourism_title = "Discover Incredible Destinations"
   tourism_subtitle = "From the breathtaking beauty of India to unforgettable international tours, Fly Maza brings you journeys crafted with care."
-  destinations = data.travel.destinations.values.flatten
+  destinations = data.travel.destinations.values.flatten.filter(&:featured)
   tourism_cards = [
     {
       title: "Borobudur Keajaiban",
@@ -78,7 +78,7 @@
   destinations_title = "Our Most Popular Packages"
   destinations_subtitle = "Handpicked trips loved by our travelers, combining comfort, adventure, and value."
   
-  packages = data.travel.destinations.values.flatten.map(&:packages).flatten.first(3)
+  packages = data.travel.destinations.values.flatten.map(&:packages).flatten.filter(&:featured)
   
   testimonials = [
     {
@@ -124,7 +124,7 @@
 <!-- Hero Section Wrapper -->
 <section>
   <!-- Rounded Hero Section -->
-  <div class="relative min-h-screen flex items-center justify-center overflow-hidden">
+  <div class="relative min-h-[90dvh] flex items-center justify-center overflow-hidden">
     <!-- Background Image -->
     <div class="absolute inset-0 z-0">
       <img src=<%= responsive_image("hero.jpg") %> class="w-full h-full object-cover">      
@@ -140,20 +140,6 @@
         <p class="text-base sm:text-lg md:text-xl mb-12 text-white/90 max-w-2xl mx-auto font-medium">
           <%= hero_subtitle %>
         </p>
-        
-        <!-- Simple Search Bar -->
-        <div class="max-w-2xl mx-auto mb-16">
-          <div class="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-6 shadow-2xl">
-            <div class="flex flex-col sm:flex-row gap-4">
-              <input type="text" 
-                     placeholder="Search destinations, packages, experiences..."
-                     class="flex-1 px-4 py-3 sm:px-6 sm:py-4 text-white placeholder-white/70 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl focus:ring-2 focus:ring-white/30 focus:outline-none">
-              <button class="bg-white hover:bg-gray-100 text-gray-900 font-semibold py-3 sm:py-4 px-6 sm:px-8 rounded-xl transition-all duration-200 transform hover:scale-105 shadow-lg whitespace-nowrap">
-                Search
-              </button>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </div>

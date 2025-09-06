@@ -1,7 +1,7 @@
 <% if development? %>
 local_backend: true
-
 <% end %>
+
 backend:
   name: git-gateway
   branch: main
@@ -16,101 +16,120 @@ editor:
   preview: false
 
 collections:
-  - name: "travel"
-    label: "Travel Destinations"    
-    create: false
-    delete: false
+  # All Destinations Management
+  - name: "destinations"
+    label: "Travel Destinations"
     files:
-      - name: "travel"
-        label: "Travel Data"
+      - name: "destinations"
+        label: "All Destinations"
         file: "data/travel.yml"
         fields:
-          - label: "Destinations"
+          - label: "Travel Destinations"
             name: "destinations"
             widget: "object"
-            collapsed: false
             fields:
-              - label: "Domestic"
+              - label: "Domestic Destinations"
                 name: "domestic"
                 widget: "list"
-                collapsed: true
-                required: true
+                summary: "🏠 {{fields.name}}"
                 fields:
                   - {label: "Name", name: "name", widget: "string"}
                   - {label: "Hero Image", name: "hero", widget: "image"}
+                  - {label: "Featured", name: "featured", widget: "boolean", default: false}
                   - {label: "Description", name: "description", widget: "text"}
-                  - {label: "Highlights", name: "highlights", widget: "list", collapsed: true, field: {label: "Highlight", name: "", widget: "string"}}
+                  - {label: "Highlights", name: "highlights", widget: "list", field: {label: "Highlight", name: "", widget: "string"}}                  
                   - label: "Gallery"
                     name: "gallery"
                     widget: "list"
-                    collapsed: true
                     field: {label: "Image", name: "", widget: "image"}
-                  - label: "Packages"
-                    name: "packages"
-                    widget: "list"
-                    collapsed: true
-                    fields:
-                      - {label: "Title", name: "title", widget: "string"}
-                      - {label: "Hero Image", name: "hero", widget: "image"}
-                      - {label: "Days", name: "days", widget: "number"}
-                      - {label: "Nights", name: "nights", widget: "number"}
-                      - {label: "Price", name: "price", widget: "string"}
-                      - {label: "Description", name: "description", widget: "text"}
-                      - {label: "Highlights", name: "highlights", widget: "list", collapsed: true, field: {label: "Highlight", name: "", widget: "string"}}
-                      - {label: "Inclusions", name: "inclusions", widget: "list", collapsed: true, field: {label: "Inclusion", name: "", widget: "string"}}
-                      - {label: "Exclusions", name: "exclusions", widget: "list", collapsed: true, field: {label: "Exclusion", name: "", widget: "string"}}
-                      - label: "Itinerary"
-                        name: "itinerary"
-                        widget: "list"
-                        collapsed: true
-                        fields:
-                          - {label: "Title", name: "title", widget: "string"}
-                          - {label: "Details", name: "details", widget: "text"}
-                      - label: "Gallery"
-                        name: "gallery"
-                        widget: "list"
-                        collapsed: true
-                        field: {label: "Image", name: "", widget: "image"}
-
-              - label: "International"
+              
+              - label: "International Destinations"
                 name: "international"
                 widget: "list"
-                collapsed: true
-                required: true
+                summary: "🌍 {{fields.name}}"
                 fields:
                   - {label: "Name", name: "name", widget: "string"}
                   - {label: "Hero Image", name: "hero", widget: "image"}
+                  - {label: "Featured", name: "featured", widget: "boolean", default: false}
                   - {label: "Description", name: "description", widget: "text"}
-                  - {label: "Highlights", name: "highlights", widget: "list", collapsed: true, field: {label: "Highlight", name: "", widget: "string"}}
+                  - {label: "Highlights", name: "highlights", widget: "list", field: {label: "Highlight", name: "", widget: "string"}}                  
                   - label: "Gallery"
                     name: "gallery"
                     widget: "list"
-                    collapsed: true
                     field: {label: "Image", name: "", widget: "image"}
+
+  # All Packages Management
+  - name: "packages"
+    label: "Travel Packages"
+    files:
+      - name: "packages"
+        label: "All Travel Packages"
+        file: "data/travel.yml"
+        fields:
+          - label: "Travel Packages"
+            name: "destinations"
+            widget: "object"
+            fields:
+              - label: "Domestic Packages"
+                name: "domestic"
+                widget: "list"
+                summary: "🏠 {{fields.name}}"
+                fields:                  
                   - label: "Packages"
                     name: "packages"
                     widget: "list"
-                    collapsed: true
+                    summary: "📦 {{fields.title}} - {{fields.days}}D/{{fields.nights}}N - Rs.{{fields.price}}"
                     fields:
                       - {label: "Title", name: "title", widget: "string"}
                       - {label: "Hero Image", name: "hero", widget: "image"}
                       - {label: "Days", name: "days", widget: "number"}
                       - {label: "Nights", name: "nights", widget: "number"}
                       - {label: "Price", name: "price", widget: "string"}
+                      - {label: "Featured", name: "featured", widget: "boolean", default: false}
                       - {label: "Description", name: "description", widget: "text"}
-                      - {label: "Highlights", name: "highlights", widget: "list", collapsed: true, field: {label: "Highlight", name: "", widget: "string"}}
-                      - {label: "Inclusions", name: "inclusions", widget: "list", collapsed: true, field: {label: "Inclusion", name: "", widget: "string"}}
-                      - {label: "Exclusions", name: "exclusions", widget: "list", collapsed: true, field: {label: "Exclusion", name: "", widget: "string"}}
+                      - {label: "Highlights", name: "highlights", widget: "list", field: {label: "Highlight", name: "", widget: "string"}}
+                      - {label: "Inclusions", name: "inclusions", widget: "list", field: {label: "Inclusion", name: "", widget: "string"}}
+                      - {label: "Exclusions", name: "exclusions", widget: "list", field: {label: "Exclusion", name: "", widget: "string"}}                      
                       - label: "Itinerary"
                         name: "itinerary"
                         widget: "list"
-                        collapsed: true
+                        summary: "{{fields.title}}"
                         fields:
-                          - {label: "Title", name: "title", widget: "string"}
-                          - {label: "Details", name: "details", widget: "text"}
+                          - {label: "Day Title", name: "title", widget: "string"}
+                          - {label: "Day Details", name: "details", widget: "text"}
                       - label: "Gallery"
                         name: "gallery"
                         widget: "list"
-                        collapsed: true
                         field: {label: "Image", name: "", widget: "image"}
-
+              
+              - label: "International Packages"
+                name: "international"
+                widget: "list"
+                summary: "🌍 {{fields.name}}"
+                fields:                  
+                  - label: "Packages"
+                    name: "packages"
+                    widget: "list"
+                    summary: "📦 {{fields.title}} - {{fields.days}}D/{{fields.nights}}N - {{fields.price}}"
+                    fields:
+                      - {label: "Title", name: "title", widget: "string"}
+                      - {label: "Hero Image", name: "hero", widget: "image"}
+                      - {label: "Days", name: "days", widget: "number"}
+                      - {label: "Nights", name: "nights", widget: "number"}
+                      - {label: "Price", name: "price", widget: "string"}
+                      - {label: "Featured", name: "featured", widget: "boolean", default: false}
+                      - {label: "Description", name: "description", widget: "text"}
+                      - {label: "Highlights", name: "highlights", widget: "list", field: {label: "Highlight", name: "", widget: "string"}}
+                      - {label: "Inclusions", name: "inclusions", widget: "list", field: {label: "Inclusion", name: "", widget: "string"}}
+                      - {label: "Exclusions", name: "exclusions", widget: "list", field: {label: "Exclusion", name: "", widget: "string"}}
+                      - label: "Itinerary"
+                        name: "itinerary"
+                        widget: "list"
+                        summary: "{{fields.title}}"
+                        fields:
+                          - {label: "Day Title", name: "title", widget: "string"}
+                          - {label: "Day Details", name: "details", widget: "text"}
+                      - label: "Gallery"
+                        name: "gallery"
+                        widget: "list"
+                        field: {label: "Image", name: "", widget: "image"}

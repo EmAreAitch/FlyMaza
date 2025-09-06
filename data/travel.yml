@@ -2,7 +2,9 @@ destinations:
   domestic:
     - name: Kerala
       hero: https://image.pollinations.ai/prompt/Kerala%20backwaters%20houseboat%20palm%20trees%20serene%20tropical%20landscape?width=1920&height=1080&seed=52390&nologo=true
-      description: God's Own Country with pristine backwaters, lush hill stations, and vibrant culture. Experience the perfect blend of nature and tradition.
+      featured: true
+      description: God's Own Country with pristine backwaters, lush hill stations, and
+        vibrant culture. Experience the perfect blend of nature and tradition.
       highlights:
         - Cruise through the serene backwaters of Alleppey
         - Explore the spice plantations of Munnar
@@ -16,15 +18,19 @@ destinations:
           price: "1299"
           itinerary:
             - title: Arrival in Kochi
-              details: Airport pickup and transfer to hotel. Evening visit to Fort Kochi and Chinese fishing nets.
+              details: Airport pickup and transfer to hotel. Evening visit to Fort Kochi and
+                Chinese fishing nets.
             - title: Munnar Hill Station
-              details: Drive to Munnar, visit tea gardens and spice plantations. Overnight in hill resort.
+              details: Drive to Munnar, visit tea gardens and spice plantations. Overnight in
+                hill resort.
             - title: Alleppey Backwaters
-              details: Houseboat cruise through backwaters with traditional Kerala meals onboard.
+              details: Houseboat cruise through backwaters with traditional Kerala meals
+                onboard.
             - title: Kovalam Beach
               details: Relax at Kovalam beach, Ayurvedic spa session, and local market visit.
             - title: Departure
               details: Morning leisure time, checkout and transfer to Trivandrum airport.
+          featured: true
           days: 5
           inclusions:
             - Accommodation in 4-star hotels
@@ -35,16 +41,19 @@ destinations:
           title: Kerala Backwaters & Hills
           hero: https://image.pollinations.ai/prompt/Kerala%20houseboat%20backwaters%20sunset%20palm%20trees%20traditional%20boat?width=1920&height=1080&seed=52391&nologo=true
           nights: 4
-          description: Discover Kerala's natural beauty from misty hill stations to tranquil backwaters, complete with houseboat experience and cultural immersion.
+          description: Discover Kerala's natural beauty from misty hill stations to
+            tranquil backwaters, complete with houseboat experience and cultural
+            immersion.
           highlights:
             - Stay in a traditional Kerala houseboat
             - Visit Munnar's famous tea gardens
             - Experience authentic Ayurvedic treatments
             - Enjoy fresh seafood and coconut-based cuisine
-
     - name: Rajasthan
       hero: https://image.pollinations.ai/prompt/Rajasthan%20Jaipur%20Hawa%20Mahal%20pink%20city%20royal%20architecture?width=1920&height=1080&seed=52392&nologo=true
-      description: The Land of Kings with majestic palaces, golden deserts, and vibrant culture. Experience royal heritage and desert adventures.
+      featured: true
+      description: The Land of Kings with majestic palaces, golden deserts, and
+        vibrant culture. Experience royal heritage and desert adventures.
       highlights:
         - Explore the majestic City Palace in Jaipur
         - Experience camel safari in the Thar Desert
@@ -58,17 +67,21 @@ destinations:
           price: "1899"
           itinerary:
             - title: Arrival in Jaipur
-              details: Airport pickup, check-in at heritage hotel, evening visit to local bazaars.
+              details: Airport pickup, check-in at heritage hotel, evening visit to local
+                bazaars.
             - title: Jaipur Sightseeing
-              details: Visit Amber Fort, City Palace, Hawa Mahal, and Jantar Mantar observatory.
+              details: Visit Amber Fort, City Palace, Hawa Mahal, and Jantar Mantar
+                observatory.
             - title: Jodhpur Blue City
-              details: Drive to Jodhpur, visit Mehrangarh Fort and explore the blue painted old city.
+              details: Drive to Jodhpur, visit Mehrangarh Fort and explore the blue painted
+                old city.
             - title: Jaisalmer Desert
               details: Travel to Jaisalmer, evening camel safari and overnight in desert camp.
             - title: Udaipur City of Lakes
               details: Drive to Udaipur, boat ride on Lake Pichola, visit City Palace.
             - title: Departure
               details: Morning at leisure, transfer to Udaipur airport for departure.
+          featured: true
           days: 6
           inclusions:
             - Heritage hotel accommodation
@@ -79,17 +92,20 @@ destinations:
           title: Royal Rajasthan Circuit
           hero: https://image.pollinations.ai/prompt/Rajasthan%20desert%20camel%20safari%20sunset%20sand%20dunes%20golden%20landscape?width=1920&height=1080&seed=52393&nologo=true
           nights: 5
-          description: Journey through the royal cities of Rajasthan, from pink Jaipur to the golden sands of Jaisalmer, experiencing palaces, forts, and desert adventures.
+          description: Journey through the royal cities of Rajasthan, from pink Jaipur to
+            the golden sands of Jaisalmer, experiencing palaces, forts, and
+            desert adventures.
           highlights:
             - Stay in authentic heritage hotels
             - Overnight desert camping experience
             - Visit iconic forts and palaces
             - Traditional Rajasthani cultural performances
-
   international:
     - name: Thailand
       hero: https://image.pollinations.ai/prompt/Thailand%20tropical%20beach%20crystal%20clear%20water%20limestone%20cliffs%20longtail%20boats?width=1920&height=1080&seed=52394&nologo=true
-      description: The Land of Smiles with pristine beaches, ancient temples, and incredible street food. Perfect blend of relaxation and adventure.
+      featured: true
+      description: The Land of Smiles with pristine beaches, ancient temples, and
+        incredible street food. Perfect blend of relaxation and adventure.
       highlights:
         - Relax on the stunning beaches of Phuket and Phi Phi Islands
         - Explore ornate Buddhist temples in Bangkok
@@ -104,17 +120,22 @@ destinations:
           price: "3299"
           itinerary:
             - title: Arrival in Bangkok
-              details: Airport pickup, hotel check-in, evening visit to Chatuchak Weekend Market.
+              details: Airport pickup, hotel check-in, evening visit to Chatuchak Weekend
+                Market.
             - title: Bangkok Temples & Culture
-              details: Visit Grand Palace, Wat Pho temple, longtail boat ride through floating markets.
+              details: Visit Grand Palace, Wat Pho temple, longtail boat ride through floating
+                markets.
             - title: Flight to Phuket
-              details: Morning flight to Phuket, beach resort check-in, sunset at Patong Beach.
+              details: Morning flight to Phuket, beach resort check-in, sunset at Patong
+                Beach.
             - title: Phi Phi Islands Day Trip
               details: Full day island hopping tour with snorkeling and beach activities.
             - title: Phuket Leisure
-              details: Free day for spa treatments, shopping, or optional elephant sanctuary visit.
+              details: Free day for spa treatments, shopping, or optional elephant sanctuary
+                visit.
             - title: Bangkok & Departure
               details: Flight back to Bangkok, last-minute shopping, evening departure.
+          featured: true
           days: 6
           inclusions:
             - Round-trip airfare
@@ -126,16 +147,19 @@ destinations:
           title: Thailand Beach & Culture
           hero: https://image.pollinations.ai/prompt/Thailand%20Phi%20Phi%20islands%20turquoise%20water%20limestone%20karst%20tropical%20paradise?width=1920&height=1080&seed=52395&nologo=true
           nights: 5
-          description: Discover Thailand's magic from bustling Bangkok temples to pristine Phuket beaches, with island hopping adventures and cultural experiences.
+          description: Discover Thailand's magic from bustling Bangkok temples to pristine
+            Phuket beaches, with island hopping adventures and cultural
+            experiences.
           highlights:
             - Stay in beachfront resorts in Phuket
             - Full day Phi Phi Islands excursion
             - Explore Bangkok's iconic temples and markets
             - Traditional Thai spa and wellness experiences
-
     - name: Switzerland
       hero: https://image.pollinations.ai/prompt/Switzerland%20Alps%20snow%20mountains%20pristine%20lakes%20Swiss%20countryside%20scenic?width=1920&height=1080&seed=52396&nologo=true
-      description: Alpine wonderland with snow-capped peaks, pristine lakes, and charming villages. Perfect for nature lovers and adventure seekers.
+      featured: true
+      description: Alpine wonderland with snow-capped peaks, pristine lakes, and
+        charming villages. Perfect for nature lovers and adventure seekers.
       highlights:
         - Take scenic train rides through the Swiss Alps
         - Experience the beauty of Lake Geneva and Interlaken
@@ -152,15 +176,20 @@ destinations:
             - title: Arrival in Zurich
               details: Airport pickup, city tour of Zurich including Lake Zurich and Old Town.
             - title: Lucerne & Mount Pilatus
-              details: Train to Lucerne, cable car ride to Mount Pilatus for panoramic Alpine views.
+              details: Train to Lucerne, cable car ride to Mount Pilatus for panoramic Alpine
+                views.
             - title: Interlaken Adventure
-              details: Travel to Interlaken, paragliding or scenic helicopter ride over the Alps.
+              details: Travel to Interlaken, paragliding or scenic helicopter ride over the
+                Alps.
             - title: Jungfraujoch Top of Europe
-              details: Train journey to Jungfraujoch, Europe's highest railway station and glacier views.
+              details: Train journey to Jungfraujoch, Europe's highest railway station and
+                glacier views.
             - title: Zermatt & Matterhorn
-              details: Visit Zermatt village, cogwheel train to see the iconic Matterhorn peak.
+              details: Visit Zermatt village, cogwheel train to see the iconic Matterhorn
+                peak.
             - title: Geneva & Departure
               details: Travel to Geneva, visit Lake Geneva, shopping, and evening departure.
+          featured: false
           days: 6
           inclusions:
             - Round-trip airfare
@@ -172,7 +201,9 @@ destinations:
           title: Swiss Alps Adventure
           hero: https://image.pollinations.ai/prompt/Switzerland%20Matterhorn%20mountain%20reflection%20alpine%20lake%20snow%20peaks%20dramatic?width=1920&height=1080&seed=52397&nologo=true
           nights: 5
-          description: Experience Switzerland's breathtaking Alpine beauty with scenic train rides, mountain adventures, and visits to iconic peaks like the Matterhorn.
+          description: Experience Switzerland's breathtaking Alpine beauty with scenic
+            train rides, mountain adventures, and visits to iconic peaks like
+            the Matterhorn.
           highlights:
             - Ride the famous Swiss scenic trains
             - Visit Jungfraujoch - Top of Europe
