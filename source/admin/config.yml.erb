@@ -10,13 +10,12 @@ media_folder: "source/images/uploads"
 public_folder: "/images/uploads"
 
 site_url: "<%= config[:root_url] %>"
-logo_url: "<%= image_path 'logo.png' %>"
+logo_url: "<%= image_path 'logo-flymaza.png' %>"
 
 editor:
   preview: false
 
 collections:
-  # All Destinations Management
   - name: "destinations"
     label: "Travel Destinations"
     files:
@@ -57,8 +56,7 @@ collections:
                     name: "gallery"
                     widget: "list"
                     field: {label: "Image", name: "", widget: "image"}
-
-  # All Packages Management
+  
   - name: "packages"
     label: "Travel Packages"
     files:
@@ -133,3 +131,42 @@ collections:
                         name: "gallery"
                         widget: "list"
                         field: {label: "Image", name: "", widget: "image"}
+
+  - name: blog    
+    label: Blog
+    folder: source/articles/
+    extension: .html.markdown
+    format: frontmatter
+    create: true
+    summary: "{{title}}"
+    slug: '{{year}}-{{month}}-{{day}}-{{title}}'
+    preview_path: 'articles/{{year}}/{{month}}/{{day}}/{{title}}'
+    fields:
+      - label: Title
+        name: title
+        widget: string
+        default: Untitled                
+      - label: Date
+        name: date
+        widget: datetime
+        format: 'YYYY-MM-DD HH:mm Z'
+        default: '{{now}}'
+      - label: Cover Image
+        name: cover_image
+        widget: image
+        required: false
+      - label: Tags
+        name: tags
+        widget: list
+        default:
+          - tag1
+          - tag2
+          - tag3
+      - label: Description
+        name: description
+        widget: text
+        default: Enter a description here
+      - label: Body
+        name: body
+        widget: markdown
+        default: Write your post content here

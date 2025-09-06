@@ -1,0 +1,66 @@
+<% wrap_layout :layout do %>
+<div class="flex flex-col md:flex-row pt-24 max-w-6xl mx-auto gap-8">
+  <!-- Main Article Section -->
+  <main class="w-full md:w-2/3 p-8 bg-white rounded-2xl shadow-xl my-8">
+    <header class="mb-8">
+      <h1 class="text-4xl md:text-5xl font-heading text-primary-600 mb-2 leading-tight">
+        <%= current_article.title %>
+      </h1>
+      <time class="text-sm text-secondary-500" datetime="<%= current_article.date %>">
+        <%= current_article.date.strftime("%B %d, %Y") %>
+      </time>
+
+      <% if current_article.tags.any? %>
+      <div class="mt-4 flex flex-wrap gap-2">
+        <% current_article.tags.each do |tag| %>
+        <a href="<%= tag_path tag %>" class="inline-block text-accent-500 hover:text-accent-600 font-medium">
+          #<%= tag %>
+        </a>
+        <% end %>
+      </div>
+      <% end %>
+    </header>
+
+    <div class="mb-8 w-full">
+      <img
+        src="<%= responsive_image(current_article) %>"
+        alt="Cover image for <%= current_article.title %>"
+        class="w-full rounded-xl shadow-md object-cover mx-auto"
+      />
+    </div>
+
+    <div class="prose max-w-none text-gray-800">
+      <%= yield %>
+    </div>
+  </main>
+
+  <!-- Sidebar / Recent Articles -->
+  <aside class="w-full md:w-1/3 p-6 my-8 md:ml-4">
+    <h2 class="text-2xl font-heading text-primary-600 mb-6">More Articles</h2>
+    <div class="grid grid-cols-1 gap-6">
+      <% blog.articles.reject { |a| a.url == current_article.url }.sample(3).each do |article| %>
+        <%= partial "article", locals: {article: } %>
+      <% end %>
+    </div>
+  </aside>
+</div>
+
+<!-- CTA Section -->
+<section class="section-spacing bg-gradient-to-br from-primary-600 via-accent-500 to-secondary-500">
+  <div class="container-custom text-center">
+    <div class="max-w-4xl mx-auto fade-in">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8">
+        Ready to start your world adventure?
+      </h2>
+      <p class="text-xl text-white/90 mb-12 max-w-2xl mx-auto">
+        Don't wait to discover world's extraordinary beauty. Contact us today and let's plan your perfect getaway.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/destinations" class="bg-secondary-600 hover:bg-secondary-700 text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105">
+          View Destinations
+        </a>        
+      </div>
+    </div>
+  </div>
+</section>
+<% end %>

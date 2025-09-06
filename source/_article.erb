@@ -1,0 +1,30 @@
+<article class="bg-white rounded-2xl shadow-lg overflow-hidden">
+          <a href="<%= article.url %>" class="block">
+            <img
+              src="<%= responsive_image(article) %>" 
+              alt="<%= article.title %> cover image"
+              class="w-full object-cover"
+            />
+          </a>        
+
+          <div class="p-6"> 
+            <h2 class="text-2xl font-heading text-primary-800 mb-2">
+              <a href="<%= article.url %>"><%= article.title %></a>
+            </h2>
+
+            <time class="text-sm text-secondary-500" datetime="<%= article.date %>">
+              <%= article.date.strftime("%B %d, %Y") %>
+            </time>
+
+            <p class="mt-4 text-base text-gray-700">
+              <%= article.summary(100) %>
+            </p>
+
+            <a
+              class="mt-4 inline-block text-accent-500 hover:text-accent-600 font-semibold transition-colors"
+              href="<%= article.url %>"
+            >
+              Read more →
+            </a>
+          </div>
+        </article>

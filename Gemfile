@@ -17,5 +17,3 @@ gem "nokogiri"
 gem "kramdown-parser-gfm"
 
 gem "ruby-prof"
-
-gem "babosa"

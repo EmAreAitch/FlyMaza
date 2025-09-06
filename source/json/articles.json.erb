@@ -1,0 +1,1 @@
+<%= JSON.generate(blog.articles.map { it.data.slice(:title).merge(url: it.url) }) %>

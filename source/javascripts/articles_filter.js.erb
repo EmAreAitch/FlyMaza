@@ -1,0 +1,57 @@
+document.addEventListener("DOMContentLoaded", function() {
+  const toggleBtn = document.getElementById("toggle-tags-btn");
+  const tagsSection = document.getElementById("tags-section");
+  const searchInput = document.getElementById("search-input");
+  const searchResults = document.getElementById("search-results");
+
+  let articles = []
+
+  // Toggle Tags
+  toggleBtn.addEventListener("click", function() {
+    tagsSection.classList.toggle("hidden");
+    toggleBtn.textContent = tagsSection.classList.contains("hidden") ? "Browse by Tags" : "Hide Tags";
+  });
+
+  // Fetch Articles
+  fetch("<%= url_for 'json/articles.json' %>")
+     .then(response => response.json())
+    .then(data => {
+      articles = data;
+    })
+    .catch(err => {
+      console.error("Error loading articles.json:", err);
+    });
+
+  // Search Input Listener
+  searchInput.addEventListener("input", function(e) {
+    const query = e.target.value.trim().toLowerCase();
+    if (query === "") {
+      searchResults.classList.add("hidden");
+      searchResults.innerHTML = "";
+      return;
+    }
+
+    const filtered = articles.filter(article => 
+      article.title && article.title.toLowerCase().includes(query)
+    );
+
+    if (filtered.length === 0) {
+      searchResults.innerHTML = "<p class='text-gray-500 px-4 py-2'>No articles found.</p>";
+    } else {
+      searchResults.innerHTML = filtered.map(article => 
+        `<div class="px-4 py-2 border-b border-gray-200 hover:bg-gray-100">
+          <a href="${article.url}" class="text-secondary hover:underline">${article.title}</a>
+        </div>`
+      ).join("");
+    }
+
+    searchResults.classList.remove("hidden");
+  });
+
+  // Hide results on outside click
+  document.addEventListener("click", function(e) {
+    if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
+      searchResults.classList.add("hidden");
+    }
+  });
+});

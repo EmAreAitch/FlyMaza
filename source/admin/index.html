@@ -1,13 +1,46 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <title>Decap CMS</title>
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" type="text/javascript"></script>
+    <script
+      src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+      type="text/javascript"
+    ></script>
+    <style>
+      span:has(img[alt="Logo"]) {
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
-    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js" type="text/javascript"></script>
+    <script
+      src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"
+      type="text/javascript"
+    ></script>
+    <script>
+      function replaceImageUrls(markdown) {
+        const imageRe =
+          /!\[([^\]]*)\]\(\s*(\/images\/uploads\/[^)\s]+)(\s*"[^"]*")?\s*\)/g;
+
+        return markdown.replace(imageRe, (_, alt, origUrl, title = "") => {
+          const proxied = `/.netlify/images?fm=avif&q=50&url=${origUrl}`;
+          return `![${alt}](${proxied}${title})`;
+        });
+      }
+      CMS.registerEventListener({
+        name: 'preSave',
+        handler: ({ entry }) => {
+          let updatedBody;
+          updatedBody = replaceImageUrls(entry.getIn(["data","body"]))
+          return entry.setIn(["data","body"], updatedBody)
+        },
+      });
+    </script>
   </body>
 </html>

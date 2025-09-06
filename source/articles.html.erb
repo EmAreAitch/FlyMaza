@@ -1,0 +1,52 @@
+---
+title: "Articles"
+pageable: true
+---
+
+<section class="max-w-6xl mx-auto px-6 py-32 space-y-4">
+  <h1 class="text-3xl font-heading text-primary-800 mb-8">
+    <%= current_page.data.title %>
+  </h1>
+
+  <!-- 🏷️ Tags Section -->
+  <%= partial :tags_list %>
+
+  <!-- 📄 Articles Grid -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <% page_articles.each do |article| %>
+      <%= partial "article", locals: {article: } %>
+    <% end %>
+  </div>
+
+  <% if paginate %>
+    <nav class="mt-12 flex items-center justify-center gap-3">
+      <%# — Previous link — %>
+      <% if prev_page %>
+        <%= link_to '← Previous',
+                    prev_page,
+                    class: "px-4 py-2 rounded-lg bg-secondary-500 hover:bg-secondary-600 text-white font-medium focus:outline-none focus:ring-2 focus:ring-accent transition" %>
+      <% end %>
+
+      <%# — Numbered pages — %>
+      <% (1..num_pages).each do |n| %>
+        <% url = (n == 1 ? "/articles" : "/articles/page/#{n}") %>
+        <% if n == page_number %>
+          <span class="px-4 py-2 rounded-lg bg-primary-600 text-white font-semibold">
+            <%= n %>
+          </span>
+        <% else %>
+          <%= link_to n,
+                      url,
+                      class: "px-4 py-2 rounded-lg bg-white border border-gray-200 text-primary-700 font-medium hover:bg-primary-50 focus:outline-none focus:ring-2 focus:ring-accent transition" %>
+        <% end %>
+      <% end %>
+
+      <%# — Next link — %>
+      <% if next_page %>
+        <%= link_to 'Next →',
+                    next_page,
+                    class: "px-4 py-2 rounded-lg bg-secondary-500 hover:bg-secondary-600 text-white font-medium focus:outline-none focus:ring-2 focus:ring-accent transition" %>
+      <% end %>
+    </nav>
+  <% end %>
+</section>

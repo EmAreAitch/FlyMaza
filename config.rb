@@ -102,3 +102,30 @@ configure :development do
 end
 
 
+activate :blog do |blog|
+  blog.tag_template = "tag.html"
+  blog.layout = "article"        # uses source/layouts/article.erb
+  blog.prefix = "articles"
+  blog.sources = '{original_slug}.html'
+  blog.paginate = true
+  blog.per_page = 3
+end
+
+tags = resources
+        .select {it.data.tags}
+        .map {it.data.tags}
+        .map { it.is_a?(String) ? it.split(',').map(&:strip) : it }
+        .flatten
+        .sort_by(&:downcase)
+        .uniq
+
+collection :sorted_tags, tags
+
+module Middleman::Blog::UriTemplates
+  def self.safe_parameterize(str, sep = '-')
+    # ← your custom logic here, for example:
+    str.parameterize
+  end
+end
+
+

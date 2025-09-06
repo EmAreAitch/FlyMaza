@@ -8,8 +8,9 @@
     { name: "Home", url: "/" },
     { name: "Destinations", url: "/destinations/" },
     { name: "Packages", url: "/packages/" },
+    { name: "Articles", url: "/articles/" },
     { name: "About", url: "/about/" },
-    { name: "Contact", url: "/contact/" }
+    { name: "Contact", url: "/contact/" },
   ]  
 
   active = nav_items.find { it[:url] == current_page.url }
@@ -40,9 +41,9 @@
     <!-- Styles -->
     <%= stylesheet_link_tag "tailwind" %>
     <%= stylesheet_link_tag "site" %>
-    <%= javascript_include_tag "site", defer: true %>
-    <%= javascript_include_tag "contact", defer: true %>
+    <%= javascript_include_tag "site", defer: true %>    
     <script src="//instant.page/5.2.0" type="module" integrity="sha384-jnZyxPjiipYXnSU0ygqeac2q7CVYMbh84q0uHVRRxEtvFPiQYbXWUorga2aqZJ0z"></script>
+    <%= yield_content :head %>
   </head>
 
   <body class="antialiased bg-white text-gray-900">
@@ -56,7 +57,7 @@
           <!-- Logo -->
           <div class="flex items-center">
             <a href="/" class="flex items-center space-x-2">
-              <img src=<%= responsive_image("logo-flymaza.png") %> class="h-16 w-auto">
+              <img src=<%= responsive_image("logo-flymaza.png") %> class="h-18 w-auto">
             </a>
           </div>
     
@@ -74,10 +75,7 @@
           <div class="hidden lg:flex items-center space-x-4">
             <a href="/#contact" class="px-6 py-2 bg-secondary-500 text-white rounded-full text-sm font-medium hover:bg-golden-400">
               Book Now
-            </a>
-            <a href="/admin/" class="px-6 py-2 bg-white/30 text-black rounded-full text-sm font-medium hover:bg-white/20 border border-white/20">
-              Admin
-            </a>
+            </a>            
           </div>
           
     
@@ -102,11 +100,7 @@
     
           <a href="/#contact" class="mt-auto w-full bg-secondary-500 text-white py-3 rounded-xl font-medium hover:bg-golden-400 text-center">
             Book Now
-          </a>
-          <a href="/admin/" class="mt-4 w-full bg-primary-600 text-white py-3 rounded-xl font-medium hover:bg-primary-700 text-center border border-white/20">
-            Admin
-          </a>
-          
+          </a>                    
         </div>
       </nav>
     </header>
@@ -127,7 +121,7 @@
           <!-- Company Info -->
           <div class="lg:col-span-2">
             <div class="flex items-center space-x-2 mb-4">
-              <img src=<%= responsive_image("logo-flymaza.png") %> class="h-24 w-auto">
+              <img src=<%= responsive_image("logo-flymaza.png") %> class="h-36 w-auto mx-auto md:mx-0">
             </div>
             <p class="text-gray-400 mb-6 max-w-md">
               Discover India's extraordinary natural beauty and rich cultural heritage. 
@@ -163,6 +157,7 @@
                   </a>
                 </li>
               <% end %>
+              <li><a href="/admin/" class="text-gray-400 hover:text-accent-400 transition-colors duration-200">Admin</a></li>
             </ul>
           </div>
 

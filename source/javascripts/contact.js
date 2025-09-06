@@ -3,7 +3,12 @@ let travelData = {};
 // Fetch travel data
 fetch('/json/travel.json')
   .then(res => res.json())
-  .then(data => { travelData = data; });
+  .then(data => { 
+    travelData = data; 
+    let radio = document.querySelectorAll('.travel-radio')[0];
+    radio.checked = true;
+    radio.dispatchEvent(new Event("change", { bubbles: true }));
+  });
 
 // Elements
 const destSelect = document.getElementById('destinationSelect');
@@ -116,10 +121,4 @@ tomorrow.setDate(tomorrow.getDate() + 1);
 const minDate = tomorrow.toISOString().split('T')[0];
 travelDateInput.setAttribute('min', minDate);
 travelDateInput.setAttribute('value', minDate);
-
-
-
-
-
-
 
