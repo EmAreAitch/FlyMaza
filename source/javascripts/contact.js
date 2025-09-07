@@ -17,6 +17,7 @@ const pkgSelect = document.getElementById('packageSelect');
 const pkgDays = document.getElementById('packageDays');
 const pkgNights = document.getElementById('packageNights');
 const pkgDesc = document.getElementById('packageDescription');
+const pkgBudget = document.getElementById('packagePriceOrBudget');
 const customFields = document.getElementById('customPackageFields');
 const detailsContent = document.getElementById("detailsContent")
 
@@ -32,7 +33,8 @@ document.querySelectorAll('.travel-radio').forEach(radio => {
     pkgDays.value = '';
     pkgNights.value = '';
     pkgDesc.value = '';
-    [destInput, pkgDays, pkgNights, pkgDesc].forEach(e => e.required = false)
+    pkgBudget.value = '';    
+    [destInput, pkgDays, pkgNights, pkgDesc, pkgBudget].forEach(e => e.required = false)
     detailsContent.innerHTML = '<p class="text-gray-500 text-center">Select a package to see details</p>';
 
     if (type && travelData[type]) {
@@ -41,6 +43,8 @@ document.querySelectorAll('.travel-radio').forEach(radio => {
       });
       destSelect.innerHTML += `<option value="Custom">Custom Destination</option>`;
     }
+
+    destSelect.dispatchEvent(new Event("change", { bubbles: true }))
   });
 });
 
@@ -59,11 +63,8 @@ destSelect.addEventListener('change', () => {
     destInput.classList.remove('hidden');        
     destInput.value = "";
     destInput.required = true;
-    pkgSelect.innerHTML += '<option value="Custom Package">Custom Package</option>';        
-    return;
-  }
-
-  if (destName !== '' && type && travelData[type]) {
+    pkgSelect.innerHTML += '<option value="Custom Package">Custom Package</option>';         
+  } else if (destName !== '' && type && travelData[type]) {
     const dest = travelData[type].find(d => d.name === destName);
     if (dest) {
       dest.packages.forEach(pkg => {
@@ -72,7 +73,9 @@ destSelect.addEventListener('change', () => {
       pkgSelect.innerHTML += `<option value="Custom Package">Custom Package</option>`;
     }
   }
-  detailsContent.innerHTML = '<p class="text-gray-500 text-center">Select a package to see details</p>';
+  
+  detailsContent.innerHTML = '<p class="text-gray-500 text-center">Select a package to see details</p>';  
+  pkgSelect.dispatchEvent(new Event("change", { bubbles: true }))
 });
 
 // Package Change
@@ -85,17 +88,14 @@ pkgSelect.addEventListener('change', () => {
   pkgDays.value = '';
   pkgNights.value = '';
   pkgDesc.value = '';  
-
-  [pkgDays, pkgNights, pkgDesc].forEach(e => e.required = false)
-
+  pkgBudget.value = '';
+  [pkgDays, pkgNights, pkgDesc, pkgBudget].forEach(e => e.required = false)
+  
   if (pkgTitle === "Custom Package") {
     customFields.classList.remove('hidden');
     [pkgDays, pkgNights, pkgDesc].forEach(e => e.required = true)
-    detailsContent.innerHTML = '<p class="text-gray-500 text-center">Fill in your custom package details above</p>';
-    return;
-  }
-
-  if (pkgTitle !== '' && destName !== '' && type && travelData[type]) {
+    detailsContent.innerHTML = '<p class="text-gray-500 text-center">Fill in your custom package details above</p>';    
+  } else if (pkgTitle !== '' && destName !== '' && type && travelData[type]) {
     const dest = travelData[type].find(d => d.name === destName);
     if (dest) {
       const pkg = dest.packages.find(p => p.title === pkgTitle);
@@ -103,7 +103,7 @@ pkgSelect.addEventListener('change', () => {
         pkgDays.value = pkg.days;
         pkgNights.value = pkg.nights;
         pkgDesc.value = pkg.description;
-
+        pkgBudget.value = pkg.price;
         detailsContent.innerHTML = `
           <h3 class="text-xl font-bold mb-2">${pkg.title}</h3>
           <p class="text-gray-600 mb-4">${pkg.days} Days / ${pkg.nights} Nights • ₹${pkg.price}</p>
