@@ -36,9 +36,12 @@
       CMS.registerEventListener({
         name: 'preSave',
         handler: ({ entry }) => {
-          let updatedBody;
-          updatedBody = replaceImageUrls(entry.getIn(["data","body"]))
-          return entry.setIn(["data","body"], updatedBody)
+          if (entry.get("collection") == "blog") {
+            let updatedBody;
+            updatedBody = replaceImageUrls(entry.getIn(["data","body"]));
+            return entry.setIn(["data","body"], updatedBody);
+          }
+          return entry;        
         },
       });
     </script>
