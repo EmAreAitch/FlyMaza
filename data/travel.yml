@@ -108,6 +108,51 @@ destinations:
         the Kashmir Valley between the Great Himalayas and the Pir Panjal Range.
       highlights:
         - kashmir
+      packages:
+        - exclusions:
+            - anything not mentioned in inclusion
+          price: (changeable)
+          itinerary:
+            - title: 1 Night accommodation in Pahalgam
+              details: we provide a hotel in pahalgam
+            - title: 2 Nights accommodation in Gulmarg
+              details: "we then provide a night accommodation in Gulmerg "
+            - title: 2 Nights accommodation in Sonamarg
+              details: sonamarg
+            - title: 1 Night accommodation in Srinagar
+              details: srinagar
+          featured: false
+          days: 7
+          inclusions:
+            - Breakfast & Dinners
+            - Airport transfers
+            - Sightseeing tours
+            - All Tours & Transfers by Private Non AC vehicle
+            - All presently applicable Hotel & Airline taxes
+          title: Kashmir
+          nights: 6
+          description: >+
+            Explore the enchanting beauty of Kashmir that is revered worldwide
+            for offering endless charms and romance.
+
+
+            Visit Pahalgam which is one of the most beautiful places to visit on your Kashmir holiday with breathtaking green valleys, pine forests and river stream flowing through the middle.
+
+
+            Enjoy majestic snow-clad mountains at Gulmarg & witness the ethereal beauty of Sonamarg.
+
+
+            Stay at Srinagar which is known for its royal gardens and enjoy Shikara Ride on Dal Lake. Rejuvenate yourself in the best way possible.
+
+          highlights:
+            - Visit Pahalgam which is one of the most beautiful places to visit
+              on your Kashmir holiday with breathtaking green valleys, pine
+              forests and river stream flowing through the middle.
+            - "Enjoy majestic snow-clad mountains at Gulmarg & witness the
+              ethereal beauty of Sonamarg. "
+            - "  Stay at Srinagar which is known for its royal gardens and enjoy
+              Shikara Ride on Dal Lake. Rejuvenate yourself in the best way
+              possible."
   international:
     - name: Thailand
       hero: https://image.pollinations.ai/prompt/Thailand%20tropical%20beach%20crystal%20clear%20water%20limestone%20cliffs%20longtail%20boats?width=1920&height=1080&seed=52394&nologo=true
