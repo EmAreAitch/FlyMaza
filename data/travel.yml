@@ -121,7 +121,7 @@ destinations:
               details: sonamarg
             - title: 1 Night accommodation in Srinagar
               details: srinagar
-          featured: true
+          featured: false
           days: 7
           inclusions:
             - Breakfast & Dinners
