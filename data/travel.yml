@@ -100,7 +100,7 @@ destinations:
             - Overnight desert camping experience
             - Visit iconic forts and palaces
             - Traditional Rajasthani cultural performances
-    - featured: false
+    - featured: true
       name: Kashmir
       hero: /images/uploads/1-amarnath-yatra-pahalgam-jammu-kashmir-city-hero.jpg
       description: Kashmir is the northernmost geographical region of the Indian
