@@ -111,7 +111,7 @@ destinations:
       packages:
         - exclusions:
             - anything not mentioned in inclusion
-          price: (changeable)
+          price: (Discussable)
           itinerary:
             - title: 1 Night accommodation in Pahalgam
               details: we provide a hotel in pahalgam
