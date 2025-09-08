@@ -36,11 +36,14 @@ collections:
                   - {label: "Hero Image", name: "hero", widget: "image"}
                   - {label: "Featured", name: "featured", widget: "boolean", default: false}
                   - {label: "Description", name: "description", widget: "text"}
-                  - {label: "Highlights", name: "highlights", widget: "list", field: {label: "Highlight", name: "", widget: "string"}}                  
+                  - {label: "Highlights", name: "highlights", widget: "list", field: {label: "Highlight", name: "", widget: "string"}, default: []}                  
                   - label: "Gallery"
                     name: "gallery"
                     widget: "list"
                     field: {label: "Image", name: "", widget: "image"}
+                    default: []
+                  - {label: "Packages", name: "packages", widget: "hidden", default: []}
+                  
               
               - label: "International Destinations"
                 name: "international"
@@ -51,11 +54,13 @@ collections:
                   - {label: "Hero Image", name: "hero", widget: "image"}
                   - {label: "Featured", name: "featured", widget: "boolean", default: false}
                   - {label: "Description", name: "description", widget: "text"}
-                  - {label: "Highlights", name: "highlights", widget: "list", field: {label: "Highlight", name: "", widget: "string"}}                  
+                  - {label: "Highlights", name: "highlights", widget: "list", field: {label: "Highlight", name: "", widget: "string"}, default: []}                  
                   - label: "Gallery"
                     name: "gallery"
                     widget: "list"
+                    default: []
                     field: {label: "Image", name: "", widget: "image"}
+                  - {label: "Packages", name: "packages", widget: "hidden", default: []}
   
   - name: "packages"
     label: "Travel Packages"
@@ -86,19 +91,21 @@ collections:
                       - {label: "Price", name: "price", widget: "string"}
                       - {label: "Featured", name: "featured", widget: "boolean", default: false}
                       - {label: "Description", name: "description", widget: "text"}
-                      - {label: "Highlights", name: "highlights", widget: "list", field: {label: "Highlight", name: "", widget: "string"}}
-                      - {label: "Inclusions", name: "inclusions", widget: "list", field: {label: "Inclusion", name: "", widget: "string"}}
-                      - {label: "Exclusions", name: "exclusions", widget: "list", field: {label: "Exclusion", name: "", widget: "string"}}                      
+                      - {label: "Highlights", name: "highlights", widget: "list", field: {label: "Highlight", name: "", widget: "string"}, default: []}
+                      - {label: "Inclusions", name: "inclusions", widget: "list", field: {label: "Inclusion", name: "", widget: "string"}, default: []}
+                      - {label: "Exclusions", name: "exclusions", widget: "list", field: {label: "Exclusion", name: "", widget: "string"}, default: []}                      
                       - label: "Itinerary"
                         name: "itinerary"
                         widget: "list"
                         summary: "{{fields.title}}"
+                        default: []
                         fields:
                           - {label: "Day Title", name: "title", widget: "string"}
                           - {label: "Day Details", name: "details", widget: "text"}
                       - label: "Gallery"
                         name: "gallery"
                         widget: "list"
+                        default: []
                         field: {label: "Image", name: "", widget: "image"}
               
               - label: "International Packages"
@@ -119,12 +126,13 @@ collections:
                       - {label: "Price", name: "price", widget: "string"}
                       - {label: "Featured", name: "featured", widget: "boolean", default: false}
                       - {label: "Description", name: "description", widget: "text"}
-                      - {label: "Highlights", name: "highlights", widget: "list", field: {label: "Highlight", name: "", widget: "string"}}
-                      - {label: "Inclusions", name: "inclusions", widget: "list", field: {label: "Inclusion", name: "", widget: "string"}}
-                      - {label: "Exclusions", name: "exclusions", widget: "list", field: {label: "Exclusion", name: "", widget: "string"}}
+                      - {label: "Highlights", name: "highlights", widget: "list", field: {label: "Highlight", name: "", widget: "string"}, default: []}
+                      - {label: "Inclusions", name: "inclusions", widget: "list", field: {label: "Inclusion", name: "", widget: "string"}, default: []}
+                      - {label: "Exclusions", name: "exclusions", widget: "list", field: {label: "Exclusion", name: "", widget: "string"}, default: []}
                       - label: "Itinerary"
                         name: "itinerary"
                         widget: "list"
+                        default: []
                         summary: "{{fields.title}}"
                         fields:
                           - {label: "Day Title", name: "title", widget: "string"}
@@ -132,6 +140,7 @@ collections:
                       - label: "Gallery"
                         name: "gallery"
                         widget: "list"
+                        default: []
                         field: {label: "Image", name: "", widget: "image"}
 
   - name: blog    

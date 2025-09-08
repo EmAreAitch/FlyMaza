@@ -186,11 +186,7 @@
         <%= tourism_subtitle %>
       </p>
     </div>
-
-    <!-- Tourism Cards Grid -->
-    <div class="space-y-6 mb-16">
-      <%= partial "destinations", locals: {destinations:} %>
-    </div>    
+    <%= partial "destinations", locals: {destinations:} %>
     <div class="text-center">
       <a href="/destinations/" class="bg-black hover:bg-gray-800 text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105">
         View more
