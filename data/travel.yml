@@ -154,6 +154,20 @@ destinations:
             - "  Stay at Srinagar which is known for its royal gardens and enjoy
               Shikara Ride on Dal Lake. Rejuvenate yourself in the best way
               possible."
+    - featured: false
+      highlights:
+        - Stunning beaches like Radhanagar Beach
+        - World-class water sports such as scuba diving and snorkeling
+        - " Rich marine life, especially at the Mahatma Gandhi Marine National
+          Park"
+      gallery: []
+      packages: []
+      name: Andaman and Nicobar Islands
+      description: "The Andaman and Nicobar Islands is a union territory of India
+        comprising 572 islands, of which only 38 are inhabited. The islands are
+        grouped into two main clusters: the northern Andaman Islands and the
+        southern Nicobar Islands, separated by a 150 km wide channel."
+      hero: https://www.nitworldwideholidays.com/andaman-tour-packages/img/5days-Andaman-Tour.jpg
   international:
     - name: Thailand
       hero: https://image.pollinations.ai/prompt/Thailand%20tropical%20beach%20crystal%20clear%20water%20limestone%20cliffs%20longtail%20boats?width=1920&height=1080&seed=52394&nologo=true
