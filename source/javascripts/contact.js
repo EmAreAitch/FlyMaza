@@ -150,6 +150,6 @@ document.getElementById("enquiryForm").addEventListener("submit", function (e) {
     const encodedMessage = encodeURIComponent(message);
 
     // Redirect to WhatsApp
-    window.location.href = `https://wa.me/9773930305?text=${encodedMessage}`;
+    window.location.href = `https://wa.me/919650512067?text=${encodedMessage}`;
   }
 });
