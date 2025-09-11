@@ -8,7 +8,7 @@
     <h1 class="heading-hero text-white drop-shadow-lg"><%= package[:title] %></h1>
     <p class="mt-4 text-lg md:text-xl text-white/80 drop-shadow">
       <%= package[:days] %> Days / <%= package[:nights] %> Nights —
-      <span class="text-golden-400 font-bold">₹<%= package[:price] %></span>
+      Starting from <span class="text-golden-400 font-bold">₹<%= package[:price] %></span> per person
     </p>
   </div>
 </section>
@@ -28,7 +28,7 @@
           <ul class="space-y-3 text-gray-900">
             <li><strong>Destination:</strong> <%= destination_name %></li>
             <li><strong>Duration:</strong> <%= package[:days] %>D / <%= package[:nights] %>N</li>
-            <li><strong>Price:</strong> ₹<%= package[:price] %></li>
+            <li><strong>Starting from:</strong> ₹<%= package[:price] %> per person</li>
           </ul>
         </div>
       </div>
@@ -107,10 +107,7 @@
                   <%= index + 1 %>
                 </div>
               </div>
-              <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 flex-1">
-                <div class="mb-2 text-sm font-semibold text-primary-600 uppercase tracking-wide">
-                  Day <%= index + 1 %>
-                </div>
+              <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 flex-1">                
                 <h3 class="text-2xl font-bold text-gray-900 mb-4"><%= day[:title] %></h3>
                 <p class="text-gray-600 leading-relaxed text-lg"><%= day[:details] %></p>
               </div>

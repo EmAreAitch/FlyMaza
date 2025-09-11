@@ -68,7 +68,7 @@ destSelect.addEventListener('change', () => {
     const dest = travelData[type].find(d => d.name === destName);
     if (dest) {
       dest.packages.forEach(pkg => {
-        pkgSelect.innerHTML += `<option value="${pkg.title}">${pkg.title} - ₹${pkg.price}</option>`;
+        pkgSelect.innerHTML += `<option value="${pkg.title}">${pkg.title} - ₹${pkg.price} per person</option>`;
       });
       pkgSelect.innerHTML += `<option value="Custom Package">Custom Package</option>`;
     }
@@ -106,7 +106,7 @@ pkgSelect.addEventListener('change', () => {
         pkgBudget.value = pkg.price;
         detailsContent.innerHTML = `
           <h3 class="text-xl font-bold mb-2">${pkg.title}</h3>
-          <p class="text-gray-600 mb-4">${pkg.days} Days / ${pkg.nights} Nights • ₹${pkg.price}</p>
+          <p class="text-gray-600 mb-4">${pkg.days} Days / ${pkg.nights} Nights • Starting from ₹${pkg.price} per person</p>
           <p class="text-gray-600">${pkg.description}</p>
         `;
       }
