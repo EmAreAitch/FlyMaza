@@ -161,7 +161,104 @@ destinations:
         - " Rich marine life, especially at the Mahatma Gandhi Marine National
           Park"
       gallery: []
-      packages: []
+      packages:
+        - exclusions:
+            - Major meals not included (Lunch and Dinner)
+            - " Vehicle at disposal at Port Blair & Havelock & Neil"
+            - Flight/Train.
+            - Any personal expenses. Room service and special orders. Alcoholic
+              and non alcoholic beverages
+            - Any extra excursions or sightseeing apart from the suggested tour
+              itinerary.
+            - Guide Charges, Camera Tickets are NOT INCLUDED in the mentioned
+              cost of Sightseeing & Transfers
+            - Water sports activities apart from given in inclusion
+            - " Other meals not mentioned laundry, telephone calls, and
+              incidentals"
+            - " Any additional charges arising due to natural calamities,
+              political disturbances, VIP movement, etc."
+            - All applicable Taxes.
+          price: 41,500
+          itinerary:
+            - title: "DAY 1 : Arrive Andaman - Airport - Corbyn's Cove, Cellular Jail, Sound &
+                Light show at Cellular Jail"
+              details: >-
+                t - Corbyn's Cove, Cellular Jail, Sound & Light show at Cellular
+                Jail
+
+                Arrival at Port Blair and transfer to hotel. Relax and rest at the hotel and after lunch visit Corbyn's Cove Beach
+
+                - The only beach in Port Blair City. Later Visit the famous Cellular Jail*(a witness to the freedom struggle -
+
+                Closed Mondays) .In the evening proceed to attend the enthralling Sound and Light Show at Cellular Jail
+
+                -depending on light and sound show ticket availability) where the heroic saga of the Indian freedom struggle is
+
+                brought alive.
+            - title: "DAY 2 : Journey to Havelock by Cruise from Port Blair and visit
+                Radhanagar Beach at Havelock"
+              details: >-
+                Departure by Cruise from Port Blair – Havelock. The Cruise takes
+                2.5 hrs to reach Havelock. On arrival
+
+                proceed to the selected hotel and in the evening visit Beach No 7* (Radhanagar Beach) rated as the ‘Best Beach
+
+                in Asia’ by Time Magazine.Return back to hotel to relax and unwind. (Kindly remind the hotel to provide
+
+                packed breakfast at Port Blair since the same is not included at Havelock).
+
+                NOTE: *No Vehicle provided to Radhanagar beach for the guests staying at TSG
+            - title: "DAY 3 : Havelock: Excursion to Elephant Beach"
+              details: >
+                (Car will come at 0700 hrs and please ensure you are ready as
+                the boat will leave at 0830 hrs and it is a further
+
+                10 min drive away to the boat) Embark on the most memorable trip for water sports activity at extra cost It’s
+
+                also a great place to just spend the day lying on the beach and relaxing. The beach is very scenic with fallen trees and white sand giving the photographer some interesting shots. The reef here starts very close to shore at a
+
+                depth of about 1 metre. The large reef is mostly made up of hard coral and has plenty of marine life.
+            - title: "DAY 4 : Havelock: Return to Port Blair"
+              details: >-
+                Check out in the morning. Return from Havelock Island in the
+                Morning/ evening by Ferry and transfer to hotel
+
+                in Port Blair. Ferry takes 2.5 hrs to cover the distance. Drop to Port Blair Hotel. Evening at Leisure.
+            - title: "DAY 5 : Departure"
+              details: >-
+                Check out in the morning. Return from Havelock Island in the
+                Morning/ evening by Ferry and transfer to hotel
+
+                in Port Blair. Ferry takes 2.5 hrs to cover the distance. Drop to Port Blair Hotel. Evening at Leisure
+          featured: false
+          gallery: []
+          days: 5
+          inclusions:
+            - Accommodation for 4 nights in above mentioned hotels
+            - 1 double sharing room
+            - 2 Nights stay at selected category of hotel/resort at Port Blair +
+              2 Nights stay at selected category of hotel/resort at Havelock
+            - Daily breakfast, as indicated in the meal plan. (Except breakfast
+              on day of arrival)
+            - Entry tickets, and ferry tickets to all sightseeing places.
+            - PB – Havelock – PB by Govt / private Cruise (Makruzz/Green
+              Ocean/Sea Link) - subject to availability and schedule (Morning or
+              afternoon)
+            - " All transfers by 01 Ac Cabin Port Blair, Havelock and Neil
+              Island."
+            - Airport pickup / drop and Jetty pickup / drop wherever applicable.
+            - Inclusive of all hotel taxes.
+          title: Andaman Package
+          hero: https://travelogyindia.b-cdn.net/storage/app/itinerary/504/corbyn-cove-beach-andaman.jpg
+          nights: 4
+          description: An Andaman package is a travel package designed for the Andaman and
+            Nicobar Islands, including accommodation, airport/inter-island
+            transfers by ferry and car, daily breakfast, entry tickets to
+            attractions, and sightseeing at locations
+          highlights:
+            - "1N Port Blair : Hotel Shompen ( Deluxe Room )"
+            - " 2N Havelock : White Coral Beach Resort ( Deluxe Cottage )"
+            - "1N Port Blair : Hotel Shompen ( Deluxe Room )"
       name: Andaman and Nicobar Islands
       description: "The Andaman and Nicobar Islands is a union territory of India
         comprising 572 islands, of which only 38 are inhabited. The islands are
