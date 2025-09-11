@@ -111,7 +111,7 @@ destinations:
       packages:
         - exclusions:
             - anything not mentioned in inclusion
-          price: 19,000 PP
+          price: 19,000
           itinerary:
             - title: 1 Night accommodation in Pahalgam
               details: we provide a hotel in pahalgam
