@@ -122,3 +122,34 @@ const minDate = tomorrow.toISOString().split('T')[0];
 travelDateInput.setAttribute('min', minDate);
 travelDateInput.setAttribute('value', minDate);
 
+function prettifyKey(key) {
+  return key
+    // insert a space before every capital letter
+    .replace(/([A-Z])/g, " $1")
+    // capitalize the first letter
+    .replace(/^./, str => str.toUpperCase());
+}
+
+
+document.getElementById("enquiryForm").addEventListener("submit", function (e) {
+  const useWhatsapp = document.getElementById("useWhatsapp").checked;
+
+  if (useWhatsapp) {
+    e.preventDefault();
+
+    const formData = new FormData(this);
+    let message = "Hello, I'd like to plan my travel:\n";
+
+    for (const [key, value] of formData.entries()) {
+      if (key !== "useWhatsapp" && value.trim() !== "") {
+        message += `*${prettifyKey(key)}:* ${value}\n`;
+      }
+    }
+
+    // Encode everything properly
+    const encodedMessage = encodeURIComponent(message);
+
+    // Redirect to WhatsApp
+    window.location.href = `https://wa.me/9773930305?text=${encodedMessage}`;
+  }
+});

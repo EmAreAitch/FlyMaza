@@ -6,6 +6,30 @@
 
 # Per-page layout changes
 
+module Middleman::Blog::UriTemplates
+  def self.safe_parameterize(str, sep = '-')
+    # ← your custom logic here, for example:
+    str.parameterize
+  end
+end
+
+configure :development do
+  module Rack
+    class DowncaseHeaders
+      def initialize(app)
+        @app = app
+      end
+
+      def call(env)
+        status, headers, body = @app.call(env)
+        # Lower-case all header names
+        [status, headers.transform_keys(&:downcase), body]
+      end
+    end
+  end
+  use Rack::DowncaseHeaders
+end
+
 activate :external_pipeline,
   name: :css,
   command: "npx postcss source/stylesheets/tailwind.css -o .tmp/stylesheets/tailwind.css#{" --watch" unless build?}",
@@ -71,7 +95,7 @@ set :port, 3000
 
 configure :build do
   activate :asset_hash do |opts|
-    opts.exts = config[:asset_extensions] + %w(.avif .json) - %w(.ico)
+    opts.exts = config[:asset_extensions] + %w(.avif .json .xml .yml) - %w(.ico)
   end
 end
 
@@ -83,23 +107,6 @@ set :markdown,
     hard_wrap: false       # treat single newlines as <br/>
 
 set :root_url, ENV['URL'] || 'http://localhost:3000'
-
-configure :development do
-  module Rack
-    class DowncaseHeaders
-      def initialize(app)
-        @app = app
-      end
-
-      def call(env)
-        status, headers, body = @app.call(env)
-        # Lower-case all header names
-        [status, headers.transform_keys(&:downcase), body]
-      end
-    end
-  end
-  use Rack::DowncaseHeaders
-end
 
 
 activate :blog do |blog|
@@ -120,12 +127,5 @@ tags = resources
         .uniq
 
 collection :sorted_tags, tags
-
-module Middleman::Blog::UriTemplates
-  def self.safe_parameterize(str, sep = '-')
-    # ← your custom logic here, for example:
-    str.parameterize
-  end
-end
 
 
