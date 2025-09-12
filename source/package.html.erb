@@ -93,7 +93,6 @@
         Explore Paris in style with a carefully crafted journey blending culture, gastronomy, and elegance.
       </p>
     </div>
-
     <div class="max-w-4xl mx-auto">
       <div class="space-y-12">
         <% package[:itinerary].each_with_index do |day, index| %>
@@ -107,9 +106,20 @@
                   <%= index + 1 %>
                 </div>
               </div>
-              <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 flex-1">                
-                <h3 class="text-2xl font-bold text-gray-900 mb-4"><%= day[:title] %></h3>
-                <p class="text-gray-600 leading-relaxed text-lg"><%= day[:details] %></p>
+              <div class="bg-white rounded-2xl shadow-sm border border-gray-100 flex-1 overflow-hidden">
+                <div class="p-8 cursor-pointer hover:bg-gray-50 transition-colors collapsible-header" data-target="day-<%= index %>">
+                  <div class="flex items-center justify-between">
+                    <h3 class="text-2xl font-bold text-gray-900"><%= day[:title] %></h3>                    
+                    <svg class="size-5 shrink-0 text-gray-500 transition-transform duration-200 collapsible-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div id="day-<%= index %>" class="max-h-0 overflow-hidden transition-[max-height] duration-300 collapsible-content">
+                  <div class="px-8 pb-8">
+                    <p class="text-gray-600 leading-relaxed text-lg"><%= day[:details] %></p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -131,6 +141,9 @@
     </div>
   </section>
 <% end %>
+
+<!-- Testimonial Section -->
+<%= partial "testimonials" %>
 
 <%# CTA Section %>
 <section class="py-32 bg-primary-600">

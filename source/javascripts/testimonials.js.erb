@@ -1,0 +1,34 @@
+const testimonials = <%= data.site.testimonials.to_json %>;
+let currentIndex = 0;
+
+const avatarEl = document.getElementById("testimonialAvatar");
+const nameEl = document.getElementById("testimonialName");
+const roleEl = document.getElementById("testimonialRole");
+const contentEl = document.getElementById("testimonialContent");
+
+function updateTestimonial(index) {
+  const t = testimonials[index];
+  avatarEl.src = `https://placehold.co/80x80/4A5A96/FFFFFF?text=${t.name[0]}`;
+  avatarEl.alt = t.name;
+  nameEl.textContent = t.name;
+  roleEl.textContent = t.role;
+  contentEl.textContent = t.content;
+}
+
+function prevTestimonial() {
+  currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+  updateTestimonial(currentIndex);
+}
+
+function nextTestimonial() {
+  currentIndex = (currentIndex + 1) % testimonials.length;
+  updateTestimonial(currentIndex);
+}
+
+// Desktop arrows
+document.getElementById("testimonialPrev").addEventListener("click", prevTestimonial);
+document.getElementById("testimonialNext").addEventListener("click", nextTestimonial);
+
+// Mobile arrows
+document.getElementById("testimonialPrevMobile").addEventListener("click", prevTestimonial);
+document.getElementById("testimonialNextMobile").addEventListener("click", nextTestimonial);

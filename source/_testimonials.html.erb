@@ -1,0 +1,74 @@
+<% 
+  testimonials = data.site.testimonials
+  current_testimonial_index = 0
+  content_for :head, javascript_include_tag("testimonials", defer: true)
+%>
+
+
+<section class="section-spacing bg-gray-50">
+  <div class="container-custom px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 lg:gap-16 items-start">
+
+        <!-- Left Side: Avatar, Name, Role -->
+        <div class="fade-in lg:col-span-4 flex flex-col lg:items-start items-start">
+          <div class="flex items-center space-x-4 lg:mb-8">
+            <div class="w-16 h-16 lg:w-20 lg:h-20 rounded-full overflow-hidden flex-shrink-0">
+              <img id="testimonialAvatar" src="https://placehold.co/80x80/4A5A96/FFFFFF?text=<%= testimonials[current_testimonial_index][:name][0] %>" 
+                   alt="<%= testimonials[current_testimonial_index][:name] %>" 
+                   class="w-full h-full object-cover">
+            </div>
+            <div>
+              <div id="testimonialName" class="font-bold text-xl lg:text-2xl mb-1 text-gray-900">
+                <%= testimonials[current_testimonial_index][:name] %>
+              </div>
+              <div id="testimonialRole" class="text-sm lg:text-lg text-gray-500">
+                <%= testimonials[current_testimonial_index][:role] %>
+              </div>
+            </div>
+          </div>
+
+          <!-- Desktop navigation arrows -->
+          <div class="hidden lg:flex mt-4 lg:mt-0">
+            <div class="flex items-center space-x-4">
+              <button id="testimonialPrev" class="w-12 h-12 rounded-full border border-gray-200 hover:border-gray-300 flex items-center justify-center transition-all duration-300 hover:bg-gray-50 group">
+                <svg class="w-5 h-5 text-gray-400 group-hover:text-gray-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+              </button>
+              <button id="testimonialNext" class="w-12 h-12 rounded-full bg-gray-900 hover:bg-gray-800 flex items-center justify-center transition-all duration-300 group">
+                <svg class="w-5 h-5 text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: Testimonial Content -->
+        <div class="fade-in lg:col-span-8 mt-6 lg:mt-0 flex flex-col">
+          <div class="pt-2 lg:pt-4">
+            <p id="testimonialContent" class="text-gray-700 text-base md:text-lg lg:text-xl leading-relaxed font-normal">
+              <%= testimonials[current_testimonial_index][:content] %>
+            </p>
+          </div>
+
+          <!-- Mobile navigation arrows -->
+          <div class="flex items-center justify-start space-x-4 mt-6 lg:hidden">
+            <button id="testimonialPrevMobile" class="w-10 h-10 rounded-full border border-gray-200 hover:border-gray-300 flex items-center justify-center transition-all duration-300 hover:bg-gray-50 group">
+              <svg class="w-4 h-4 text-gray-400 group-hover:text-gray-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+              </svg>
+            </button>
+            <button id="testimonialNextMobile" class="w-10 h-10 rounded-full bg-gray-900 hover:bg-gray-800 flex items-center justify-center transition-all duration-300 group">
+              <svg class="w-4 h-4 text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>

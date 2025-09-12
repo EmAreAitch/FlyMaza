@@ -12,9 +12,9 @@
     {
       icon: "phone",
       title: "Phone",
-      primary: "+91 99993 26874",
+      primary: "+91 96505 12067",
       secondary: "Mon-Sun: 8AM-10PM WIB",
-      link: "tel:+919999326874"
+      link: "tel:+919650512067"
     },
     {
       icon: "email", 
@@ -26,7 +26,7 @@
     {
       icon: "location",
       title: "Office", 
-      primary: "Delhi, India",
+      primary: "F-210, SF, Old M.B Road, Lado Sarai, 110030",
       secondary: "Visit our headquarters",
       link: "#"
     },
@@ -155,7 +155,7 @@
             </div>
             <div>
               <p class="font-semibold text-gray-900">24/7 Support</p>
-              <p class="text-gray-600">+91 99993 26874</p>
+              <p class="text-gray-600">+91 96505 12067</p>
             </div>
           </div>
         </div>
@@ -300,34 +300,14 @@
       </div>
       
       <!-- Office Locations -->
-      <div class="slide-in-right">
+      <div class="slide-in-right h-1/2">
         <div class="mb-8">
-          <h2 class="text-3xl font-bold text-gray-900 mb-4">Visit Our Offices</h2>
-          <p class="text-gray-600">Drop by any of our locations to speak with our travel experts in person.</p>
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Visit Our Office</h2>
+          <p class="text-gray-600">Drop by our location to speak with our travel experts in person.</p>
         </div>
         
-        <div class="space-y-6">
-          <% offices.each_with_index do |office, index| %>
-            <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 fade-in">
-              <div class="flex items-start space-x-4">
-                <div class="w-12 h-12 bg-<%= ['primary', 'secondary', 'accent'][index] %>-100 rounded-full flex items-center justify-center flex-shrink-0">
-                  <svg class="w-6 h-6 text-<%= ['primary', 'secondary', 'accent'][index] %>-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-                  </svg>
-                </div>
-                <div class="flex-1">
-                  <h3 class="text-xl font-bold text-gray-900 mb-2"><%= office[:city] %></h3>
-                  <p class="text-gray-600 mb-3"><%= office[:address] %></p>
-                  <div class="space-y-1 text-sm text-gray-500">
-                    <p><strong>Phone:</strong> <%= office[:phone] %></p>
-                    <p><strong>Email:</strong> <%= office[:email] %></p>
-                    <p><strong>Hours:</strong> <%= office[:hours] %></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          <% end %>
+        <div class="space-y-6 h-full">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56097.44734902625!2d77.12361434863284!3d28.506926000000018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1e02011fc705%3A0x4585c88747b5cec7!2sHDFC%20Bank!5e0!3m2!1sen!2sin!4v1757691076125!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-full h-full"></iframe>
         </div>
       </div>
     </div>
