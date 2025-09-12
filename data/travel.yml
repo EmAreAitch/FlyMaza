@@ -15,7 +15,7 @@ destinations:
             - Personal expenses
             - Travel insurance
             - Monument entrance fees
-          price: "1299"
+          price: "12999"
           itinerary:
             - title: Arrival in Kochi
               details: Airport pickup and transfer to hotel. Evening visit to Fort Kochi and
@@ -64,7 +64,7 @@ destinations:
             - Personal expenses
             - Monument entrance fees
             - Camel safari tips
-          price: "1899"
+          price: "18999"
           itinerary:
             - title: Arrival in Jaipur
               details: Airport pickup, check-in at heritage hotel, evening visit to local
