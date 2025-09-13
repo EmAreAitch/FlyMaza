@@ -1,6 +1,6 @@
 destinations:
   domestic:
-    - featured: false
+    - featured: true
       highlights:
         - Stunning beaches like Radhanagar Beach
         - World-class water sports such as scuba diving and snorkeling
@@ -112,7 +112,7 @@ destinations:
         grouped into two main clusters: the northern Andaman Islands and the
         southern Nicobar Islands, separated by a 150 km wide channel."
       hero: https://www.nitworldwideholidays.com/andaman-tour-packages/img/5days-Andaman-Tour.jpg
-    - featured: false
+    - featured: true
       highlights:
         - lively shores of Baga and Calangute to the serene sands of Palolem,
           Goa’s beaches are unmatched. By night, the state transforms into
@@ -196,7 +196,7 @@ destinations:
         forts and churches, or diving into thrilling water sports. A destination
         that promises both adventure and serenity, Goa is where every trip
         becomes an unforgettable memory.
-    - featured: false
+    - featured: true
       highlights:
         - Snow-capped mountains, rolling valleys, and scenic hill towns that
           showcase nature at its best.
