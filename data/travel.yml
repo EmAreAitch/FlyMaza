@@ -78,7 +78,7 @@ destinations:
                 NOTE: that all hotels on Havelock have a early morning check out time and late checkout is provided at the discretion of the hotel management
             - title: "DAY 5 : Departure"
               details: Depart Port Blair with Fond memories of these mesmerizing Islands.
-          featured: false
+          featured: true
           gallery: []
           days: 5
           inclusions:
@@ -163,7 +163,7 @@ destinations:
               details: After having breakfast checkout from the hotel and transfer to the
                 airport as per your flight timing to return back with a lot of
                 good memories.
-          featured: false
+          featured: true
           gallery: []
           days: 5
           inclusions:
@@ -207,7 +207,91 @@ destinations:
         - Colorful local festivals, handicrafts, and traditional Himachali
           cuisine that reflect rich culture.
       gallery: []
-      packages: []
+      packages:
+        - exclusions:
+            - Lunch
+            - Vehicle at disposal
+            - Any personal expenses. Room service and special orders. Alcoholic
+              and non alcoholic beverages
+            - Any extra excursions or sightseeing apart from the suggested tour
+              itinerary
+            - Guide Charges, Camera Tickets are NOT INCLUDED in the mentioned
+              cost of Sightseeing & Transfers
+            - Gala Dinner on 25th & 31st Night.
+            - Other meals not mentioned laundry, telephone calls, and incidentals
+            - Any additional charges arising due to natural calamities,
+              political disturbances, VIP movement, etc.
+            - All applicable Taxes ● Chain Vehicle Charges ● Any guide charges
+          price: 17,500
+          itinerary:
+            - title: "DAY 1 - Delhi -Shimla "
+              details: We start our scenic drive from Chandigarh towards Shimla. Our driver
+                will pick you up from the airport/railway station. You will be
+                driven through the Chandigarh bypass and various pit stops to
+                reach Shimla. Check into your hotel to relax. Overnight stay at
+                the hotel.
+            - title: "DAY 2 - Shimla local & Kufri sightseeing "
+              details: After breakfast, proceed for a full-day sightseeing tour of Shimla.
+                Visit Kufri, a scenic hill spot at an altitude of 2,622 meters,
+                known for its pleasant climate and natural beauty. Explore the
+                Himalayan Nature Park, home to a variety of fauna. Later, take a
+                stroll along the Mall Road and visit popular attractions such as
+                The Ridge, Christ Church, Scandal Point, Gaiety Theater, and
+                Town Hall. In the evening, return to the hotel for an overnight
+                stay.
+            - title: "DAY 3: Shimla – Manali via Kullu"
+              details: After breakfast, check out and proceed to Manali. En route, visit
+                Sunder Nagar Lake, Pandoh Dam, and Kullu Valley. Enjoy optional
+                river rafting ( own expense) and explore the local markets.
+                Arrive in Manali by evening and check in to your hotel.
+                Overnight stay in Manali.
+            - details: >-
+                After breakfast, set out for local sightseeing in Manali. Visit
+                Hadimba Temple, Vashisht Temple, Van Vihar, and Tibetan
+                Monasteries. In the evening, spend time on Mall Road shopping
+                and enjoying the lively markets. Overnight stay at the hotel.
+
+                Optional: Rohtang Pass can also be visited in a local cab at your own cost.
+              title: "DAY 4: Manali Local Sightseeing"
+            - details: This morning, after breakfast, visit Solang Valley (13 kms), famous for
+                its stunning views of glaciers and snow-capped mountains.
+                Adventure enthusiasts can indulge in activities such as
+                paragliding, zorbing, skiing, and more (own expense). Return to
+                the hotel for an overnight stay in Manali.
+              title: "DAY 5: Excursion to Solang Valley"
+            - details: After breakfast, check out from the hotel and drive towards Delhi. Drop
+                at airport/railway station for your onward journey, carrying
+                sweet memories and a promise to return.
+              title: "DAY 6: Manali – Delhi Departure"
+          featured: true
+          gallery: []
+          days: 4
+          inclusions:
+            - Hotels as per mentioned above.
+            - " Daily breakfast and Dinner included in the package"
+            - Delhi airport pickup & drop off included
+            - Transfers and Sightseeing by private Non AC Private Cab
+            - " 1 Rooms on Double sharing basis Included in all Hotel."
+            - Welcome drink on arrival
+            - All toll taxes, parking charges included.
+            - Includes driver’s expenses, fuel charges and allowances.
+            - All taxes included
+          title: Shimla and Manali Tour
+          hero: https://seasontours.org/wp-content/uploads/2024/03/5-14.webp
+          nights: 3
+          description: Escape to the hills of Himachal Pradesh with a journey through
+            Shimla and Manali, two of India’s most loved mountain getaways.
+            Stroll along Shimla’s Mall Road, visit colonial landmarks, and enjoy
+            panoramic Himalayan views. In Manali, soak in the beauty of
+            snow-capped peaks, adventure at Solang Valley, and find peace at
+            ancient temples and hot springs. A perfect blend of nature,
+            adventure, and culture, this tour offers an unforgettable Himalayan
+            experience.
+          highlights:
+            - 2 nights in Shimla
+            - 3 nights in Manali
+            - Manali sightseeing
+            - Shimla local and Kufri sightseeing
       name: " Himachal Pradesh"
       hero: https://static.toiimg.com/photo/msid-93246451,width-96,height-65.cms
       description: Himachal Pradesh is a breathtaking destination where snow-capped
@@ -216,112 +300,4 @@ destinations:
         serene landscapes, Himachal offers a blend of natural beauty, cultural
         charm, and endless opportunities for relaxation and exploration—making
         it a true paradise for every traveler.
-  international:
-    - name: Thailand
-      hero: https://image.pollinations.ai/prompt/Thailand%20tropical%20beach%20crystal%20clear%20water%20limestone%20cliffs%20longtail%20boats?width=1920&height=1080&seed=52394&nologo=true
-      featured: true
-      description: The Land of Smiles with pristine beaches, ancient temples, and
-        incredible street food. Perfect blend of relaxation and adventure.
-      highlights:
-        - Relax on the stunning beaches of Phuket and Phi Phi Islands
-        - Explore ornate Buddhist temples in Bangkok
-        - Experience floating markets and street food culture
-        - Enjoy traditional Thai massage and spa treatments
-      packages:
-        - exclusions:
-            - Personal expenses
-            - Visa fees
-            - Travel insurance
-            - Optional tours
-          price: "32999"
-          itinerary:
-            - title: Arrival in Bangkok
-              details: Airport pickup, hotel check-in, evening visit to Chatuchak Weekend
-                Market.
-            - title: Bangkok Temples & Culture
-              details: Visit Grand Palace, Wat Pho temple, longtail boat ride through floating
-                markets.
-            - title: Flight to Phuket
-              details: Morning flight to Phuket, beach resort check-in, sunset at Patong
-                Beach.
-            - title: Phi Phi Islands Day Trip
-              details: Full day island hopping tour with snorkeling and beach activities.
-            - title: Phuket Leisure
-              details: Free day for spa treatments, shopping, or optional elephant sanctuary
-                visit.
-            - title: Bangkok & Departure
-              details: Flight back to Bangkok, last-minute shopping, evening departure.
-          featured: true
-          days: 6
-          inclusions:
-            - Round-trip airfare
-            - 4-star hotel accommodation
-            - Daily breakfast
-            - Domestic flights
-            - Island tour with lunch
-            - Airport transfers
-          title: Thailand Beach & Culture
-          hero: https://image.pollinations.ai/prompt/Thailand%20Phi%20Phi%20islands%20turquoise%20water%20limestone%20karst%20tropical%20paradise?width=1920&height=1080&seed=52395&nologo=true
-          nights: 5
-          description: Discover Thailand's magic from bustling Bangkok temples to pristine
-            Phuket beaches, with island hopping adventures and cultural
-            experiences.
-          highlights:
-            - Stay in beachfront resorts in Phuket
-            - Full day Phi Phi Islands excursion
-            - Explore Bangkok's iconic temples and markets
-            - Traditional Thai spa and wellness experiences
-    - name: Switzerland
-      hero: https://image.pollinations.ai/prompt/Switzerland%20Alps%20snow%20mountains%20pristine%20lakes%20Swiss%20countryside%20scenic?width=1920&height=1080&seed=52396&nologo=true
-      featured: true
-      description: Alpine wonderland with snow-capped peaks, pristine lakes, and
-        charming villages. Perfect for nature lovers and adventure seekers.
-      highlights:
-        - Take scenic train rides through the Swiss Alps
-        - Experience the beauty of Lake Geneva and Interlaken
-        - Visit charming mountain villages like Zermatt
-        - Enjoy world-renowned Swiss chocolate and cheese
-      packages:
-        - exclusions:
-            - Personal expenses
-            - Visa fees
-            - Travel insurance
-            - Cable car tickets
-          price: "45999"
-          itinerary:
-            - title: Arrival in Zurich
-              details: Airport pickup, city tour of Zurich including Lake Zurich and Old Town.
-            - title: Lucerne & Mount Pilatus
-              details: Train to Lucerne, cable car ride to Mount Pilatus for panoramic Alpine
-                views.
-            - title: Interlaken Adventure
-              details: Travel to Interlaken, paragliding or scenic helicopter ride over the
-                Alps.
-            - title: Jungfraujoch Top of Europe
-              details: Train journey to Jungfraujoch, Europe's highest railway station and
-                glacier views.
-            - title: Zermatt & Matterhorn
-              details: Visit Zermatt village, cogwheel train to see the iconic Matterhorn
-                peak.
-            - title: Geneva & Departure
-              details: Travel to Geneva, visit Lake Geneva, shopping, and evening departure.
-          featured: false
-          days: 6
-          inclusions:
-            - Round-trip airfare
-            - 4-star Swiss hotels
-            - Daily breakfast
-            - Swiss Travel Pass
-            - Airport transfers
-            - Scenic train journeys
-          title: Swiss Alps Adventure
-          hero: https://image.pollinations.ai/prompt/Switzerland%20Matterhorn%20mountain%20reflection%20alpine%20lake%20snow%20peaks%20dramatic?width=1920&height=1080&seed=52397&nologo=true
-          nights: 5
-          description: Experience Switzerland's breathtaking Alpine beauty with scenic
-            train rides, mountain adventures, and visits to iconic peaks like
-            the Matterhorn.
-          highlights:
-            - Ride the famous Swiss scenic trains
-            - Visit Jungfraujoch - Top of Europe
-            - See the iconic Matterhorn mountain
-            - Experience Swiss hospitality and cuisine
+  international: []
