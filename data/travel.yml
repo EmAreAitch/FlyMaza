@@ -196,6 +196,26 @@ destinations:
         forts and churches, or diving into thrilling water sports. A destination
         that promises both adventure and serenity, Goa is where every trip
         becomes an unforgettable memory.
+    - featured: false
+      highlights:
+        - Snow-capped mountains, rolling valleys, and scenic hill towns that
+          showcase nature at its best.
+        - Adventure activities like trekking, paragliding, rafting, and skiing
+          for an adrenaline rush.
+        - Peaceful temples, monasteries, and spiritual retreats offering moments
+          of serenity.
+        - Colorful local festivals, handicrafts, and traditional Himachali
+          cuisine that reflect rich culture.
+      gallery: []
+      packages: []
+      name: " Himachal Pradesh"
+      hero: https://static.toiimg.com/photo/msid-93246451,width-96,height-65.cms
+      description: Himachal Pradesh is a breathtaking destination where snow-capped
+        mountains, lush valleys, and gushing rivers create the perfect escape.
+        From scenic hill towns and ancient temples to adventure sports and
+        serene landscapes, Himachal offers a blend of natural beauty, cultural
+        charm, and endless opportunities for relaxation and exploration—making
+        it a true paradise for every traveler.
   international:
     - name: Thailand
       hero: https://image.pollinations.ai/prompt/Thailand%20tropical%20beach%20crystal%20clear%20water%20limestone%20cliffs%20longtail%20boats?width=1920&height=1080&seed=52394&nologo=true
