@@ -1,159 +1,5 @@
 destinations:
   domestic:
-    - name: Kerala
-      hero: https://image.pollinations.ai/prompt/Kerala%20backwaters%20houseboat%20palm%20trees%20serene%20tropical%20landscape?width=1920&height=1080&seed=52390&nologo=true
-      featured: true
-      description: God's Own Country with pristine backwaters, lush hill stations, and
-        vibrant culture. Experience the perfect blend of nature and tradition.
-      highlights:
-        - Cruise through the serene backwaters of Alleppey
-        - Explore the spice plantations of Munnar
-        - Witness traditional Kathakali dance performances
-        - Enjoy authentic Kerala seafood and coconut curries
-      packages:
-        - exclusions:
-            - Personal expenses
-            - Travel insurance
-            - Monument entrance fees
-          price: "12999"
-          itinerary:
-            - title: Arrival in Kochi
-              details: Airport pickup and transfer to hotel. Evening visit to Fort Kochi and
-                Chinese fishing nets.
-            - title: Munnar Hill Station
-              details: Drive to Munnar, visit tea gardens and spice plantations. Overnight in
-                hill resort.
-            - title: Alleppey Backwaters
-              details: Houseboat cruise through backwaters with traditional Kerala meals
-                onboard.
-            - title: Kovalam Beach
-              details: Relax at Kovalam beach, Ayurvedic spa session, and local market visit.
-            - title: Departure
-              details: Morning leisure time, checkout and transfer to Trivandrum airport.
-          featured: true
-          days: 5
-          inclusions:
-            - Accommodation in 4-star hotels
-            - Daily breakfast and dinner
-            - Airport transfers
-            - Houseboat cruise
-            - Sightseeing tours
-          title: Kerala Backwaters & Hills
-          hero: https://image.pollinations.ai/prompt/Kerala%20houseboat%20backwaters%20sunset%20palm%20trees%20traditional%20boat?width=1920&height=1080&seed=52391&nologo=true
-          nights: 4
-          description: Discover Kerala's natural beauty from misty hill stations to
-            tranquil backwaters, complete with houseboat experience and cultural
-            immersion.
-          highlights:
-            - Stay in a traditional Kerala houseboat
-            - Visit Munnar's famous tea gardens
-            - Experience authentic Ayurvedic treatments
-            - Enjoy fresh seafood and coconut-based cuisine
-    - name: Rajasthan
-      hero: https://image.pollinations.ai/prompt/Rajasthan%20Jaipur%20Hawa%20Mahal%20pink%20city%20royal%20architecture?width=1920&height=1080&seed=52392&nologo=true
-      featured: true
-      description: The Land of Kings with majestic palaces, golden deserts, and
-        vibrant culture. Experience royal heritage and desert adventures.
-      highlights:
-        - Explore the majestic City Palace in Jaipur
-        - Experience camel safari in the Thar Desert
-        - Visit the romantic Lake Palace in Udaipur
-        - Shop for traditional handicrafts and textiles
-      packages:
-        - exclusions:
-            - Personal expenses
-            - Monument entrance fees
-            - Camel safari tips
-          price: "18999"
-          itinerary:
-            - title: Arrival in Jaipur
-              details: Airport pickup, check-in at heritage hotel, evening visit to local
-                bazaars.
-            - title: Jaipur Sightseeing
-              details: Visit Amber Fort, City Palace, Hawa Mahal, and Jantar Mantar
-                observatory.
-            - title: Jodhpur Blue City
-              details: Drive to Jodhpur, visit Mehrangarh Fort and explore the blue painted
-                old city.
-            - title: Jaisalmer Desert
-              details: Travel to Jaisalmer, evening camel safari and overnight in desert camp.
-            - title: Udaipur City of Lakes
-              details: Drive to Udaipur, boat ride on Lake Pichola, visit City Palace.
-            - title: Departure
-              details: Morning at leisure, transfer to Udaipur airport for departure.
-          featured: true
-          days: 6
-          inclusions:
-            - Heritage hotel accommodation
-            - Daily breakfast
-            - Private car with driver
-            - Desert camp stay
-            - Camel safari experience
-          title: Royal Rajasthan Circuit
-          hero: https://image.pollinations.ai/prompt/Rajasthan%20desert%20camel%20safari%20sunset%20sand%20dunes%20golden%20landscape?width=1920&height=1080&seed=52393&nologo=true
-          nights: 5
-          description: Journey through the royal cities of Rajasthan, from pink Jaipur to
-            the golden sands of Jaisalmer, experiencing palaces, forts, and
-            desert adventures.
-          highlights:
-            - Stay in authentic heritage hotels
-            - Overnight desert camping experience
-            - Visit iconic forts and palaces
-            - Traditional Rajasthani cultural performances
-    - featured: false
-      name: Kashmir
-      hero: /images/uploads/1-amarnath-yatra-pahalgam-jammu-kashmir-city-hero.jpg
-      description: Kashmir is the northernmost geographical region of the Indian
-        subcontinent. Until the mid-19th century, the term Kashmir denoted only
-        the Kashmir Valley between the Great Himalayas and the Pir Panjal Range.
-      highlights:
-        - kashmir
-      packages:
-        - exclusions:
-            - anything not mentioned in inclusion
-          price: 19,000
-          itinerary:
-            - title: 1 Night accommodation in Pahalgam
-              details: we provide a hotel in pahalgam
-            - title: 2 Nights accommodation in Gulmarg
-              details: "we then provide a night accommodation in Gulmerg "
-            - title: 2 Nights accommodation in Sonamarg
-              details: sonamarg
-            - title: 1 Night accommodation in Srinagar
-              details: srinagar
-          featured: false
-          days: 7
-          inclusions:
-            - Breakfast & Dinners
-            - Airport transfers
-            - Sightseeing tours
-            - All Tours & Transfers by Private Non AC vehicle
-            - All presently applicable Hotel & Airline taxes
-          title: Kashmir
-          hero: /images/uploads/1-amarnath-yatra-pahalgam-jammu-kashmir-city-hero.jpg
-          nights: 6
-          description: >+
-            Explore the enchanting beauty of Kashmir that is revered worldwide
-            for offering endless charms and romance.
-
-
-            Visit Pahalgam which is one of the most beautiful places to visit on your Kashmir holiday with breathtaking green valleys, pine forests and river stream flowing through the middle.
-
-
-            Enjoy majestic snow-clad mountains at Gulmarg & witness the ethereal beauty of Sonamarg.
-
-
-            Stay at Srinagar which is known for its royal gardens and enjoy Shikara Ride on Dal Lake. Rejuvenate yourself in the best way possible.
-
-          highlights:
-            - Visit Pahalgam which is one of the most beautiful places to visit
-              on your Kashmir holiday with breathtaking green valleys, pine
-              forests and river stream flowing through the middle.
-            - "Enjoy majestic snow-clad mountains at Gulmarg & witness the
-              ethereal beauty of Sonamarg. "
-            - "  Stay at Srinagar which is known for its royal gardens and enjoy
-              Shikara Ride on Dal Lake. Rejuvenate yourself in the best way
-              possible."
     - featured: false
       highlights:
         - Stunning beaches like Radhanagar Beach
@@ -279,7 +125,68 @@ destinations:
         - rasailing, jet skiing, scuba diving, and dolphin spotting—Goa is a
           haven for thrill seekers and water lovers.
       gallery: []
-      packages: []
+      packages:
+        - exclusions:
+            - Lunch + Dinner in hotel
+            - Flight + Train
+            - Any activity
+            - Any entry ticket / entrance fee
+            - Any water sports activities
+            - " Personal expenses"
+          price: 27,000
+          itinerary:
+            - title: DAY 1- Arrival at Goa  and transfer to respective hotel
+              details: Arrive at Goa & get transferred to your pre-booked Hotel on a private
+                Vehicle basis. Overnight at the respective Hotel.
+            - title: DAY 2 - North Goa sightseeing
+              details: >
+                After breakfast proceed for North Goa tour .
+
+
+                Places covered will be : Fort Aguada, Sinquerim Beach, Calangute Beach, Baga Beach, anjuna, Vagator Beach, Chapora Fort.
+
+
+                Later a drop at Coco beach to take a cruise or fairy for Dolphin Spot ( At your own cost ). Evening return back to Hotel and overnight stay.
+            - title: DAY 3 - North Goa and South Goa tour and transfer
+              details: >
+                Have breakfast in the hotel, and proceed for the South Goa
+                tour. 
+
+
+                Places covered will be: Shri Mangueshi Temple, Old Goa Churches, Dona Paula, Miramar Beach.
+
+
+                In the Evening Enjoy Mandovi River Dinner Cruise (on your own expenses).
+            - title: DAY 4 - North Goa leisure day
+              details: Leisure Day
+            - title: DAY 5 - Goa to home return
+              details: After having breakfast checkout from the hotel and transfer to the
+                airport as per your flight timing to return back with a lot of
+                good memories.
+          featured: false
+          gallery: []
+          days: 5
+          inclusions:
+            - Accommodation in above given hotel
+            - " 1 Room on double sharing basis"
+            - Breakfast in hotels
+            - Return airport transfer by private cab
+            - All tole and taxes , including driver allowances , fuel charges
+              and parking
+            - Perp person package cost is as per minimum 5 adults , if adults
+              increase or decrease , cost will also vary
+          title: "GOA TOUR: North Goa & South Goa"
+          hero: https://s7ap1.scene7.com/is/image/incredibleindia/vagator-beach-goa-city-1-hero?qlt=82&ts=1742158909874
+          nights: 4
+          description: Discover the best of Goa with a tour that blends the vibrant energy
+            of North Goa’s beaches, nightlife, and forts with the serene charm
+            of South Goa’s peaceful shores, heritage churches, and lush
+            landscapes—offering you the perfect balance of adventure and
+            relaxation.
+          highlights:
+            - 04 Nights – North Goa - Antara Goa or Similar - Deluxe room
+            - North Goa and South Goa tour
+            - North Goa sightseeing
       name: Goa
       hero: https://yu-hotel.com/wp-content/uploads/2023/03/best-luxury-hotels-in-north-goa-YU-Hotel.jpg
       description: Goa, India’s beach paradise, is the perfect blend of sun, sand, and
@@ -306,7 +213,7 @@ destinations:
             - Visa fees
             - Travel insurance
             - Optional tours
-          price: "3299"
+          price: "32999"
           itinerary:
             - title: Arrival in Bangkok
               details: Airport pickup, hotel check-in, evening visit to Chatuchak Weekend
@@ -360,7 +267,7 @@ destinations:
             - Visa fees
             - Travel insurance
             - Cable car tickets
-          price: "4599"
+          price: "45999"
           itinerary:
             - title: Arrival in Zurich
               details: Airport pickup, city tour of Zurich including Lake Zurich and Old Town.
