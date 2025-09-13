@@ -1,7 +1,7 @@
 let travelData = {};
 
 // Fetch travel data
-fetch('/json/travel.json')
+fetch('<%= asset_path(:json, "travel") %>')
   .then(res => res.json())
   .then(data => { 
     travelData = data; 
