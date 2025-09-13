@@ -30,16 +30,18 @@ collections:
               - label: "Domestic Destinations"
                 name: "domestic"
                 widget: "list"
+                minimize_collapsed: true
                 summary: "🏠 {{fields.name}}"
                 fields:
                   - {label: "Name", name: "name", widget: "string"}
                   - {label: "Hero Image", name: "hero", widget: "image"}
                   - {label: "Featured", name: "featured", widget: "boolean", default: false}
                   - {label: "Description", name: "description", widget: "text"}
-                  - {label: "Highlights", name: "highlights", widget: "list", field: {label: "Highlight", name: "", widget: "string"}, default: []}                  
+                  - {label: "Highlights", name: "highlights", widget: "list", field: {label: "Highlight", name: "", widget: "string"}, default: [], minimize_collapsed: true}                  
                   - label: "Gallery"
                     name: "gallery"
                     widget: "list"
+                    minimize_collapsed: true
                     field: {label: "Image", name: "", widget: "image"}
                     default: []
                   - {label: "Packages", name: "packages", widget: "hidden", default: []}
@@ -48,16 +50,18 @@ collections:
               - label: "International Destinations"
                 name: "international"
                 widget: "list"
+                minimize_collapsed: true
                 summary: "🌍 {{fields.name}}"
                 fields:
                   - {label: "Name", name: "name", widget: "string"}
                   - {label: "Hero Image", name: "hero", widget: "image"}
                   - {label: "Featured", name: "featured", widget: "boolean", default: false}
                   - {label: "Description", name: "description", widget: "text"}
-                  - {label: "Highlights", name: "highlights", widget: "list", field: {label: "Highlight", name: "", widget: "string"}, default: []}                  
+                  - {label: "Highlights", name: "highlights", widget: "list", field: {label: "Highlight", name: "", widget: "string"}, default: [], minimize_collapsed: true}                  
                   - label: "Gallery"
                     name: "gallery"
                     widget: "list"
+                    minimize_collapsed: true
                     default: []
                     field: {label: "Image", name: "", widget: "image"}
                   - {label: "Packages", name: "packages", widget: "hidden", default: []}
@@ -76,11 +80,13 @@ collections:
               - label: "Domestic Packages"
                 name: "domestic"
                 widget: "list"
+                minimize_collapsed: true
                 summary: "🏠 {{fields.name}}"
                 fields:                  
                   - label: "Packages"
                     name: "packages"
                     widget: "list"
+                    minimize_collapsed: true
                     default: []
                     summary: "📦 {{fields.title}} - {{fields.days}}D/{{fields.nights}}N - Rs.{{fields.price}}"
                     fields:
@@ -91,12 +97,13 @@ collections:
                       - {label: "Price", name: "price", widget: "string"}
                       - {label: "Featured", name: "featured", widget: "boolean", default: false}
                       - {label: "Description", name: "description", widget: "text"}
-                      - {label: "Highlights", name: "highlights", widget: "list", field: {label: "Highlight", name: "", widget: "string"}, default: []}
-                      - {label: "Inclusions", name: "inclusions", widget: "list", field: {label: "Inclusion", name: "", widget: "string"}, default: []}
-                      - {label: "Exclusions", name: "exclusions", widget: "list", field: {label: "Exclusion", name: "", widget: "string"}, default: []}                      
+                      - {label: "Highlights", name: "highlights", widget: "list", field: {label: "Highlight", name: "", widget: "string"}, default: [], minimize_collapsed: true}
+                      - {label: "Inclusions", name: "inclusions", widget: "list", field: {label: "Inclusion", name: "", widget: "string"}, default: [], minimize_collapsed: true}
+                      - {label: "Exclusions", name: "exclusions", widget: "list", field: {label: "Exclusion", name: "", widget: "string"}, default: [], minimize_collapsed: true}                      
                       - label: "Itinerary"
                         name: "itinerary"
                         widget: "list"
+                        minimize_collapsed: true
                         summary: "{{fields.title}}"
                         default: []
                         fields:
@@ -105,17 +112,20 @@ collections:
                       - label: "Gallery"
                         name: "gallery"
                         widget: "list"
+                        minimize_collapsed: true
                         default: []
                         field: {label: "Image", name: "", widget: "image"}
               
               - label: "International Packages"
                 name: "international"
                 widget: "list"
+                minimize_collapsed: true
                 summary: "🌍 {{fields.name}}"
                 fields:                  
                   - label: "Packages"
                     name: "packages"
                     widget: "list"
+                    minimize_collapsed: true
                     default: []
                     summary: "📦 {{fields.title}} - {{fields.days}}D/{{fields.nights}}N - {{fields.price}}"
                     fields:
@@ -126,12 +136,13 @@ collections:
                       - {label: "Price", name: "price", widget: "string"}
                       - {label: "Featured", name: "featured", widget: "boolean", default: false}
                       - {label: "Description", name: "description", widget: "text"}
-                      - {label: "Highlights", name: "highlights", widget: "list", field: {label: "Highlight", name: "", widget: "string"}, default: []}
-                      - {label: "Inclusions", name: "inclusions", widget: "list", field: {label: "Inclusion", name: "", widget: "string"}, default: []}
-                      - {label: "Exclusions", name: "exclusions", widget: "list", field: {label: "Exclusion", name: "", widget: "string"}, default: []}
+                      - {label: "Highlights", name: "highlights", widget: "list", field: {label: "Highlight", name: "", widget: "string"}, default: [], minimize_collapsed: true}
+                      - {label: "Inclusions", name: "inclusions", widget: "list", field: {label: "Inclusion", name: "", widget: "string"}, default: [], minimize_collapsed: true}
+                      - {label: "Exclusions", name: "exclusions", widget: "list", field: {label: "Exclusion", name: "", widget: "string"}, default: [], minimize_collapsed: true}
                       - label: "Itinerary"
                         name: "itinerary"
                         widget: "list"
+                        minimize_collapsed: true
                         default: []
                         summary: "{{fields.title}}"
                         fields:
@@ -140,6 +151,7 @@ collections:
                       - label: "Gallery"
                         name: "gallery"
                         widget: "list"
+                        minimize_collapsed: true
                         default: []
                         field: {label: "Image", name: "", widget: "image"}
 
