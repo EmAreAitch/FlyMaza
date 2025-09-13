@@ -193,3 +193,30 @@ collections:
         name: body
         widget: markdown
         default: Write your post content here
+  - name: "site_content"
+    label: "Site Content"
+    files:
+      - name: "site_data"
+        label: "Site Data"
+        file: "data/site.yml"
+        fields:
+          - label: "Testimonials"
+            name: "testimonials"
+            widget: "list"
+            minimize_collapsed: true
+            summary: "{{fields.name}}"
+            fields:
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Role", name: "role", widget: "string"}
+              - {label: "Content", name: "content", widget: "text"}
+              - {label: "Avatar", name: "avatar", widget: "image", required: false}
+              - {label: "Review Link", name: "review_link", widget: "string", required: false}
+          - label: "Statistics"
+            name: "stats"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Happy Travelers", name: "happy_travelers", widget: "string"}
+              - {label: "Years of Experience", name: "years_of_experience", widget: "string"}
+              - {label: "Destinations Covered", name: "destinations_covered", widget: "string"}
+              - {label: "Customer Rating", name: "customer_rating", widget: "string"}

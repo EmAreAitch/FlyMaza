@@ -1,34 +1,60 @@
-const testimonials = <%= data.site.testimonials.to_json %>;
+const testimonials = <%= data.site.testimonials.map { it.avatar = responsive_image(it.avatar); it }.to_json %>;
 let currentIndex = 0;
+let timer;
 
 const avatarEl = document.getElementById("testimonialAvatar");
 const nameEl = document.getElementById("testimonialName");
 const roleEl = document.getElementById("testimonialRole");
 const contentEl = document.getElementById("testimonialContent");
 
+// Add transitions
+const style = document.createElement('style');
+style.textContent = `.testimonial-fade { transition: opacity 0.3s ease; }`;
+document.head.appendChild(style);
+
+[avatarEl, nameEl, roleEl, contentEl].forEach(el => el.classList.add('testimonial-fade'));
+
 function updateTestimonial(index) {
   const t = testimonials[index];
-  avatarEl.src = `https://placehold.co/80x80/4A5A96/FFFFFF?text=${t.name[0]}`;
-  avatarEl.alt = t.name;
-  nameEl.textContent = t.name;
-  roleEl.textContent = t.role;
-  contentEl.textContent = t.content;
+  
+  // Fade out
+  [avatarEl, nameEl, roleEl, contentEl].forEach(el => el.style.opacity = '0');
+  
+  setTimeout(() => {
+    avatarEl.src = t.avatar || `https://placehold.co/80x80/4A5A96/FFFFFF?text=${t.name[0]}`;
+    nameEl.textContent = t.name;
+    roleEl.textContent = t.role;  
+    !!t.review_link ? contentEl.href = t.review_link : contentEl.removeAttribute("href")    
+    contentEl.textContent = t.content;
+    
+    // Fade in
+    [avatarEl, nameEl, roleEl, contentEl].forEach(el => el.style.opacity = '1');
+  }, 300);
 }
 
-function prevTestimonial() {
-  currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
-  updateTestimonial(currentIndex);
-}
-
-function nextTestimonial() {
+function next() {
   currentIndex = (currentIndex + 1) % testimonials.length;
   updateTestimonial(currentIndex);
 }
 
-// Desktop arrows
-document.getElementById("testimonialPrev").addEventListener("click", prevTestimonial);
-document.getElementById("testimonialNext").addEventListener("click", nextTestimonial);
+function prev() {
+  currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+  updateTestimonial(currentIndex);
+}
 
-// Mobile arrows
-document.getElementById("testimonialPrevMobile").addEventListener("click", prevTestimonial);
-document.getElementById("testimonialNextMobile").addEventListener("click", nextTestimonial);
+// Auto advance
+function startTimer() {
+  timer = setInterval(next, 5000);
+}
+
+// Event listeners
+document.getElementById("testimonialNext").addEventListener("click", () => { next(); clearInterval(timer); startTimer(); });
+document.getElementById("testimonialPrev").addEventListener("click", () => { prev(); clearInterval(timer); startTimer(); });
+document.getElementById("testimonialNextMobile").addEventListener("click", () => { next(); clearInterval(timer); startTimer(); });
+document.getElementById("testimonialPrevMobile").addEventListener("click", () => { prev(); clearInterval(timer); startTimer(); });
+
+// Pause on hover
+document.querySelector('#testimonials').addEventListener('mouseenter', () => clearInterval(timer));
+document.querySelector('#testimonials').addEventListener('mouseleave', startTimer);
+
+startTimer();
