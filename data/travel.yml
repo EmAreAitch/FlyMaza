@@ -453,7 +453,89 @@ destinations:
         - Thrilling nightlife, shopping, and entertainment in cities like
           Bangkok and Pattaya.
       gallery: []
-      packages: []
+      packages:
+        - exclusions:
+            - Visa
+            - RT-PCR Test.
+            - Video and Camera permits at sights
+            - Use of vehicles other than the specified itinerary.
+            - Expenses of personal nature.
+            - Any other services not specified above.
+            - Early check in & Late check out at the hotels (Check in 2.00 Noon&
+              Check out time 12.00 Noon)
+          price: 19,500
+          itinerary:
+            - title: Day 1- BANGKOK ARRIVAL - PATTAYA TRANSFER & ALCAZAR SHOW EVENING
+              details: >-
+                Arrive Bangkok Airport & Transfer To The Pattaya By (Private
+                Car). Check In Hotel & Take Some Rest & Fresh Up. Later
+                Experience one of
+
+                Thailand’s most spectacular stage productions at the Alcazar Cabaret Show. This world-renowned 70-minute performance features over 400
+
+                talented performers in extravagant costumes, delivering a dazzling fusion of dance, music, and cultural showcases from around the globe.
+
+                Perfect for all ages, the show blends glamour, artistry, and entertainment in an unforgettable evening you won’t want to miss!
+
+                Overnight Stay At Hotel
+            - title: "Day 2: CORAL ISLAND TOUR ON SPEED BOAT WITH LUNCH & BANGKOK TRANSFE"
+              details: >-
+                After Breakfast At The Hotel, Checkout from the Hotel & Proceed
+                for Coral Island Tour. Beach Where The Speedboat Takes You Over
+                To The
+
+                Beautiful Koh Larn Coral Island. As You Arrive, Be Amazed By Its Vast White-sand Beaches And Crystal Clear Blue Water. Plan Your Stay How
+
+                You Like It Either Relax On The Beach, Snooze In The Sun, Swim In The Ocean, Or Try Out Some Water Sports, Including Waterskiing,
+
+                Parasailing, And Windsurfing (for An Additional Fee And Subject To Availability). After An Action-packed Or Relaxed Day, The Speedboat
+
+                Brings You Back To Pattaya Beach, Returning To Your Hotel Then Collect your Luggage and Transfer To Bangkok.
+            - title: "Day 3: SAFARI WORLD & MARINE PARK WITH LUNCH"
+              details: >-
+                After Breakfast Proceed For A Full Day Tour To Safari World And
+                Marine Park. Enjoy The Services Of A Guide Who Introduces You To
+                Safari
+
+                World Two Main Attractions The Safari Park And Marine Park. Observe Lions And Zebras From Your Vehicle During A Safari Tour Through
+
+                African-inspired Landscapes Go In Search Of Crocodiles And Gorillas On A Jungle Cruise; And View Dolphins, Sea Lions
+
+                And Orangutans On Exhibit And At Entertaining Animal Shows. Lunch And Transport Are Included On This Full-day Excursion
+            - title: "Day 4: BANGKOK - INDIA"
+              details: After Breakfast Check out From Hotel & Transfer to Airport. As Per Your
+                Flight Timing. To Fly Back to Home.
+          featured: false
+          gallery: []
+          days: 4
+          inclusions:
+            - DBL/TWN / TPL sharing Accommodation
+            - Alcazar Show
+            - Coral Island Tour with Lunch
+            - Safari World &Marine Park
+            - Government Taxes
+            - All Transfers on PVT Basis
+            - All Tours on SIC Basis
+          title: Bangkok & Pataya tour
+          hero: https://www.travelandleisure.com/thmb/0vBZL11obssIPShxzC89OZqqqQg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/TAL-bangkok-thailand-MSTVISITCITY0325-e0567533052f4f2cbd883732a9d81858.jpg
+          nights: 3
+          description: Discover the magic of Thailand with a 4-day tour combining the
+            vibrant charm of Pattaya and Bangkok. Witness the glamorous Alcazar
+            Cabaret Show, spend a sun-soaked day at Coral Island with optional
+            water sports, and enjoy an unforgettable wildlife experience at
+            Safari World & Marine Park. With seamless transfers, comfortable
+            hotels, and a perfect mix of culture, adventure, and relaxation,
+            this package is designed to give you the very best of Thailand in
+            one unforgettable trip.
+          highlights:
+            - Spectacular Alcazar Cabaret Show in Pattaya with dazzling music,
+              dance, and costumes.
+            - Coral Island tour by speedboat with options for water sports and
+              beach relaxation.
+            - Full-day adventure at Safari World & Marine Park with thrilling
+              wildlife encounters and entertaining shows.
+            - A perfect blend of Pattaya’s glamour and Bangkok’s culture for a
+              short yet memorable Thailand getaway.
       name: Thailand
       hero: https://nextvacay.com/wp-content/uploads/2022/06/best-time-to-visit-bangkok.jpg.webp
       description: From the pristine beaches of Phuket and Krabi to the bustling
