@@ -428,7 +428,7 @@ destinations:
         rugged mountains, crystal-clear lakes, ancient monasteries, and vibrant
         culture—perfect for adventure seekers and peace lovers alike.
   international:
-    - featured: true
+    - featured: false
       highlights:
         - Golden beaches and crystal-clear waters ideal for relaxation and water
           sports.
@@ -442,3 +442,22 @@ destinations:
       description: Bali is a tropical paradise known for its golden beaches, lush rice
         terraces, ancient temples, and vibrant culture—perfect for both
         relaxation and adventure.
+    - featured: true
+      highlights:
+        - Stunning beaches and islands like Phuket, Krabi, and Phi Phi, perfect
+          for relaxation and water sports.
+        - Glittering temples, royal palaces, and cultural landmarks showcasing
+          Thailand’s rich heritage.
+        - Bustling street markets, floating markets, and world-famous Thai
+          cuisine.
+        - Thrilling nightlife, shopping, and entertainment in cities like
+          Bangkok and Pattaya.
+      gallery: []
+      packages: []
+      name: Thailand
+      hero: https://nextvacay.com/wp-content/uploads/2022/06/best-time-to-visit-bangkok.jpg.webp
+      description: From the pristine beaches of Phuket and Krabi to the bustling
+        streets of Bangkok and the cultural charm of Chiang Mai, every corner
+        offers something unique. Whether it’s indulging in authentic Thai
+        cuisine, exploring vibrant markets, or enjoying thrilling adventures and
+        nightlife, Thailand promises an unforgettable escape.
