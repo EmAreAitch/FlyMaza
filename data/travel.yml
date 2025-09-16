@@ -305,7 +305,126 @@ destinations:
         - Thrilling adventures including trekking, biking, river rafting, and
           high passes.
       gallery: []
-      packages: []
+      packages:
+        - exclusions:
+            - Lunch
+            - Entry Fees
+            - AC Charges in CAB
+          price: 69,000
+          itinerary:
+            - title: DAY 1 - ARRIVAL TO LEH AIRPORT
+              details: >-
+                ● Arrive at the Leh airport and enjoy a hassle-free transfer to
+                the hotel
+
+                ● Enjoy a hearty breakfast in the hotel and gradually getacclimatized to the climate
+
+                ● Overnight stay at the hotel
+            - title: DAY 2 - LEH LOCAL SIGHTSEEING (Hall of Fame, Gurudwara Pathar Sahib,
+                Magnetic Hill, Majestic Shanti Stupa, Leh Market)
+              details: >-
+                ● Begin the journey with a drive towards the confluence of
+                Zanskar.
+
+                ● Stop by at the Hall of Fame, located near the Leh Airfield. Move
+
+                on to explore Gurudwara Pathar Sahib, Magnetic Hill and the
+
+                Indus Rivers. (Optional river rafting at the world's highest river
+
+                rafting point)
+
+                ● Head back to Leh to visit the Majestic Shanti Stupa and
+
+                end your day with an extraordinary view of Leh city.
+
+                ● Overnight stay at the hotel
+            - title: DAY 3 - LEH - NUBRA VIA KHARDUNGLA
+              details: |-
+                ● Enjoy a mouth-watering breakfast at the hotel.
+                ● Then, drive to the world’s highest motorable road at a
+                height of 18,380 ft. - Khardungla.
+                ● Drive down into the enchanting Nubra valley.
+                ● Visit the serene Diskit monastery and the 106 feet Maitreya
+                Buddha statue located just below the monastery.
+                ● Drive to the Hunder Sand Dunes. Ride on double humped
+                camels which gently make their way among the white sand
+                dunes, with poplar trees dotting the
+                landscape & the pleasing murmur of the River Shyok flowing
+                nearby as it all makes for a memorable experience.
+                ● Overnight stay in Nubra
+            - title: DAY 4 - VISIT TO TURTUK VILLAGE.
+              details: >-
+                ● After Breakfast drove to Turtuk, Turtuk was under Pakistan's
+
+                control until 1971, after which India gained control of this strategic
+
+                area. It is predominantly a Muslim village, and residents speak
+
+                languages including Balti, Ladakhi and Urdu.
+
+                ● Turtuk is the last outpost in India after which the
+
+                Pakistan-controlled Gilgit-Baltistan begins. Turtuk is one of the
+
+                gateways to the Siachen Glacier
+            - title: DAY 5 - NUBRA - PANGONG
+              details: |-
+                ● Wake up in the morning in the beautiful Nubra Valley and
+                have a scrumptious breakfast.
+                ● Get ready for the most awaited day as you will be visiting
+                Pangong Lake on the Indo-China border.
+                ● One of the highest altitude saline water lakes, Pangong Tso
+                will greet you with its changing colors from shades of blue to
+                green to red.
+                ● Spend the rest of the day exploring the surroundings of the
+                Pangong Lake with the view of the Shyok river on one side and
+                the mountains on another side.
+                ● Overnight stay and dinner at a campsite near Pangong Lake.
+            - title: DAY 6 - PANGONG - LEH
+              details: |-
+                ●Take a stopover at traditional attractions and reach Leh.
+                ● Enroute Visit Shrey Palace, Rancho School, Thiksy
+                monastery & Changla pass.
+                ● Visit Leh market to shop for
+                some goods and enjoy Ladakhi cuisine.
+                ● Overnight stay at hotel in Leh
+            - title: DAY 7 - DEPARTURE
+              details: |-
+                ● Indulge in a wholesome breakfast as you are about to conclude
+                the Ladakh tour 
+                ● After arriving at the Leh airport, it is now time to
+                head back home with a plethora of memories
+          featured: false
+          gallery: []
+          days: 7
+          inclusions:
+            - Accommodation on 1 Double Sharing Basis for 6 Nights.
+            - 6 Breakfast + 6 Dinner Included.
+            - All tours and transfers on a Private basis (in 1 Cab).
+            - " Airport Transfers via TAXI VAN"
+            - 1 Private Cab (Innova/ Ertiga) Non AC
+            - Inner Line Permit
+            - Oxygen Cylinder
+            - Environment Fee
+          title: Ladakh tour
+          hero: https://cdn.britannica.com/23/262123-050-B115C23E/Ladakh-India-Confluence-of-the-Zanskar-river-and-Indus-river-photographed-from-a-viewpoint-along-the-Srinigar-to-Leh-highway.jpg
+          nights: 6
+          description: Explore the wonders of Ladakh with this 7-day journey covering Leh,
+            Nubra Valley, Turtuk, and Pangong Lake. Begin with local sightseeing
+            in Leh, visiting landmarks like Shanti Stupa, Magnetic Hill, and Leh
+            Market. Cross the world-famous Khardung La to reach Nubra Valley,
+            experience the unique beauty of Turtuk, and then continue to the
+            breathtaking Pangong Lake with its ever-changing blue hues. Conclude
+            your adventure with a return to Leh, carrying memories of majestic
+            mountains, monasteries, and high-altitude landscapes.
+          highlights:
+            - Deluxe rooms, cottages, tents
+            - Scenic arrival and acclimatization in Leh, the gateway to Ladakh.
+            - Adventure drive across Khardung La, one of the world’s highest
+              motorable passes
+            - Mesmerizing views of Pangong Lake, famous for its ever-changing
+              shades of blue.
       name: Ladakh
       hero: https://s7ap1.scene7.com/is/image/incredibleindia/2-lamayuru-or-yuru-monastery-kargil-j_k-city-hero?qlt=82&ts=1726667854003
       description: Ladakh, the “Land of High Passes,” is a breathtaking destination of
