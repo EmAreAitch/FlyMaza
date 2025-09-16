@@ -432,7 +432,115 @@ destinations:
         - Ancient temples, traditional dances, and rich Balinese culture.
         - Vibrant nightlife, shopping streets, and world-class resorts.
       gallery: []
-      packages: []
+      packages:
+        - exclusions:
+            - Lunch and Dinner
+            - Anything not mentioned under ‘Package Inclusions’
+            - All personal expenses, optional tours and extra meals
+            - Any increase in fare of air ticket
+            - Peak season, weekend and special event surcharges
+            - Tips, porterage, laundry and phone calls
+            - Visa(35USD PP)
+            - Nusa Penida Island Fee(3 USD PP)
+            - 5% Extra Tcs on Land Amount
+          price: "36000"
+          itinerary:
+            - title: Day-1- AIRPORT TRANSFER TO KUTA HOTEL ON PVT BASIS
+              details: >-
+                Arrived at Bali. Our representative will pick you up and
+                transfer you to your pre-booked Hotel in Kuta by car.
+
+                As when you reach Bali, you will be helped with the check in formalities
+            - title: Day-2- WATER ACTIVITIES + ULUWATU TEMPLE WITH KECAK FIRE DANCE ON PVT
+              details: >-
+                A morning
+
+                tour to the Benoa Water Sport center at Nusa Dua. Note : Single Parasailing will change to Flying Fish if the
+
+                weather conditions are not permitted) Includes Benoa Water Sport Entrance Fee Transfers - 01 x Round Banana
+
+                Boat - 01 x Round Parasailing - 01 x Round Jet Ski. After completing the Water Activities you will Visit Ulluwatu
+
+                Temple, one of six key temples believed to be Bali's spiritual pillars, and Kecak Fire Dance. Later return back to
+
+                the hotel and stayed overnight stay
+            - title: Day-3- FULL DAY NUSA PENIDA TOUR WITH COMPLIMENTARY LOCAL LUNCH +
+                SPEEDBOAT TRANSFER ON SIC BASIS
+              details: >-
+                Embark on a one-day adventure to Nusa Penida via speed boat from
+                Sanur. After arriving at Pakeh Harbor, begin
+
+                your journey with a visit to the stunning Broken Beach (Pasih Uug), a natural rock formation that has created a
+
+                serene ocean pool. Just nearby is the magical Angel’s Billabong, known for its emerald-green tide pools and
+
+                dramatic cliffs. Continue to the iconic Kelingking Beach, famous for its T-Rex-shaped cliff and breathtaking
+
+                viewpoints. Finally, unwind at Crystal Bay, a peaceful white sand beach with calm turquoise waters and swaying
+
+                coconut trees — perfect for relaxing before heading back to Bali.
+
+                Highlights:
+
+                Broken Beach • Angel’s Billabong • Kelingking Cliff • Crystal Bay
+            - title: Day- 4 - MORNING CHECKOUT FROM KUTA HOTEL + LEMPUYANG TEMPLE(Gateway of
+                Heaven) + TIRTA GANGGA TEMPLE TOUR + DROP AT UBUD VILLA ON PVT
+                BASIS
+              details: >-
+                After Breakfast Checkout From Kuta and Transfer To Lempuyang
+                Temple.
+
+                Lempuyang Temple Tour is one of the exciting Bali Tour Packages to visit the most iconic and photogenic
+
+                attractions in the eastern part of Bali. Gate Of Heaven Bali Tour is one of the famous Bali Instagram Tour
+
+                Packages to enjoy the beautiful view of Lempuyang Temple (Gate Of Heaven), Tirta Gangga Water Palace ETC.
+
+                In the Evening Return Back to the hotel and overnight stay in Ubud
+            - title: Day-5- FULL DAY KINTAMANI UBUD TOUR + BALI ALOHA SWING PACKAGE ON PVT
+                BASIS
+              details: >-
+                Rice Terrace
+
+                Visit Volcano View
+
+                Tegenungan Waterfall
+
+                Swing Package :- 2 Single Swings, 1 Romantic Swing, 1 Bed Swing, 1 Sky Bed, 1 Chicken Nest, 1 Bird Nest
+            - title: Day-6-  RETURN TRANSFER FROM UBUD VILLA TO AIRPORT ON PVT BASIS
+              details: After Breakfast checkout from Ubud and leave for the Airport
+          featured: true
+          gallery: []
+          days: 6
+          inclusions:
+            - " Accommodation as per mentioned details and hotel list"
+            - Daily Breakfast
+            - " Cab Transport for all Local Transfer on PVT Basis"
+            - " All Taxes Included"
+            - All Entry Ticket Included
+            - Daily Mineral Water
+            - " Free WIFI"
+            - 1 Local Lunch Included At Nusa Penida
+            - 1 Floating Breakfast Included
+          title: Bali tour
+          hero: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROO5zGYS97auXrbfC9sr87zXg51YyiuBJLbQ&s
+          nights: 5
+          description: Unwind in Bali with a journey that blends adventure, culture, and
+            natural beauty. Begin in Kuta with thrilling water sports and a
+            magical sunset at Uluwatu Temple with the Kecak Fire Dance. Cruise
+            to Nusa Penida for its iconic landscapes like Kelingking Cliff and
+            Crystal Bay. Explore the stunning Temple at Lempuyang and the serene
+            Tirta Gangga Water Palace before retreating to your private Ubud
+            villa. End your trip with panoramic volcano views, lush rice
+            terraces, waterfalls, and the famous Bali Aloha Swing — the perfect
+            mix of relaxation and adventure
+          highlights:
+            - Thrilling water sports at Benoa Beach & a mesmerizing Kecak Fire
+              Dance at Uluwatu Temple
+            - Explore Nusa Penida’s iconic spots — Broken Beach, Angel’s
+              Billabong & Kelingking Cliff.
+            - Most photogenic sites — Lempuyang “Gateway of Heaven,” Tirta
+              Gangga, Ubud’s rice terraces & Bali Swing.
       name: Bali
       hero: https://etimg.etb2bimg.com/photo/115997634.cms
       description: Bali is a tropical paradise known for its golden beaches, lush rice
