@@ -556,7 +556,165 @@ destinations:
         - Verdant valleys and rivers in Pahalgam
         - Majestic mountain views and meadows of Sonmarg
       gallery: []
-      packages: []
+      packages:
+        - exclusions:
+            - Flights
+            - Lunch
+            - Vehicle at disposal
+            - Pahalgam Union Cab ( Aru, Betaab & Chandanwari Valley )
+            - Gondola Cable Car Tickets
+            - " Any personal expenses. Room service and special orders.
+              Alcoholic and non alcoholic beverages ● Any extra excursions or
+              sightseeing apart from the suggested tour itinerary"
+            - " Guide Charges, Camera Tickets are NOT INCLUDED in the mentioned
+              cost of Sightseeing & Transfer"
+            - Gala Dinner on 25th & 31st Night
+            - " Other meals not mentioned laundry, telephone calls, and
+              incidentals"
+            - Any additional charges arising due to natural calamities,
+              political disturbances, VIP movement, etc. ● All applicable Taxes
+            - " Chain Vehicle Charges in Sonamarg & Gulmarg. ● Any guide charges
+              ● Any pony rides"
+          price: 22,000
+          itinerary:
+            - title: "DAY 01: SRINAGAR ARRIVAL & LOCAL SIGHTSEEING "
+              details: >-
+                After arrival at Srinagar airport, meet
+
+                our representative, he will guide you and take you in a private car from the airport to the Srinagar
+
+                hotel. Later on get fresh and You will Visit Srinagar local sightseeing. You will visit Shankaracharya
+
+                Temple and gardens like, Cheshmashahi garden, Parimahal garden, Botanical garden of Kashmir; also
+
+                you will visit Mughal gardens of Kashmir like, Nishat garden & Shalimar garden. Later in the evening
+
+                Have your dinner and overnight stay in a hotel.
+            - title: "DAY 02: SRINAGAR – SONMARG – SRINAGAR"
+              details: >-
+                Morning after breakfast you will visit Sonmarg. Sonmarg (Meadow
+                of Gold).
+
+                Sonmarg is absolutely true to its name, which means 'Meadow of Gold'. The distance of about 85
+
+                kms, will be covered in about 3 hrs. Sonmarg lies in Sindh Valley streamed with flowers and
+
+                surrounded by mountains. Sonmarg is also the base for some interesting treks to the high altitude
+
+                Himalayan Lakes. Sonmarg is the last stop of Kashmir District. From here starts the territory of
+
+                Ladakh. Situated at an altitude of 2743 m above sea level. The moment you enter Sonmarg, the first
+
+                thing that you will notice will be the snow-covered mountain that forms the backdrop of the town.
+
+                Covered with alpine trees from all sides, Sonmarg has few of the loveliest flower collections in
+
+                Jammu and Kashmir. Here you can visit Thajiwas Glacier (by pony ride on your own expenses) where
+
+                snow remains round the year. After completing sightseeing, return back to Srinagar by evening.
+
+                Dinner & overnight at the hotel.
+            - title: "DAY 03: SRINAGAR – GULMARG – SRINAGAR"
+              details: >-
+                Today after breakfast get ready and leave for your trip to
+
+                Gulmarg. Gulmarg (Meadow of Flowers) 2730 mts. Above the sea level. The drive past colorful
+
+                villages and rice fields, gives you an insight of the rich cultural past of Kashmir. We arrive at a small
+
+                picturesque market town of Tangmarg and drive ahead on a scenic drive of 14 kilometers to
+
+                Gulmarg. Gulmarg has one of the best ski slopes in the world and the highest golf course with 18
+
+                holes. Today you can enjoy a cable car known as Gondola Ride at Gulmarg. You can board the
+
+                Gondola cable car system, and ascend towards the Affarwat Mountain range. The 08 minutes of
+
+                ropeway will take you past colorful shepherd hutments to the lower ridge of the Affarwat peak.
+
+                From here you can click lots of photos of the nearby mountain ranges that stand tall like sentinels
+
+                guarding the rich natural beauty of Kashmir valley. We descend back to Gulmarg base after an hour
+
+                or so and later do some horse-riding to the strawberry valley. Rest of the day free at leisure for
+
+                individual activities. Later on, return back to Srinagar, have your dinner & overnight Stay in Srinagar
+
+                Hotel.
+            - title: "DAY 04: SRINAGAR – PAHALGAM & NIGHT STAY"
+              details: >-
+                After breakfast at the hotel you will leave for Pahalgam.
+                Pahalgam (The valley of shepherds).The total
+
+                distance is about 96 kms, and will be covered in about 3 hours. En-route, visit the saffron fields of
+
+                pampore, Awantipura Ruins (1100 years old temple of Lord Vishnu built by the King Awantivarman),
+
+                and enjoy the beautiful countryside. Drive through the pine forests. Arrive at Pahalgam and enjoy
+
+                the Lidder stream. Later you will leave for full day sightseeing at Pahalgam starting from walking
+
+                along pony trails with a magnificent view of the mountains. Here you can also visit many
+
+                breathtaking places like Betaab Valley, Chandanwari & Aru Valley (In local taxi on your own expenses)
+
+                walk along pony trails with a magnificent view of the mountains. Dinner and Overnight stay at
+
+                Pahalgam
+            - title: 05 - PAHALGAM – SRINAGAR & HOUSEBOAT STAY
+              details: >-
+                Today, Have Your Breakfast Later On You Can
+
+                Spend Some Of Your Time At Pahalgam Enjoying The Beauty, & You Can Also Complete Your
+
+                Remaining Sightseeing. Later on leave for Srinagar. After Reaching Srinagar, You Can Enjoy The
+
+                Shikara Ride In Dal Lake. Here You Can See The Floating Vegetable Gardens In Dal Lake. Enjoy The
+
+                Leisure Of The Evening. After Shikara At Evening Check In To Srinagar Houseboat. Have Your Dinner
+
+                And Night Stay At The Houseboat.
+            - title: "DAY 06: SRINAGAR AIRPORT DEPARTURE"
+              details: >-
+                This morning have your breakfast and later on pack your bags and
+                get ready to be transferred to
+
+                Srinagar Airport to catch a flight for an onward destination with sweet Holiday memories
+          featured: false
+          gallery: []
+          days: 6
+          inclusions:
+            - Hotels as per mentioned above.
+            - Daily breakfast and Dinner included in the package
+            - 01 Hour complimentary Shikara ride included in Dal Lake.
+            - Srinagar airport pickup & drop off included
+            - Transfers and Sightseeing by private Non AC Private Cab
+            - All toll taxes, parking charges included.
+            - 24 Hours telephonic support from our office.
+            - Includes driver’s expenses, fuel charges and allowances.
+            - All taxes included
+          title: Kashmir Tour
+          hero: https://s7ap1.scene7.com/is/image/incredibleindia/1-amarnath-yatra-pahalgam-jammu-kashmir-city-hero?qlt=82&ts=1726816087141
+          nights: 5
+          description: Experience the unmatched beauty of Kashmir with this 6-day journey
+            through its valleys, lakes, and meadows. Begin with Srinagar’s
+            Mughal gardens and Shankaracharya Temple before heading to the
+            golden meadows of Sonmarg and the snowy Thajiwas Glacier. Explore
+            Gulmarg’s scenic slopes with an optional Gondola ride offering
+            breathtaking Himalayan views. Continue to Pahalgam, where pine
+            forests, Lidder River, and the stunning Betaab, Aru, and Chandanwari
+            valleys await. Return to Srinagar for a memorable Shikara ride on
+            Dal Lake and a stay in a traditional houseboat. This tour blends
+            culture, nature, and relaxation, leaving you with unforgettable
+            memories of Kashmir.
+          highlights:
+            - Srinagar sightseeing with Mughal Gardens, Dal Lake &
+              Shankaracharya Templ
+            - Excursion to Sonmarg with optional pony ride to Thajiwas Glacier
+            - Gulmarg visit with optional Gondola ride offering panoramic
+              Himalayan views.
+            - Pahalgam valley exploration including Betaab Valley, Aru Valley &
+              Chandanwari.
       name: Kashmir
       hero: https://images.travelandleisureasia.com/wp-content/uploads/sites/3/2024/01/15134114/kashmir-deepanshu-nayak-1600x900.jpeg
       description: Kashmir is a stunning destination in northern India, known for its
