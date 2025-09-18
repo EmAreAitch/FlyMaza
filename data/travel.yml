@@ -549,6 +549,23 @@ destinations:
         Alleppey, explore tea gardens in Munnar, spot wildlife in Thekkady, and
         relax on the beaches of Kovalam. The state also offers authentic
         cuisine, classical art forms, and Ayurvedic wellness experiences.
+    - featured: false
+      highlights:
+        - Scenic beauty of Dal Lake with traditional houseboats and shikaras
+        - Snowy landscapes and skiing in Gulmarg
+        - Verdant valleys and rivers in Pahalgam
+        - Majestic mountain views and meadows of Sonmarg
+      gallery: []
+      packages: []
+      name: Kashmir
+      hero: https://images.travelandleisureasia.com/wp-content/uploads/sites/3/2024/01/15134114/kashmir-deepanshu-nayak-1600x900.jpeg
+      description: Kashmir is a stunning destination in northern India, known for its
+        snow-clad mountains, pristine lakes, and scenic valleys. Travelers can
+        enjoy houseboat stays on Dal Lake, visit vibrant Mughal gardens, and
+        explore popular hill towns like Gulmarg, Pahalgam, and Sonmarg. The
+        region is also ideal for adventure activities such as skiing, trekking,
+        and river rafting, along with peaceful moments surrounded by
+        breathtaking landscapes.
   international:
     - featured: false
       highlights:
