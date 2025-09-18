@@ -431,7 +431,117 @@ destinations:
         - Golden beaches and coastal charm of Kovalam
         - Authentic Kerala cuisine and traditional art forms
       gallery: []
-      packages: []
+      packages:
+        - exclusions:
+            - Airfare/Train Ticket
+            - Entrances fees
+            - Expenses of personal nature such as drinks, telephone, and laundry
+              bills etc
+            - Tips and porter charges
+            - Any boating charges (motor boat / pedal boat)
+            - Any additional expenses incurred due to any flight delay or
+              cancellation, weather conditions, political closures, technical
+              faults etc
+            - Any other service/is not specified above
+          price: "28000 "
+          itinerary:
+            - title: Day 1- Arrival Cochin Airport to Munnar
+              details: >-
+                Arrive at Cochin Airport or Ernakulam Railway Station, assisting
+                all arrival formalities, then transfer to
+
+                Munnar Hotel. Munnar, “The Southern Kashmeer of Kerala”, located 1800 meters above Sea level. This hill station is
+
+                marked by vast expanses of tea plantations, colonial bungalows, rivulets, waterfalls and cool weather. A 4 hour
+
+                scenic/picturesque drive to Munnar through hill station. Enroute visit Spice Plantations, Valara/Cheeyappara Falls.
+
+                Arrival at a place which is called ‘nature’s lovers paradise’. On arrival check in at Hotel. Later the day Is free for
+
+                leisure. Overnight at the Hotel in Munnar
+            - title: Day 2- Munnar Sightseeing
+              details: >-
+                Morning depart to enjoy full day sightseeing tour of Munnar
+                visiting Mattupetty Dam/Lake, Echo Point, Nursery
+
+                Garden, Photo Point, Rajamalai (Eravikulam) National Park – famous for Nilgiri Tahr(Wild goat), Anamudi Peak –
+
+                South India’s Highest Peak, Tata Tea Museum. Evening Spice/Tea trailing at Munnar. Overnight at the Hotel in
+
+                Munnar.
+            - title: Day 3- Munnar to Thekkady
+              details: >-
+                Morning proceeds to Thekkady, set in the heart of the Cardamom
+                Hills of Kerala. A scenic journey past most capped
+
+                mountains, spice plantations and open grasslands lined with spectacular waterfalls & delightful trekking trails form
+
+                the access to your hide away here. On arrival check into the hotel, refresh yourself & be relaxed. Later depart to enjoy
+
+                a half day sightseeing tour of Thekkady.Then, get boosted up for the adventurous jeep safari in Periyar national park.
+
+                You will get to observe a variety of flora and fauna in Periyar Wildlife Sanctuary in Thekkady honeymoon tour. Also, a
+
+                boat safari on the Periyar Lake through Periyar Tiger Reserve extends a lifetime’s chance to spot exotic wildlife in its
+
+                natural habitat. Later visit to Spice Plantation. Evening walk through the bustling Spice Market in the Kumily village.
+
+                Overnight at the Hotel in Thekkady.
+            - title: Day 4- Thekkady to Alleppey (Houseboat)
+              details: >-
+                Morning proceeds to Alleppey. Alleppey is a charming village on
+                the Vembanad Lake. The land which is known for its
+
+                azure backwaters, swaying palms, and floating houseboats. A 4 hour scenic drive through typical Kerala Village,
+
+                Paddy Field. On arrival check in at Kettuvallam known as a famous Kerala Houseboat. Lunch at Houseboat. Cruise
+
+                through the unique web of lakes, lagoons, canals and rivers. Visit Paddy Field, Kuttanadan Region, the only region to
+
+                cultivate rice below sea level. Overnight at a houseboat in Alleppey.
+            - title: Day 5- Alleppey to Kovalam
+              details: >-
+                After breakfast, Check out from the houseboat and Get
+                transferred from Alleppey to Kovalam. A city of vintage
+
+                castles and flawless beaches. Check into the hotel after arriving there, and go to your room to relax. You can proceed
+
+                to Lighthouse Beach, Hawah Beach and Samudra Beach and watch the sunset and make the evening beautiful with
+
+                your partner. When you’re done, return back to the hotel and enjoy your sleep.
+            - title: Day 6- Tour Ends Later Proceed to Airport
+              details: >-
+                Bid farewell to this serene land as your holidays come to an end
+                as you get transferred to Trivandrum Airport or
+
+                Railway Station for your onward journey back to home.
+          featured: false
+          gallery: []
+          days: 6
+          inclusions:
+            - 5N Stay at given Hotels
+            - Daily Breakfast
+            - All 3 meals in houseboat (Breakfast + Lunch + Dinner)
+            - All Transfer on private basis Tempo Traveler or similar
+            - Toll taxes and driver allowances , fuel charges and parking charges
+          title: Kerala Tour
+          hero: https://lp-cms-production.imgix.net/2025-04/shutterstock524524162.jpg?auto=format,compress&q=72&w=1440&h=810&fit=crop
+          nights: 5
+          description: Discover the natural beauty and cultural charm of Kerala on this
+            carefully crafted journey through its most iconic destinations.
+            Begin in the misty hills of Munnar, surrounded by tea plantations,
+            waterfalls, and wildlife. Continue to Thekkady, where spice-scented
+            plantations and thrilling safaris in Periyar National Park await.
+            Drift along the serene backwaters of Alleppey in a traditional
+            houseboat, experiencing Kerala’s village life up close. End your
+            trip at Kovalam, where golden beaches and tranquil sunsets create
+            the perfect finale to your holiday.
+          highlights:
+            - Scenic tea gardens, waterfalls, and wildlife at Munnar.
+            - Spice plantations and a Periyar Lake safari in Thekkady.
+            - Overnight stay on a traditional Alleppey houseboat cruising the
+              backwaters.
+            - Relaxing sunsets and sandy shores at Kovalam Beach.
       name: Kerala
       hero: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLJTYaeOeIjN_8Po_9BTaGO35jGeN6LrZzgA&s
       description: Kerala is known for its backwaters, hill stations, beaches, and
