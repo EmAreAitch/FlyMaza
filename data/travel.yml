@@ -279,7 +279,10 @@ destinations:
                 sweet memories and a promise to return.
               title: "DAY 6: Manali – Delhi Departure"
           featured: true
-          gallery: []
+          gallery:
+            - /images/uploads/sm2.webp
+            - /images/uploads/sm3.jpg
+            - /images/uploads/sm4.jpg
           days: 6
           inclusions:
             - Hotels as per mentioned above.
@@ -290,7 +293,7 @@ destinations:
             - Includes driver’s expenses, fuel charges and allowances.
             - All taxes included
           title: Shimla and Manali Tour
-          hero: https://seasontours.org/wp-content/uploads/2024/03/5-14.webp
+          hero: /images/uploads/sm1.jpg
           nights: 5
           description: Escape to the hills of Himachal Pradesh with a journey through
             Shimla and Manali, two of India’s most loved mountain getaways.
