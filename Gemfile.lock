@@ -16,7 +16,6 @@ GEM
       uri (>= 0.13.1)
     addressable (2.8.7)
       public_suffix (>= 2.0.2, < 7.0)
-    babosa (2.0.0)
     base64 (0.3.0)
     benchmark (0.4.1)
     bigdecimal (3.2.2)
@@ -155,7 +154,6 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  babosa
   irb
   kramdown-parser-gfm
   middleman
