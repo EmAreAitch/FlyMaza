@@ -215,7 +215,13 @@ destinations:
           of serenity.
         - Colorful local festivals, handicrafts, and traditional Himachali
           cuisine that reflect rich culture.
-      gallery: []
+      gallery:
+        - /images/uploads/hm2.webp
+        - /images/uploads/hm3.jpg
+        - /images/uploads/hm4.webp
+        - /images/uploads/hm5.jpg
+        - /images/uploads/hm6.webp
+        - /images/uploads/hm7.webp
       packages:
         - exclusions:
             - Lunch
@@ -300,7 +306,7 @@ destinations:
             - Manali sightseeing
             - Shimla local and Kufri sightseeing
       name: " Himachal Pradesh"
-      hero: https://static.toiimg.com/photo/msid-93246451,width-96,height-65.cms
+      hero: /images/uploads/hm1.jpg
       description: Himachal Pradesh is a stunning destination of snow-capped peaks,
         lush valleys, and rivers. With scenic hill towns, ancient temples,
         adventure sports, and serene landscapes, it offers the perfect mix of
