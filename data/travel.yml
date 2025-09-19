@@ -421,7 +421,13 @@ destinations:
                 ● After arriving at the Leh airport, it is now time to
                 head back home with a plethora of memories
           featured: false
-          gallery: []
+          gallery:
+            - /images/uploads/l1.jpg
+            - /images/uploads/l3.jpg
+            - /images/uploads/l4.jpg
+            - /images/uploads/l5.jpg
+            - /images/uploads/l7.jpg
+            - /images/uploads/l6.jpg
           days: 7
           inclusions:
             - Accommodation on 1 Double Sharing Basis for 6 Nights.
@@ -433,7 +439,7 @@ destinations:
             - Oxygen Cylinder
             - Environment Fee
           title: Ladakh tour
-          hero: https://cdn.britannica.com/23/262123-050-B115C23E/Ladakh-India-Confluence-of-the-Zanskar-river-and-Indus-river-photographed-from-a-viewpoint-along-the-Srinigar-to-Leh-highway.jpg
+          hero: /images/uploads/l2.jpg
           nights: 6
           description: Explore the wonders of Ladakh with this 7-day journey covering Leh,
             Nubra Valley, Turtuk, and Pangong Lake. Begin with local sightseeing
