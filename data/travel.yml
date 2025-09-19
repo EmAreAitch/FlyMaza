@@ -6,7 +6,12 @@ destinations:
         - World-class water sports such as scuba diving and snorkeling
         - " Rich marine life, especially at the Mahatma Gandhi Marine National
           Park"
-      gallery: []
+      gallery:
+        - /images/uploads/an1-2.webp
+        - /images/uploads/an3.webp
+        - /images/uploads/an4.jpg
+        - /images/uploads/an5.png
+        - /images/uploads/an6.jpg
       packages:
         - exclusions:
             - Major meals not included (Lunch and Dinner)
@@ -110,7 +115,7 @@ destinations:
         comprising 572 islands, of which only 38 are inhabited. The islands are
         grouped into two main clusters: the northern Andaman Islands and the
         southern Nicobar Islands, separated by a 150 km wide channel."
-      hero: https://www.nitworldwideholidays.com/andaman-tour-packages/img/5days-Andaman-Tour.jpg
+      hero: /images/uploads/an1.jpg
     - featured: true
       highlights:
         - lively shores of Baga and Calangute to the serene sands of Palolem,
