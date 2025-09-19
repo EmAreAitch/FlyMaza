@@ -173,7 +173,11 @@ destinations:
                 airport as per your flight timing to return back with a lot of
                 good memories.
           featured: true
-          gallery: []
+          gallery:
+            - /images/uploads/goa1.jpg
+            - /images/uploads/goa2.jpg
+            - /images/uploads/goa3.jpg
+            - /images/uploads/goa5.png
           days: 5
           inclusions:
             - Accommodation in above given hotel
@@ -182,7 +186,7 @@ destinations:
             - All tole and taxes , including driver allowances , fuel charges
               and parking
           title: "GOA TOUR: North Goa & South Goa"
-          hero: https://s7ap1.scene7.com/is/image/incredibleindia/vagator-beach-goa-city-1-hero?qlt=82&ts=1742158909874
+          hero: /images/uploads/goa4.jpg
           nights: 4
           description: Discover the best of Goa with a tour that blends the vibrant energy
             of North Goa’s beaches, nightlife, and forts with the serene charm
