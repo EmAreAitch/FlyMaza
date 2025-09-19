@@ -133,7 +133,11 @@ destinations:
           culture
         - rasailing, jet skiing, scuba diving, and dolphin spotting—Goa is a
           haven for thrill seekers and water lovers.
-      gallery: []
+      gallery:
+        - /images/uploads/goa2.jpg
+        - /images/uploads/goa3.jpg
+        - /images/uploads/goa4.jpg
+        - /images/uploads/goa5.png
       packages:
         - exclusions:
             - Lunch + Dinner in hotel
@@ -198,7 +202,7 @@ destinations:
             - North Goa and South Goa tour
             - North Goa sightseeing
       name: Goa
-      hero: https://yu-hotel.com/wp-content/uploads/2023/03/best-luxury-hotels-in-north-goa-YU-Hotel.jpg
+      hero: /images/uploads/goa1.jpg
       description: Goa, India’s beach paradise, is a vibrant mix of golden beaches,
         nightlife, Portuguese heritage, and delicious seafood—perfect for
         relaxation, adventure, and culture.
