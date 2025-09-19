@@ -84,7 +84,11 @@ destinations:
             - title: "DAY 5 : Departure"
               details: Depart Port Blair with Fond memories of these mesmerizing Islands.
           featured: true
-          gallery: []
+          gallery:
+            - /images/uploads/an1.jpg
+            - /images/uploads/an1-2.webp
+            - /images/uploads/an4.jpg
+            - /images/uploads/an5.png
           days: 5
           inclusions:
             - Accommodation for 4 nights
@@ -100,7 +104,7 @@ destinations:
             - Airport pickup / drop and Jetty pickup / drop wherever applicable.
             - Inclusive of all hotel taxes.
           title: Andaman Package
-          hero: https://travelogyindia.b-cdn.net/storage/app/itinerary/504/corbyn-cove-beach-andaman.jpg
+          hero: /images/uploads/an6.jpg
           nights: 4
           description: An Andaman package is a travel package designed for the Andaman and
             Nicobar Islands, including accommodation, airport/inter-island
@@ -110,6 +114,7 @@ destinations:
             - "2 Nights in Port Blair : Hotel Shompen ( Deluxe Room )"
             - " 2 Nights in Havelock : White Coral Beach Resort ( Deluxe Cottage
               )"
+            - visit at Havelock beach
       name: Andaman and Nicobar Islands
       description: "The Andaman and Nicobar Islands is a union territory of India
         comprising 572 islands, of which only 38 are inhabited. The islands are
