@@ -1,3 +1,35 @@
+<% content_for :head do %>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "OfferCatalog",
+    "name": "Travel Packages",
+    "description": "Explore FlyMaza's curated travel packages for domestic and international destinations. Best prices, expert planning, and unforgettable travel experiences.",
+    "url": "<%= config[:root_url] %>/packages/",
+    "provider": {
+      "@type": "TravelAgency",
+      "name": "FlyMaza",
+      "url": "<%= config[:root_url] %>"
+    },
+    "itemListElement": [
+      <% all_packages = data.travel.destinations.values.flatten.map(&:packages).flatten %>
+      <% all_packages.each_with_index do |package, index| %>
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "TouristTrip",
+          "name": "<%= json_escape(package.title) %>",
+          "description": "<%= json_escape(package.description) %>",
+          "duration": "<%= package.duration %>",
+          "price": "<%= package.price %>"
+        }
+      }<%= ',' unless index == all_packages.length - 1 %>
+      <% end %>
+    ]
+  }
+  </script>
+<% end %>
+
 <% destinations = data.travel.destinations %>
 
 <%# Tab Navigation Section %>

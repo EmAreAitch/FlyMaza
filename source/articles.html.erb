@@ -3,6 +3,46 @@ title: "Articles"
 pageable: true
 ---
 
+<% content_for :head do %>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "FlyMaza Travel Blog",
+    "description": "Read FlyMaza's travel blog for expert travel tips, destination guides, travel stories, and insights. Discover the best travel advice for your next adventure.",
+    "url": "<%= config[:root_url] %>/articles/",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FlyMaza",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "<%= config[:root_url] %>/images/logo-flymaza.png"
+      }
+    },
+    "blogPost": [
+      <% page_articles.each_with_index do |article, index| %>
+      {
+        "@type": "BlogPosting",
+        "headline": "<%= json_escape(article.title) %>",
+        "description": "<%= json_escape(article.data.description || article.summary) %>",
+        "url": "<%= config[:root_url] %><%= article.url %>",
+        "datePublished": "<%= article.date.iso8601 %>",
+        "dateModified": "<%= article.date.iso8601 %>",
+        "author": {
+          "@type": "Organization",
+          "name": "FlyMaza"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "FlyMaza"
+        }
+      }<%= ',' unless index == page_articles.length - 1 %>
+      <% end %>
+    ]
+  }
+  </script>
+<% end %>
+
 <section class="max-w-6xl mx-auto px-6 py-32 space-y-4">
   <h1 class="text-3xl font-heading text-primary-800 mb-8">
     <%= current_page.data.title %>

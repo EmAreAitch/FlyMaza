@@ -27,11 +27,46 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
-    <title><%= current_page.data.title ? "#{current_page.data.title} | #{site_name}" : "#{site_name} - #{site_tagline}" %></title>
-    <meta name="description" content="<%= current_page.data.description || 'Discover Indonesia\'s extraordinary natural beauty and rich cultural heritage with FlyMaza. Expert travel experiences, curated packages, and unforgettable adventures await.' %>">
+<%
+  # Get dynamic SEO data for current page
+  seo_data = get_page_seo_data
+  
+  # Use page-specific data if available, otherwise use dynamic data
+  page_title = current_page.data.title || seo_data[:title]
+  page_description = current_page.data.description || seo_data[:description]
+  page_keywords = current_page.data.keywords || seo_data[:keywords]
+  page_og_type = current_page.data.og_type || seo_data[:og_type]
+  page_og_image = current_page.data.og_image || seo_data[:og_image]
+%>
+
+    <title><%= page_title %></title>
+    <meta name="description" content="<%= page_description %>">
+    <meta name="keywords" content="<%= page_keywords %>">
+    <meta name="author" content="FlyMaza">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="<%= config[:root_url] %><%= current_page.url %>">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="<%= page_og_type %>">
+    <meta property="og:title" content="<%= page_title %>">
+    <meta property="og:description" content="<%= page_description %>">
+    <meta property="og:url" content="<%= config[:root_url] %><%= current_page.url %>">
+    <meta property="og:site_name" content="<%= site_name %>">
+    <meta property="og:image" content="<%= config[:root_url] %><%= page_og_image %>">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_IN">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="<%= page_title %>">
+    <meta name="twitter:description" content="<%= page_description %>">
+    <meta name="twitter:image" content="<%= config[:root_url] %><%= page_og_image %>">
+    <meta name="twitter:site" content="@flymaza">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/images/favicon.jpeg">
+    <link rel="apple-touch-icon" href="/images/favicon.jpeg">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,6 +78,65 @@
     <%= stylesheet_link_tag "site" %>
     <%= javascript_include_tag "site", defer: true %>    
     <script src="//instant.page/5.2.0" type="module" integrity="sha384-jnZyxPjiipYXnSU0ygqeac2q7CVYMbh84q0uHVRRxEtvFPiQYbXWUorga2aqZJ0z"></script>
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TravelAgency",
+      "name": "<%= site_name %>",
+      "description": "Discover India's extraordinary natural beauty and rich cultural heritage with FlyMaza. Expert travel experiences, curated packages, and unforgettable adventures await.",
+      "url": "<%= config[:root_url] %>",
+      "logo": "<%= config[:root_url] %>/images/logo-flymaza.png",
+      "image": "<%= config[:root_url] %>/images/hero.jpg",
+      "telephone": "<%= phone %>",
+      "email": "<%= email %>",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "IN",
+        "addressLocality": "India"
+      },
+      "sameAs": [
+        "https://www.instagram.com/flymaza",
+        "https://www.facebook.com/people/Fly-Maza/61580068719719"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "<%= data.site.stats.customer_rating %>",
+        "reviewCount": "100+"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Travel Packages",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "TouristTrip",
+              "name": "Domestic Travel Packages",
+              "description": "Explore India's beautiful destinations"
+            }
+          },
+          {
+            "@type": "Offer", 
+            "itemOffered": {
+              "@type": "TouristTrip",
+              "name": "International Travel Packages",
+              "description": "Discover amazing destinations worldwide"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+    
+    <!-- Breadcrumb Schema -->
+    <% if generate_breadcrumb_schema %>
+    <script type="application/ld+json">
+    <%= generate_breadcrumb_schema %>
+    </script>
+    <% end %>
+    
     <%= yield_content :head %>
   </head>
 

@@ -12,8 +12,12 @@ gem "irb"
 
 gem "middleman-blog"
 
-gem "nokogiri"
+gem "nokogiri"  # XML/HTML parsing and escaping
 
 gem "kramdown-parser-gfm"
 
-gem "ruby-prof"
+# Web server for development
+gem "webrick"
+
+# Performance monitoring (only in development)
+gem "ruby-prof", group: :development

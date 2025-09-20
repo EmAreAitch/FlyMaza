@@ -1,4 +1,30 @@
-<% content_for :title, "Posts tagged \"#{tagname}\"" %>
+<% content_for :head do %>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "<%= json_escape(tagname.humanize) %> Travel Articles",
+    "description": "Explore <%= json_escape(tagname.humanize) %> travel articles, tips, and stories on FlyMaza's travel blog. Discover expert travel advice, destination guides, and travel insights.",
+    "url": "<%= config[:root_url] %><%= tag_path tagname %>",
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": [
+        <% articles.each_with_index do |article, index| %>
+        {
+          "@type": "BlogPosting",
+          "position": <%= index + 1 %>,
+          "name": "<%= json_escape(article.title) %>",
+          "url": "<%= config[:root_url] %><%= article.url %>",
+          "description": "<%= json_escape(article.data.description || article.summary) %>",
+          "datePublished": "<%= article.date.iso8601 %>"
+        }<%= ',' unless index == articles.length - 1 %>
+        <% end %>
+      ]
+    }
+  }
+  </script>
+<% end %>
+
 <section class="max-w-6xl mx-auto px-6 py-32 space-y-4">
   <!-- Page Title -->
   <h1 class="text-3xl font-heading text-primary-600 mb-8">

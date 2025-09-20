@@ -1,4 +1,36 @@
 <% wrap_layout :layout do %>
+<% content_for :head do %>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "<%= json_escape(current_article.title) %>",
+    "description": "<%= json_escape(current_article.data.description || current_article.summary) %>",
+    "image": "<%= config[:root_url] %><%= responsive_image(current_article) %>",
+    "author": {
+      "@type": "Organization",
+      "name": "FlyMaza",
+      "url": "<%= config[:root_url] %>"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "FlyMaza",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "<%= config[:root_url] %>/images/logo-flymaza.png"
+      }
+    },
+    "datePublished": "<%= current_article.date.iso8601 %>",
+    "dateModified": "<%= current_article.date.iso8601 %>",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "<%= config[:root_url] %><%= current_article.url %>"
+    },
+    "keywords": "<%= json_escape(current_article.tags.join(', ')) %>"
+  }
+  </script>
+<% end %>
+
 <div class="flex flex-col md:flex-row pt-24 max-w-6xl mx-auto gap-8">
   <!-- Main Article Section -->
   <main class="w-full md:w-2/3 p-8 bg-white rounded-2xl shadow-xl my-8">

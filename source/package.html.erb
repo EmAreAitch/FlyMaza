@@ -1,5 +1,45 @@
 <%# /source/packages/package.html.erb %>
 
+<% content_for :head do %>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TouristTrip",
+    "name": "<%= json_escape(package[:title]) %>",
+    "description": "<%= json_escape(package[:description]) %>",
+    "url": "<%= config[:root_url] %><%= package[:url] %>",
+    "image": "<%= config[:root_url] %><%= responsive_image(package[:hero]) %>",
+    "provider": {
+      "@type": "TravelAgency",
+      "name": "FlyMaza",
+      "url": "<%= config[:root_url] %>"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "<%= package[:price] %>",
+      "priceCurrency": "INR",
+      "availability": "https://schema.org/InStock"
+    },
+    "duration": "P<%= package[:days] %>D",
+    "itinerary": {
+      "@type": "ItemList",
+      "itemListElement": [
+        <% if package[:itinerary] %>
+          <% package[:itinerary].each_with_index do |day, index| %>
+          {
+            "@type": "ListItem",
+            "position": <%= index + 1 %>,
+            "name": "Day <%= index + 1 %>",
+            "description": "<%= json_escape(day) %>"
+          }<%= ',' unless index == package[:itinerary].length - 1 %>
+          <% end %>
+        <% end %>
+      ]
+    }
+  }
+  </script>
+<% end %>
+
 <%# Hero Section %>
 <section class="relative h-[90dvh] bg-cover bg-center" style="background-image: url('<%= responsive_image(package[:hero]) %>')">
   <div class="absolute inset-0 gradient-overlay"></div>

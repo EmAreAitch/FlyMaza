@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Homepage -->
+  <url>
+    <loc><%= xml_escape(config[:root_url]) %>/</loc>
+    <lastmod><%= Date.current.strftime('%Y-%m-%d') %></lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- Main Pages -->
+  <url>
+    <loc><%= xml_escape(config[:root_url]) %>/destinations/</loc>
+    <lastmod><%= Date.current.strftime('%Y-%m-%d') %></lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc><%= xml_escape(config[:root_url]) %>/packages/</loc>
+    <lastmod><%= Date.current.strftime('%Y-%m-%d') %></lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc><%= xml_escape(config[:root_url]) %>/articles/</loc>
+    <lastmod><%= Date.current.strftime('%Y-%m-%d') %></lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc><%= xml_escape(config[:root_url]) %>/about/</loc>
+    <lastmod><%= Date.current.strftime('%Y-%m-%d') %></lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc><%= xml_escape(config[:root_url]) %>/contact/</loc>
+    <lastmod><%= Date.current.strftime('%Y-%m-%d') %></lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Destination Pages -->
+  <% data.travel.destinations.each do |type, destinations| %>
+    <% destinations.each do |destination| %>
+      <url>
+        <loc><%= xml_escape(config[:root_url] + (destination.url || '/')) %></loc>
+        <lastmod><%= Date.current.strftime('%Y-%m-%d') %></lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+          <image:loc><%= xml_escape(config[:root_url] + (responsive_image(destination.hero) || '/images/default_cover_image.png')) %></image:loc>
+          <image:title><%= xml_escape(destination.name || 'Destination') %></image:title>
+          <image:caption><%= xml_escape(destination.description || 'Travel destination') %></image:caption>
+        </image:image>
+      </url>
+      
+      <!-- Package Pages for each destination -->
+      <% destination.packages.each do |package| %>
+        <url>
+          <loc><%= xml_escape(config[:root_url] + (package.url || '/')) %></loc>
+          <lastmod><%= Date.current.strftime('%Y-%m-%d') %></lastmod>
+          <changefreq>monthly</changefreq>
+          <priority>0.7</priority>
+          <image:image>
+            <image:loc><%= xml_escape(config[:root_url] + (responsive_image(package.image) || '/images/default_cover_image.png')) %></image:loc>
+            <image:title><%= xml_escape(package.title || 'Travel Package') %></image:title>
+            <image:caption><%= xml_escape(package.description || 'Travel package') %></image:caption>
+          </image:image>
+        </url>
+      <% end %>
+    <% end %>
+  <% end %>
+  
+  <!-- Article Pages -->
+  <% blog.articles.each do |article| %>
+    <url>
+      <loc><%= xml_escape(config[:root_url] + (article.url || '/')) %></loc>
+      <lastmod><%= article.date.strftime('%Y-%m-%d') %></lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.6</priority>
+      <image:image>
+        <image:loc><%= xml_escape(config[:root_url] + (responsive_image(article) || '/images/default_cover_image.png')) %></image:loc>
+        <image:title><%= xml_escape(article.title || 'Article') %></image:title>
+        <image:caption><%= xml_escape(article.data.description || article.summary || 'Travel article') %></image:caption>
+      </image:image>
+    </url>
+  <% end %>
+  
+  <!-- Tag Pages -->
+  <% collection(:sorted_tags).each do |tag| %>
+    <url>
+      <loc><%= xml_escape(config[:root_url] + (tag_path(tag) || '/')) %></loc>
+      <lastmod><%= Date.current.strftime('%Y-%m-%d') %></lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+  <% end %>
+  
+</urlset>

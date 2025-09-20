@@ -164,6 +164,7 @@ DEPENDENCIES
   terser
   tzinfo-data
   wdm
+  webrick
 
 BUNDLED WITH
    2.7.0.dev

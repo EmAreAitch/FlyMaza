@@ -1,0 +1,40 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: <%= config[:root_url] %>/sitemap.xml
+
+# Disallow admin area
+Disallow: /admin/
+
+# Allow all other content
+Allow: /images/
+Allow: /stylesheets/
+Allow: /javascripts/
+Allow: /articles/
+Allow: /destinations/
+Allow: /packages/
+
+# Crawl delay (optional - helps prevent server overload)
+Crawl-delay: 1
+
+# Additional SEO directives
+# Allow search engines to crawl all public content
+Allow: /about/
+Allow: /contact/
+
+# Block any potential duplicate content
+Disallow: /*?*
+Disallow: /*.json$
+Disallow: /*.xml$
+
+# Allow specific file types
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.gif$
+Allow: /*.webp$
+Allow: /*.svg$
+Allow: /*.ico$

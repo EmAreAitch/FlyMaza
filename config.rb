@@ -1,6 +1,10 @@
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
 
+# Set encoding to UTF-8
+Encoding.default_external = Encoding::UTF_8
+Encoding.default_internal = Encoding::UTF_8
+
 # Layouts
 # https://middlemanapp.com/basics/layouts/
 
@@ -32,7 +36,7 @@ end
 
 activate :external_pipeline,
   name: :css,
-  command: "npx postcss source/stylesheets/tailwind.css -o .tmp/stylesheets/tailwind.css#{" --watch" unless build?}",
+  command: config[:mode] == :server ? "npx postcss source/stylesheets/tailwind.css -o .tmp/stylesheets/tailwind.css --watch" : "npx postcss source/stylesheets/tailwind.css -o .tmp/stylesheets/tailwind.css",
   source: ".tmp"
   
 page '/*.xml', layout: false
@@ -95,7 +99,7 @@ set :port, 3000
 
 configure :build do
   activate :asset_hash do |opts|
-    opts.exts = config[:asset_extensions] + %w(.avif .json .xml .yml) - %w(.ico)
+    opts.exts = config[:asset_extensions] + %w(.avif .json .yml) - %w(.ico)
   end
 end
 
