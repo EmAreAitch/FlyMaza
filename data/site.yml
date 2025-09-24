@@ -1,19 +1,33 @@
 testimonials:
   - name: Daniel Sullivan
     role: Travel Enthusiast
-    content: This travel website is very informative and easy to use. Booked online
-      and the package was exactly as described with excellent recommendations.
+    content: This travel website is very informative, well-structured, and easy to
+      navigate. The booking process was simple and hassle-free, and everything
+      we received matched the package exactly as described. The recommendations
+      provided were excellent, making it much easier to choose the right
+      experiences and plan our trip without any confusion. Overall, it felt
+      reliable, trustworthy, and customer-focused, which gave us a lot of
+      confidence while booking.
     review_link: ""
     avatar: ""
   - name: Priya Sharma
     role: Adventure Seeker
-    content: Fly Maza made my trip to Manali seamless and memorable. From selecting
-      packages to personalized suggestions, everything was perfect.
+    content: My Manali trip with Fly Maza was an unforgettable experience. The
+      entire journey, from browsing packages to finalizing the booking, was
+      effortless. What stood out most was the personalized guidance and
+      thoughtful suggestions that made the trip feel tailor-made for me. The
+      arrangements were well-organized, the stay was comfortable, and every
+      moment of the trip felt smooth and enjoyable. Fly Maza truly took care of
+      everything, allowing me to focus only on creating memories.
     avatar: ""
-  - name: Arjun Mehta
-    role: Family Traveler
-    content: We booked a family vacation to Goa through Fly Maza. The attention to
-      detail and smooth communication made it stress-free and enjoyable.
+  - name: Vikrant singh
+    role: Family travel
+    content: We booked our Bali trip with Flymaza, and it was an amazing experience!
+      The team was professional, responsive, and made sure everything was
+      perfectly planned from transfers and hotels to sightseeing and local
+      experiences. The itinerary was well-balanced, the accommodations were
+      excellent, and local support made the trip completely stress-free. Highly
+      recommend them for a seamless and memorable vacation!
 stats:
   happy_travelers: 7000+
   years_of_experience: 15+
