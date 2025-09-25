@@ -308,6 +308,100 @@ destinations:
             - 3 nights in Manali
             - Manali sightseeing
             - Shimla local and Kufri sightseeing
+        - exclusions:
+            - Lunch
+            - Vehicle at disposal
+            - " Any personal expenses. Room service and special orders.
+              Alcoholic and non alcoholic beverages"
+            - Any extra excursions or sightseeing apart from the suggested tour
+              itinerary.
+            - Guide Charges, Camera Tickets are NOT INCLUDED in the mentioned
+              cost of Sightseeing & Transfers
+            - Gala Dinner on 25th & 31st Night
+            - Other meals not mentioned laundry, telephone calls, and incidentals
+            - " Any additional charges arising due to natural calamities,
+              political disturbances, VIP movement, etc."
+            - " All applicable Taxes ● Chain Vehicle Charges ● Any guide charges"
+          price: "17000"
+          itinerary:
+            - title: "DAY 1 - Delhi - MANALI "
+              details: >-
+                We Started Our Scenic
+
+                Drive From Chandigarh Towards Manali. Our Driver Will Pick You From Airport/Railway
+
+                Station .You Will Be Driven Through The Chandigarh Bypass And Various Pit Stops To
+
+                Reach Manali. Check Into Your Hotel To Relax. Overnight Stay At Hotel.
+            - title: "DAY 2 - MANALI LOCAL SIGHTSEEING "
+              details: >-
+                Have Breakfast In The Hotel And Proceed For A
+
+                Sightseeing Tour Of Manali Visiting Hadimba Temple, Vashisht Temple, Van Vihar And
+
+                Tibetan Monasteries. Evening Free For Your Own Activities. Spend Time On Mall Road
+
+                Doing Some Shopping And Enjoying The Markets. Overnight Stay At Hotel.
+            - title: "DAY 3 - MANALI - SOLANG VALLEY "
+              details: >-
+                Morning After Breakfast, Visit Solang Valley
+
+                (13 Kms) Which Is A Splendid Valley Between Solang Village And Beas Kund. Solang
+
+                Valley Offers Views Of Glaciers And Snow Capped Mountains And Peaks. It Has Fine Ski
+
+                Slopes. The Mountaineering Institute Has Installed A Ski Lift For Training Purposes. Indulge
+
+                In Activities Like Parachuting, Paragliding, Skating And Zorbing, Skiing Etc (Own
+
+                Expenses).Overnight Stay.
+            - title: "DAY 4 – MANALI - KASOL DAY TOUR "
+              details: >-
+                After Breakfast, Leave From The Hotel And
+
+                Transfer To Kasol. Kasol Is A Hamlet In The Kullu District Of The Indian State Of Himachal
+
+                Pradesh. Here You Will Visit The Manikaran Sahib Guruduwara To Soak In The Divine Aura
+
+                Of This Spiritual Destination And Seek Blessings At This Holy Place And Then You Will Go
+
+                For Kasol Market. Evening Return Back To The Hotel. Dinner And Overnight Stay.
+            - title: DAY 5 - MANALI - DELHI HOME RETURN
+              details: >-
+                After Breakfast
+
+                Checkout From The Hotel And Transfer Towards Delhi To Return Back To Home As Per
+
+                Your Flight Ticket With A Lot Of Sweet Memories And A Promise To Return Back.
+          featured: false
+          gallery: []
+          days: 5
+          inclusions:
+            - " Hotels as per mentioned above."
+            - Daily breakfast and Dinner included in the package.
+            - Delhi airport pickup & drop off included
+            - Transfers and Sightseeing by private Non AC Private Cab
+            - Welcome drink on arrival
+            - All toll taxes, parking charges included
+            - 24 Hours telephonic support from our office
+            - Includes driver’s expenses, fuel charges and allowances. ● All
+              taxes included
+          title: Manali
+          nights: 4
+          description: This 5-day Manali tour takes you through the scenic beauty of
+            Himachal Pradesh with a perfect mix of nature, adventure, and local
+            culture. From exploring Manali’s temples and markets to enjoying
+            thrilling activities at Solang Valley and experiencing the spiritual
+            vibes of Manikaran Sahib in Kasol, this trip offers a refreshing
+            mountain escape filled with unforgettable memories.
+          highlights:
+            - Local sightseeing in Manali including Hadimba Temple, Vashisht
+              Temple & Mall Road.
+            - Adventure and snow fun at Solang Valley with paragliding, zorbing
+              & skiing .
+            - Spiritual visit to Manikaran Sahib Gurudwara and leisure time in
+              Kasol market.
+            - Scenic drives through the Himalayas with stunning mountain views
       name: " Himachal Pradesh"
       hero: /images/uploads/hm1.1.webp
       description: Himachal Pradesh is a stunning destination of snow-capped peaks,
