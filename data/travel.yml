@@ -1082,3 +1082,18 @@ destinations:
         offers something unique. Whether it’s indulging in authentic Thai
         cuisine, exploring vibrant markets, or enjoying thrilling adventures and
         nightlife, Thailand promises an unforgettable escape.
+    - featured: false
+      highlights:
+        - futuristic Gardens by the Bay and its stunning Supertree Grove.
+        - Iconic Marina Bay Sands and its breathtaking skyline views.
+        - vibrant neighborhoods like Chinatown, Little India, and Kampong Glam
+          for culture and cuisine.
+      gallery: []
+      packages: []
+      name: Singapore
+      hero: /images/uploads/s1.jpg
+      description: Singapore is a vibrant island nation known for its modern skyline,
+        lush green spaces, and seamless blend of cultures. From world-class
+        attractions like Marina Bay Sands, Gardens by the Bay, and Sentosa
+        Island to bustling street markets and diverse cuisine, Singapore offers
+        a perfect mix of leisure, adventure, and cultural exploration.
