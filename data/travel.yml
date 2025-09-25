@@ -1097,3 +1097,112 @@ destinations:
         attractions like Marina Bay Sands, Gardens by the Bay, and Sentosa
         Island to bustling street markets and diverse cuisine, Singapore offers
         a perfect mix of leisure, adventure, and cultural exploration.
+    - packages:
+        - exclusions:
+            - 5% TCS EXTRA
+            - Malaysia Tourism Tax 10 RM Per room per Night
+          price: "68000"
+          itinerary:
+            - title: "Day 1 - ARRIVAL IN SINGAPORE + NIGHT SAFARI "
+              details: >-
+                Arrive in Singapore and transfer to your hotel for check-in. In
+                the evening, enjoy a visit to the world’s
+
+                first Night Safari,Experience a guided tram
+
+                ride through different zones representing the world’s major habitats, and don’t miss the Animal Show,
+
+                where nocturnal animals showcase their natural behaviors. It’s a fascinating and family-friendly
+
+                introduction to Singapore’s rich biodiversity.
+            - details: >-
+                Start your day with a Singapore city tour, covering iconic
+                landmarks such as Merlion Park,
+
+                Chinatown, Little India, and the Civic District. Later, enjoy a fun-filled day at Sentosa Island, starting
+
+                with a scenic cable car ride offering aerial views of Singapore’s harbor and skyline. Visit Madame
+
+                Tussauds, where the 4-in-1 combo includes the wax museum, Spirit of Singapore boat ride, Marvel
+
+                4D Experience, and Images of Singapore LIVE. In the evening, watch the spectacular Wings of Time
+
+                show at 7:40 PM — a multi-sensory performance featuring water, lights, fire, and music by the
+
+                beach.
+              title: "Day 2 - SINGAPORE CITY TOUR + FULL-DAY SENTOSA ISLAND TOUR "
+            - title: Day 3 – UNIVERSAL STUDIOS
+              details: >-
+                Spend the day at Universal Studios Singapore, Southeast Asia’s
+                first Hollywood-themed Park located
+
+                on Sentosa Island. Enjoy thrilling rides, world-class attractions, and live shows across themed zones
+
+                like Sci-Fi City, Ancient Egypt, The Lost World, Madagascar, and more. This full- day adventure offers
+
+                fun for all ages, from adrenaline-pumping coasters to kid-friendly experiences
+            - title: Day 4 - SINGAPORE TO KUALA LUMPUR + KUALA LUMPUR CITY TOUR WITH PETRONAS
+                TWIN TOWERS
+              details: >-
+                After breakfast, transfer from Singapore to Kuala Lumpur by
+                coach. Upon arrival, begin a Kuala
+
+                Lumpur city tour, exploring key sights like the King’s Palace, National Monument, Independence
+
+                Square, and the famous Petronas Twin Towers (Ticket Included). Learn about Malaysia’s cultural
+
+                blend and modern architecture during this engaging half-day tour. Check in to your hotel and enjoy
+
+                the evening at leisure.
+            - title: "Day 5 - GENTING HIGHLANDS TOUR WITH CABLE CAR + BATU CAVES "
+              details: >-
+                Head out for a full-day excursion to Genting Highlands, a
+                mountain resort known for its cool climate,
+
+                casinos, and theme parks. En route, stop at the iconic Batu Caves for a photo opportunity at the
+
+                giant golden Murugan statue and the limestone hill temple. Continue to Genting via the cable car ride,
+
+                offering scenic views of the rainforest. Enjoy free time at the resort for shopping, entertainment, or indoor theme park activities.
+            - title: "Day 6 - DEPARTURE BACK "
+              details: A departure back with happy memories
+          featured: false
+          gallery: []
+          days: 6
+          inclusions:
+            - Airport Transfers on Private basis
+            - Kuala Lumpur Transfers on Private basis
+            - All Sightseeing Transfers on Sharing basis (Singapore)
+            - Singapore to Malaysia Coach Transfer
+            - Night Safari with Tram Ride
+            - Singapore City Tour
+            - Universal Studios
+            - Full Day Sentosa Island Tour
+            - Kuala Lumpur City Tour with Petronas Twin Tower
+            - Genting Highland Tour with Cable Car + Batu Caves
+          title: Singapore-malaysia
+          hero: /images/uploads/m-s1.jpg
+          nights: 5
+          description: >-
+            This 6-day Singapore and Malaysia package is the perfect blend of
+            adventure, culture, and modern attractions. Begin with Singapore’s
+            world-class highlights from the famous Night Safari and a fun-filled
+            Sentosa Island experience to thrilling rides at Universal Studios
+            and the futuristic Gardens by the Bay. Continue your journey to
+            Kuala Lumpur, where iconic landmarks like the Petronas Twin Towers,
+            the King’s Palace, and Independence Square showcase Malaysia’s rich
+            culture and modern charm. A day trip to Genting Highlands with a
+            scenic cable car ride and a stop at the Batu Caves adds a touch of
+            excitement and natural beauty.
+
+
+            This package combines family-friendly entertainment, sightseeing, and leisure making it an ideal choice for travelers who want to experience the very best of Singapore and Malaysia in one trip.
+          highlights:
+            - Thrilling Night Safari in Singapore with animal show & tram ride.
+            - Fun-filled Sentosa Island tour with cable car, Madame Tussauds
+              4-in-1 combo & Wings of Time.
+            - Full-day adventure at Universal Studios Singapore with world-class
+              rides & shows.
+            - Kuala Lumpur sightseeing including the Petronas Twin Towers.
+            - Exciting Genting Highlands tour with cable car ride & photo stop
+              at Batu Caves.
