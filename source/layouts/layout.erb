@@ -191,7 +191,13 @@
               <%= item[:name] %>
             </a>
           <% end %>
-    
+
+          <div class="border-t border-gray-200 pt-4 mt-4">
+            <a href="/privacy-policy/" class="text-gray-700 hover:text-primary-600 py-2 block">
+              Privacy Policy
+            </a>
+          </div>
+
           <a href="/#contact" class="mt-auto w-full bg-secondary-500 text-white py-3 rounded-xl font-medium hover:bg-golden-400 text-center">
             Book Now
           </a>                    
@@ -211,7 +217,7 @@
     <!-- Footer -->
     <footer class="bg-gray-900 text-white">
       <div class="container-custom section-spacing-sm">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           <!-- Company Info -->
           <div class="lg:col-span-2">
             <div class="flex items-center space-x-2 mb-4">
@@ -244,6 +250,14 @@
                   </a>
                 </li>
               <% end %>
+            </ul>
+          </div>
+
+          <!-- Legal & Support -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Legal & Support</h3>
+            <ul class="space-y-2">
+              <li><a href="/privacy-policy/" class="text-gray-400 hover:text-accent-400 transition-colors duration-200">Privacy Policy</a></li>
               <li><a href="/admin/" class="text-gray-400 hover:text-accent-400 transition-colors duration-200">Admin</a></li>
             </ul>
           </div>
