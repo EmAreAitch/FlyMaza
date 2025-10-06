@@ -24,6 +24,65 @@ module ApplicationHelpers
     end
   end
 
+  def responsive_image_srcset(path, mobile_w:, desktop_w:, h: nil, fm: "avif", fit: nil, position: nil, q: 50)
+    return { src: nil, srcset: nil } unless path.present?
+    
+    # Get base path
+    base_path = path.is_a?(Middleman::Blog::BlogArticle) ? (path.data.cover_image || "default_cover_image.png") : path
+    
+    if development?
+      # In development, return the simple image path without srcset
+      { src: image_path(base_path), srcset: nil, sizes: nil }
+    else
+      # Generate mobile and desktop versions
+      mobile_src = responsive_image(base_path, fm: fm, fit: fit, w: mobile_w, h: h, position: position, q: q)
+      desktop_src = responsive_image(base_path, fm: fm, fit: fit, w: desktop_w, h: h, position: position, q: q)
+      
+      # Generate srcset string
+      srcset = "#{mobile_src} #{mobile_w}w, #{desktop_src} #{desktop_w}w"
+      
+      # Generate sizes attribute (mobile first, then desktop)
+      sizes = "(max-width: 768px) #{mobile_w}px, #{desktop_w}px"
+      
+      {
+        src: desktop_src,  # Fallback src
+        srcset: srcset,
+        sizes: sizes
+      }
+    end
+  end
+
+  def responsive_image_tag(path, mobile_w:, desktop_w:, h: nil, alt: "", css_class: nil, loading: "lazy", fm: "avif", fit: nil, position: nil, q: 50, **extra_attrs)
+    return "" unless path.present?
+    
+    # Get image data
+    img_data = responsive_image_srcset(path, mobile_w: mobile_w, desktop_w: desktop_w, h: h, fm: fm, fit: fit, position: position, q: q)
+    
+    return "" unless img_data[:src]
+    
+    # Build attributes hash
+    attrs = {
+      src: img_data[:src],
+      alt: alt,
+      loading: loading
+    }
+    
+    # Add srcset and sizes if available (production)
+    attrs[:srcset] = img_data[:srcset] if img_data[:srcset]
+    attrs[:sizes] = img_data[:sizes] if img_data[:sizes]
+    
+    # Add class if provided
+    attrs[:class] = css_class if css_class
+    
+    # Merge any extra attributes
+    attrs.merge!(extra_attrs)
+    
+    # Generate attribute string
+    attr_string = attrs.map { |k, v| "#{k}=\"#{v}\"" }.join(" ")
+    
+    "<img #{attr_string}>".html_safe
+  end
+
   def breadcrumbs
     breadcrumb_items = []
     

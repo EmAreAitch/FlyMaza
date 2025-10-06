@@ -2,7 +2,7 @@
 <div class="<%= col[size] %> fade-in">
   <a href="<%= destination.url %>">
     <div class="relative h-80 rounded-3xl overflow-hidden group cursor-pointer">
-      <img src="<%= responsive_image(destination[:hero]) %>" alt="<%= destination[:name] %>" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+      <%= responsive_image_tag(destination[:hero], mobile_w: 600, desktop_w: 1200, h: 800, alt: destination[:name], css_class: "w-full h-full object-cover transition-transform duration-700 group-hover:scale-105") %>
       <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
       <div class="absolute bottom-6 left-6 text-white">
         <p class="text-white/80 text-sm font-medium mb-1"><%= destination[:description] %></p>

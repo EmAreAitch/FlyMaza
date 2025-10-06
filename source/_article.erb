@@ -1,10 +1,6 @@
 <article class="bg-white rounded-2xl shadow-lg overflow-hidden">
           <a href="<%= article.url %>" class="block">
-            <img
-              src="<%= responsive_image(article) %>" 
-              alt="<%= article.title %> cover image"
-              class="w-full object-cover"
-            />
+            <%= responsive_image_tag(article, mobile_w: 600, desktop_w: 1200, h: 600, alt: "#{article.title} cover image", css_class: "w-full object-cover") %>
           </a>        
 
           <div class="p-6"> 

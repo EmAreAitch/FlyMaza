@@ -109,7 +109,7 @@
   <div class="relative min-h-screen flex items-center justify-center overflow-hidden">
     <!-- Background Image -->
     <div class="absolute inset-0 z-0">
-      <img src=<%= responsive_image("hero.jpg") %> class="w-full h-full object-cover">      
+      <%= responsive_image_tag("hero.jpg", mobile_w: 768, desktop_w: 1920, h: 1080, alt: "FlyMaza Travel Hero", css_class: "w-full h-full object-cover", loading: "eager") %>
       <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/50"></div>
     </div>
     
@@ -184,7 +184,11 @@
       <div class="slide-in-left">
         <div class="relative">
           <!-- Hero image with search interface overlay -->
-          <img src="https://image.pollinations.ai/prompt/Dramatic%20tropical%20beach%20rock%20formations%20crystal%20clear%20turquoise%20water%20pristine%20coastline%20travel%20destination?width=600&height=600&seed=42150&nologo=true" alt="Travel Process" class="w-full h-96 lg:h-[600px] object-cover rounded-2xl">
+          <img src="https://image.pollinations.ai/prompt/Dramatic%20tropical%20beach%20rock%20formations%20crystal%20clear%20turquoise%20water%20pristine%20coastline%20travel%20destination?width=1200&height=1200&seed=42150&nologo=true" 
+               srcset="https://image.pollinations.ai/prompt/Dramatic%20tropical%20beach%20rock%20formations%20crystal%20clear%20turquoise%20water%20pristine%20coastline%20travel%20destination?width=600&height=600&seed=42150&nologo=true 600w, https://image.pollinations.ai/prompt/Dramatic%20tropical%20beach%20rock%20formations%20crystal%20clear%20turquoise%20water%20pristine%20coastline%20travel%20destination?width=1200&height=1200&seed=42150&nologo=true 1200w"
+               sizes="(max-width: 768px) 600px, 1200px"
+               alt="Travel Process" 
+               class="w-full h-96 lg:h-[600px] object-cover rounded-2xl">
           
           <!-- Dark gradient overlay -->
           <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/10 rounded-2xl"></div>
