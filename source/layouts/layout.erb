@@ -68,16 +68,22 @@
     <link rel="icon" type="image/x-icon" href="/images/favicon.jpeg">
     <link rel="apple-touch-icon" href="/images/favicon.jpeg">
     
-    <!-- Fonts -->
+    <!-- Fonts - Optimized for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"></noscript>
+    
+    <!-- Inline Font Fallback - Prevents Layout Shift -->
+    <style>
+      body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+    </style>
     
     <!-- Styles -->
     <%= stylesheet_link_tag "tailwind" %>
-    <%= stylesheet_link_tag "site" %>
-    <%= javascript_include_tag "site", defer: true %>    
-    <script src="//instant.page/5.2.0" type="module" integrity="sha384-jnZyxPjiipYXnSU0ygqeac2q7CVYMbh84q0uHVRRxEtvFPiQYbXWUorga2aqZJ0z"></script>
+    <%= javascript_include_tag "site", defer: true %>
+    <%= javascript_include_tag "instant.page", type: "module" %>
     
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
