@@ -101,6 +101,25 @@
   ]
 
   content_for :head, javascript_include_tag("contact", defer: true)
+  content_for :head do
+    # Preload hero image with proper responsive attributes
+    mobile_hero = responsive_image("hero.jpg", w: 768, h: 1080)
+    desktop_hero = responsive_image("hero.jpg", w: 1920, h: 1080)
+    
+    # Create srcset string for responsive preload
+    imagesrcset = "#{mobile_hero} 768w, #{desktop_hero} 1920w"
+    imagesizes = "(max-width: 767px) 768px, 1920px"
+    
+    # Single preload link with imagesrcset and imagesizes
+    tag(:link, 
+        rel: "preload", 
+        as: "image", 
+        href: desktop_hero,  # Fallback for browsers that don't support imagesrcset
+        imagesrcset: imagesrcset,
+        imagesizes: imagesizes,
+        fetchpriority: "high", 
+        type: "image/avif")
+  end
 %>
 
 <!-- Hero Section Wrapper -->
