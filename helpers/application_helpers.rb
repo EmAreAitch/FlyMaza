@@ -24,7 +24,7 @@ module ApplicationHelpers
     end
   end
 
-  def responsive_image_srcset(path, mobile_w:, desktop_w:, h: nil, fm: "avif", fit: nil, position: nil, q: 50)
+  def responsive_image_srcset(path, mobile_w:, desktop_w:, h: nil, fm: "avif", fit: nil, position: nil, q: 50, sizes: nil)
     return { src: nil, srcset: nil } unless path.present?
     
     # Get base path
@@ -41,28 +41,27 @@ module ApplicationHelpers
       # Generate srcset string
       srcset = "#{mobile_src} #{mobile_w}w, #{desktop_src} #{desktop_w}w"
       
-      # Generate sizes attribute (mobile first, then desktop)
-      sizes = "(max-width: 768px) #{mobile_w}px, #{desktop_w}px"
+      # Use provided sizes or generate default
+      calculated_sizes = sizes || "(max-width: 767px) #{mobile_w}px, #{desktop_w}px"
       
       {
         src: desktop_src,  # Fallback src
         srcset: srcset,
-        sizes: sizes
+        sizes: calculated_sizes
       }
     end
   end
 
-  def responsive_image_tag(path, mobile_w:, desktop_w:, h: nil, alt: "", css_class: nil, loading: "lazy", fm: "avif", fit: nil, position: nil, q: 50, **extra_attrs)
+  def responsive_image_tag(path, mobile_w:, desktop_w:, h: nil, alt: "", css_class: nil, loading: "lazy", fm: "avif", fit: nil, position: nil, q: 50, sizes: nil, **extra_attrs)
     return "" unless path.present?
     
     # Get image data
-    img_data = responsive_image_srcset(path, mobile_w: mobile_w, desktop_w: desktop_w, h: h, fm: fm, fit: fit, position: position, q: q)
+    img_data = responsive_image_srcset(path, mobile_w: mobile_w, desktop_w: desktop_w, h: h, fm: fm, fit: fit, position: position, q: q, sizes: sizes)
     
     return "" unless img_data[:src]
     
     # Build attributes hash
     attrs = {
-      src: img_data[:src],
       alt: alt,
       loading: loading
     }
@@ -76,11 +75,8 @@ module ApplicationHelpers
     
     # Merge any extra attributes
     attrs.merge!(extra_attrs)
-    
-    # Generate attribute string
-    attr_string = attrs.map { |k, v| "#{k}=\"#{v}\"" }.join(" ")
-    
-    "<img #{attr_string}>".html_safe
+        
+    image_tag(img_data[:src], **attrs)
   end
 
   def breadcrumbs

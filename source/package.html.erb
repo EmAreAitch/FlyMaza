@@ -180,7 +180,7 @@
         <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           <% package.gallery.each do |image| %>
             <div class="rounded-2xl overflow-hidden shadow-card">
-              <%= responsive_image_tag(image, mobile_w: 600, desktop_w: 800, h: 600, alt: "#{destination_name} gallery image", css_class: "w-full h-64 object-cover") %>
+              <%= responsive_image_tag(image, mobile_w: 600, desktop_w: 800, h: 600, alt: "#{destination_name} gallery image", css_class: "w-full h-64 object-cover", sizes: "(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw") %>
             </div>
           <% end %>
         </div>

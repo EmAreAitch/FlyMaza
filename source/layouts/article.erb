@@ -54,7 +54,7 @@
     </header>
 
     <div class="mb-8 w-full">
-      <%= responsive_image_tag(current_article, mobile_w: 768, desktop_w: 1200, h: 600, alt: "Cover image for #{current_article.title}", css_class: "w-full rounded-xl shadow-md object-cover mx-auto") %>
+      <%= responsive_image_tag(current_article, mobile_w: 768, desktop_w: 1200, h: 600, alt: "Cover image for #{current_article.title}", css_class: "w-full rounded-xl shadow-md object-cover mx-auto", sizes: "100vw") %>
     </div>
 
     <div class="prose max-w-none text-gray-800">
