@@ -13,78 +13,794 @@ raw: >
   isModification: null
 
   raw: >
-    testimonials:
-      - name: Daniel Sullivan
-        role: Travel Enthusiast
-        content: This travel website is very informative, well-structured, and easy to
-          navigate. The booking process was simple and hassle-free, and everything
-          we received matched the package exactly as described. The recommendations
-          provided were excellent, making it much easier to choose the right
-          experiences and plan our trip without any confusion. Overall, it felt
-          reliable, trustworthy, and customer-focused, which gave us a lot of
-          confidence while booking.
-        review_link: ""
-        avatar: ""
-      - name: Priya Sharma
-        role: Adventure Seeker
-        content: My Manali trip with Fly Maza was an unforgettable experience. The
-          entire journey, from browsing packages to finalizing the booking, was
-          effortless. What stood out most was the personalized guidance and
-          thoughtful suggestions that made the trip feel tailor-made for me. The
-          arrangements were well-organized, the stay was comfortable, and every
-          moment of the trip felt smooth and enjoyable. Fly Maza truly took care of
-          everything, allowing me to focus only on creating memories.
-        avatar: ""
-      - name: Vikrant singh
-        role: Family travel
-        content: We booked our Bali trip with Flymaza, and it was an amazing experience!
-          The team was professional, responsive, and made sure everything was
-          perfectly planned from transfers and hotels to sightseeing and local
-          experiences. The itinerary was well-balanced, the accommodations were
-          excellent, and local support made the trip completely stress-free. Highly
-          recommend them for a seamless and memorable vacation!
-    stats:
-      happy_travelers: 7000+
-      years_of_experience: 15+
-      destinations_covered: 50+
-      customer_rating: 4.7
+    partial: false
+
+    path: data/site.yml
+
+    meta:
+      path: data/site.yml
+    isModification: null
+
+    raw: >
+      testimonials:
+        - name: Daniel Sullivan
+          role: Travel Enthusiast
+          content: This travel website is very informative, well-structured, and easy to
+            navigate. The booking process was simple and hassle-free, and everything
+            we received matched the package exactly as described. The recommendations
+            provided were excellent, making it much easier to choose the right
+            experiences and plan our trip without any confusion. Overall, it felt
+            reliable, trustworthy, and customer-focused, which gave us a lot of
+            confidence while booking.
+          review_link: ""
+          avatar: ""
+        - name: Priya Sharma
+          role: Adventure Seeker
+          content: My Manali trip with Fly Maza was an unforgettable experience. The
+            entire journey, from browsing packages to finalizing the booking, was
+            effortless. What stood out most was the personalized guidance and
+            thoughtful suggestions that made the trip feel tailor-made for me. The
+            arrangements were well-organized, the stay was comfortable, and every
+            moment of the trip felt smooth and enjoyable. Fly Maza truly took care of
+            everything, allowing me to focus only on creating memories.
+          avatar: ""
+        - name: Vikrant singh
+          role: Family travel
+          content: We booked our Bali trip with Flymaza, and it was an amazing experience!
+            The team was professional, responsive, and made sure everything was
+            perfectly planned from transfers and hotels to sightseeing and local
+            experiences. The itinerary was well-balanced, the accommodations were
+            excellent, and local support made the trip completely stress-free. Highly
+            recommend them for a seamless and memorable vacation!
+      stats:
+        happy_travelers: 7000+
+        years_of_experience: 15+
+        destinations_covered: 50+
+        customer_rating: 4.7
+    data:
+      testimonials:
+        - name: Daniel Sullivan
+          role: Travel Enthusiast
+          content: This travel website is very informative, well-structured, and easy to
+            navigate. The booking process was simple and hassle-free, and everything
+            we received matched the package exactly as described. The
+            recommendations provided were excellent, making it much easier to choose
+            the right experiences and plan our trip without any confusion. Overall,
+            it felt reliable, trustworthy, and customer-focused, which gave us a lot
+            of confidence while booking.
+          review_link: ""
+          avatar: ""
+        - name: Priya Sharma
+          role: Adventure Seeker
+          content: My Manali trip with Fly Maza was an unforgettable experience. The
+            entire journey, from browsing packages to finalizing the booking, was
+            effortless. What stood out most was the personalized guidance and
+            thoughtful suggestions that made the trip feel tailor-made for me. The
+            arrangements were well-organized, the stay was comfortable, and every
+            moment of the trip felt smooth and enjoyable. Fly Maza truly took care
+            of everything, allowing me to focus only on creating memories.
+          avatar: ""
+        - name: Vikrant singh
+          role: Family travel
+          content: We booked our Bali trip with Flymaza, and it was an amazing experience!
+            The team was professional, responsive, and made sure everything was
+            perfectly planned from transfers and hotels to sightseeing and local
+            experiences. The itinerary was well-balanced, the accommodations were
+            excellent, and local support made the trip completely stress-free.
+            Highly recommend them for a seamless and memorable vacation!
+          review_link: https://share.google/Voy8hGmZUOK3vQtko
+      stats:
+        happy_travelers: 3000+
+        years_of_experience: 15+
+        destinations_covered: 50+
+        customer_rating: 4.7
+    author: ""
+
+    slug: site_data
+
+    newRecord: false
+
+    status: ""
+
+    mediaFiles:
+      - id: 44fea03f9a03fa2a00213aa2213797e6aba0af3d
+        name: 1-amarnath-yatra-pahalgam-jammu-kashmir-city-hero.jpg
+        size: 181138
+        displayURL:
+          id: 44fea03f9a03fa2a00213aa2213797e6aba0af3d
+          path: source/images/uploads/1-amarnath-yatra-pahalgam-jammu-kashmir-city-hero.jpg
+        path: source/images/uploads/1-amarnath-yatra-pahalgam-jammu-kashmir-city-hero.jpg
+      - id: 9e32185a17460f9241076b5f3c9f51106f9937ef
+        name: an1-2.webp
+        size: 157298
+        displayURL:
+          id: 9e32185a17460f9241076b5f3c9f51106f9937ef
+          path: source/images/uploads/an1-2.webp
+        path: source/images/uploads/an1-2.webp
+      - id: 26ab2055ac6d524ac6061d6d1641535782050a14
+        name: an1.jpg
+        size: 170643
+        displayURL:
+          id: 26ab2055ac6d524ac6061d6d1641535782050a14
+          path: source/images/uploads/an1.jpg
+        path: source/images/uploads/an1.jpg
+      - id: 0e89445972487d6a863ae3b9f0be857da882b1ed
+        name: an3.webp
+        size: 157042
+        displayURL:
+          id: 0e89445972487d6a863ae3b9f0be857da882b1ed
+          path: source/images/uploads/an3.webp
+        path: source/images/uploads/an3.webp
+      - id: 21518f0c54cc79959fd90bbe9df26285966892ad
+        name: an4.jpg
+        size: 703486
+        displayURL:
+          id: 21518f0c54cc79959fd90bbe9df26285966892ad
+          path: source/images/uploads/an4.jpg
+        path: source/images/uploads/an4.jpg
+      - id: a131bb8cef3c214f78daaaa15b0e2ea90756fd33
+        name: an5.png
+        size: 435932
+        displayURL:
+          id: a131bb8cef3c214f78daaaa15b0e2ea90756fd33
+          path: source/images/uploads/an5.png
+        path: source/images/uploads/an5.png
+      - id: 57854a05b960c8d766ee08ab4d677217e045c38a
+        name: an6.jpg
+        size: 175866
+        displayURL:
+          id: 57854a05b960c8d766ee08ab4d677217e045c38a
+          path: source/images/uploads/an6.jpg
+        path: source/images/uploads/an6.jpg
+      - id: 03a52ddb7e38d3c230830385eb046a671cbe1861
+        name: b1.jpg
+        size: 441293
+        displayURL:
+          id: 03a52ddb7e38d3c230830385eb046a671cbe1861
+          path: source/images/uploads/b1.jpg
+        path: source/images/uploads/b1.jpg
+      - id: c8b9e022df666d2360ca0f36adf90e9cf83a19b1
+        name: b2.webp
+        size: 374150
+        displayURL:
+          id: c8b9e022df666d2360ca0f36adf90e9cf83a19b1
+          path: source/images/uploads/b2.webp
+        path: source/images/uploads/b2.webp
+      - id: a96a2a5bfc01e796b970da9a456cc0ac7762d465
+        name: chatgpt-image-sep-6-2025-06_47_16-pm.png
+        size: 2559113
+        displayURL:
+          id: a96a2a5bfc01e796b970da9a456cc0ac7762d465
+          path: source/images/uploads/chatgpt-image-sep-6-2025-06_47_16-pm.png
+        path: source/images/uploads/chatgpt-image-sep-6-2025-06_47_16-pm.png
+      - id: 05ab09ef3dd6875433b9a35d37df0b9b298f70d5
+        name: chatgpt-image-sep-6-2025-09_04_23-pm.png
+        size: 2802338
+        displayURL:
+          id: 05ab09ef3dd6875433b9a35d37df0b9b298f70d5
+          path: source/images/uploads/chatgpt-image-sep-6-2025-09_04_23-pm.png
+        path: source/images/uploads/chatgpt-image-sep-6-2025-09_04_23-pm.png
+      - id: daa9fab79ab201ad77869f481a1cb42cb04fdae5
+        name: goa1.jpg
+        size: 1665806
+        displayURL:
+          id: daa9fab79ab201ad77869f481a1cb42cb04fdae5
+          path: source/images/uploads/goa1.jpg
+        path: source/images/uploads/goa1.jpg
+      - id: 576eeb550a9233f09b844f8a8f8a277d79270fba
+        name: goa2.jpg
+        size: 631930
+        displayURL:
+          id: 576eeb550a9233f09b844f8a8f8a277d79270fba
+          path: source/images/uploads/goa2.jpg
+        path: source/images/uploads/goa2.jpg
+      - id: 635a203ed636396493f54f2eff64712dc8d2fe1c
+        name: goa3.jpg
+        size: 145175
+        displayURL:
+          id: 635a203ed636396493f54f2eff64712dc8d2fe1c
+          path: source/images/uploads/goa3.jpg
+        path: source/images/uploads/goa3.jpg
+      - id: 919c082c12b100b79d6bfe2b6c6b3db9f005c406
+        name: goa4.jpg
+        size: 111173
+        displayURL:
+          id: 919c082c12b100b79d6bfe2b6c6b3db9f005c406
+          path: source/images/uploads/goa4.jpg
+        path: source/images/uploads/goa4.jpg
+      - id: ad2fd46895bff51005402e4ea697432dcf6c0bb9
+        name: goa5.png
+        size: 453398
+        displayURL:
+          id: ad2fd46895bff51005402e4ea697432dcf6c0bb9
+          path: source/images/uploads/goa5.png
+        path: source/images/uploads/goa5.png
+      - id: fec75335f5329bf3a3b04cb238586f17fe47e108
+        name: hm1.1.webp
+        size: 475902
+        displayURL:
+          id: fec75335f5329bf3a3b04cb238586f17fe47e108
+          path: source/images/uploads/hm1.1.webp
+        path: source/images/uploads/hm1.1.webp
+      - id: 1fcc963aeb4f83a796ae0deee46696c8d3a62e36
+        name: hm1.jpg
+        size: 15324
+        displayURL:
+          id: 1fcc963aeb4f83a796ae0deee46696c8d3a62e36
+          path: source/images/uploads/hm1.jpg
+        path: source/images/uploads/hm1.jpg
+      - id: 38ad1d600fa19fe1eda5a0a22bc7cec8f3064f10
+        name: hm2.webp
+        size: 155526
+        displayURL:
+          id: 38ad1d600fa19fe1eda5a0a22bc7cec8f3064f10
+          path: source/images/uploads/hm2.webp
+        path: source/images/uploads/hm2.webp
+      - id: c0267c1738a7be26affbd5ce115eb9fed265dfe1
+        name: hm3.jpg
+        size: 274725
+        displayURL:
+          id: c0267c1738a7be26affbd5ce115eb9fed265dfe1
+          path: source/images/uploads/hm3.jpg
+        path: source/images/uploads/hm3.jpg
+      - id: d68eeb7c78a46a9412bcdceaa55c90899e4bf3b1
+        name: hm4.webp
+        size: 544882
+        displayURL:
+          id: d68eeb7c78a46a9412bcdceaa55c90899e4bf3b1
+          path: source/images/uploads/hm4.webp
+        path: source/images/uploads/hm4.webp
+      - id: 152a6176fb5a93e78eb434b1c1bc0f67991a4859
+        name: hm5.jpg
+        size: 271399
+        displayURL:
+          id: 152a6176fb5a93e78eb434b1c1bc0f67991a4859
+          path: source/images/uploads/hm5.jpg
+        path: source/images/uploads/hm5.jpg
+      - id: 142146b9ddb378c4f7e23513d05d5abacf7604e7
+        name: hm6.webp
+        size: 1091792
+        displayURL:
+          id: 142146b9ddb378c4f7e23513d05d5abacf7604e7
+          path: source/images/uploads/hm6.webp
+        path: source/images/uploads/hm6.webp
+      - id: cde10244618657aed8f7edd7aa0dafbd136a760f
+        name: hm7.webp
+        size: 148728
+        displayURL:
+          id: cde10244618657aed8f7edd7aa0dafbd136a760f
+          path: source/images/uploads/hm7.webp
+        path: source/images/uploads/hm7.webp
+      - id: 221b222e64003854c63fe0718d573d0635c213ce
+        name: image_2025-08-25_200629222.png
+        size: 1008394
+        displayURL:
+          id: 221b222e64003854c63fe0718d573d0635c213ce
+          path: source/images/uploads/image_2025-08-25_200629222.png
+        path: source/images/uploads/image_2025-08-25_200629222.png
+      - id: ce2a8454d40e221e09c81209c1ca226d4c9a6ee3
+        name: k1.jpg
+        size: 703494
+        displayURL:
+          id: ce2a8454d40e221e09c81209c1ca226d4c9a6ee3
+          path: source/images/uploads/k1.jpg
+        path: source/images/uploads/k1.jpg
+      - id: 44fea03f9a03fa2a00213aa2213797e6aba0af3d
+        name: kash1.jpg
+        size: 181138
+        displayURL:
+          id: 44fea03f9a03fa2a00213aa2213797e6aba0af3d
+          path: source/images/uploads/kash1.jpg
+        path: source/images/uploads/kash1.jpg
+      - id: 105d4556c6ca45aca36488a88515f2cfcd03a870
+        name: l1.jpg
+        size: 719291
+        displayURL:
+          id: 105d4556c6ca45aca36488a88515f2cfcd03a870
+          path: source/images/uploads/l1.jpg
+        path: source/images/uploads/l1.jpg
+      - id: fca5b01d6deeecc28d4425228ec77b96ea29bdf6
+        name: l2.jpg
+        size: 312616
+        displayURL:
+          id: fca5b01d6deeecc28d4425228ec77b96ea29bdf6
+          path: source/images/uploads/l2.jpg
+        path: source/images/uploads/l2.jpg
+      - id: 7e2ae1a9553973c9417c5cfd59040b711579d851
+        name: l3.jpg
+        size: 9283
+        displayURL:
+          id: 7e2ae1a9553973c9417c5cfd59040b711579d851
+          path: source/images/uploads/l3.jpg
+        path: source/images/uploads/l3.jpg
+      - id: 1e3d62c882ff96755da17d399af3c1d68138f3d4
+        name: l4.jpg
+        size: 150891
+        displayURL:
+          id: 1e3d62c882ff96755da17d399af3c1d68138f3d4
+          path: source/images/uploads/l4.jpg
+        path: source/images/uploads/l4.jpg
+      - id: 20d5cb30946b6d912c8ec11e7c9056d5b19dc227
+        name: l5.jpg
+        size: 180428
+        displayURL:
+          id: 20d5cb30946b6d912c8ec11e7c9056d5b19dc227
+          path: source/images/uploads/l5.jpg
+        path: source/images/uploads/l5.jpg
+      - id: 547362235353bf815f4f0cea9c54a8c9ac19d486
+        name: l6.jpg
+        size: 109285
+        displayURL:
+          id: 547362235353bf815f4f0cea9c54a8c9ac19d486
+          path: source/images/uploads/l6.jpg
+        path: source/images/uploads/l6.jpg
+      - id: e1369f2ccc40a42f56ede25cf221da798412f62b
+        name: l7.jpg
+        size: 259059
+        displayURL:
+          id: e1369f2ccc40a42f56ede25cf221da798412f62b
+          path: source/images/uploads/l7.jpg
+        path: source/images/uploads/l7.jpg
+      - id: 43683020c6ede59083176ff78b86ae3c38231ff7
+        name: m-s1.jpg
+        size: 292260
+        displayURL:
+          id: 43683020c6ede59083176ff78b86ae3c38231ff7
+          path: source/images/uploads/m-s1.jpg
+        path: source/images/uploads/m-s1.jpg
+      - id: 169c0c3f55bd3c117d2004c9a731e7639f063541
+        name: m1.jpg
+        size: 388640
+        displayURL:
+          id: 169c0c3f55bd3c117d2004c9a731e7639f063541
+          path: source/images/uploads/m1.jpg
+        path: source/images/uploads/m1.jpg
+      - id: 8d9e65e0a88b05ae98c94a1fb6188c410d71005d
+        name: m1.webp
+        size: 212592
+        displayURL:
+          id: 8d9e65e0a88b05ae98c94a1fb6188c410d71005d
+          path: source/images/uploads/m1.webp
+        path: source/images/uploads/m1.webp
+      - id: 47f6929247fb7d72b6e9a982006c7b672f689324
+        name: s1.jpg
+        size: 10147
+        displayURL:
+          id: 47f6929247fb7d72b6e9a982006c7b672f689324
+          path: source/images/uploads/s1.jpg
+        path: source/images/uploads/s1.jpg
+      - id: a87db10243569478cc9865e106bbffa6f3b14f7f
+        name: sm1.jpg
+        size: 228858
+        displayURL:
+          id: a87db10243569478cc9865e106bbffa6f3b14f7f
+          path: source/images/uploads/sm1.jpg
+        path: source/images/uploads/sm1.jpg
+      - id: 5f58b836727af897eb73b9ff3af689c76ae640f3
+        name: sm2.webp
+        size: 498048
+        displayURL:
+          id: 5f58b836727af897eb73b9ff3af689c76ae640f3
+          path: source/images/uploads/sm2.webp
+        path: source/images/uploads/sm2.webp
+      - id: 5e695e15882d9dfeeb827e2a6d5737b8e252e5fa
+        name: sm3.jpg
+        size: 89491
+        displayURL:
+          id: 5e695e15882d9dfeeb827e2a6d5737b8e252e5fa
+          path: source/images/uploads/sm3.jpg
+        path: source/images/uploads/sm3.jpg
+      - id: 75695b9b5919fb6d521534afcb81c53bbf780e40
+        name: sm4.jpg
+        size: 110697
+        displayURL:
+          id: 75695b9b5919fb6d521534afcb81c53bbf780e40
+          path: source/images/uploads/sm4.jpg
+        path: source/images/uploads/sm4.jpg
+    label: Site Data
+
+    updatedOn: ""
+
+    i18n: {}
+
+    collection: site_content
   data:
+    partial: false
+    path: data/site.yml
+    meta:
+      path: data/site.yml
+    isModification: null
+    raw: >
+      testimonials:
+        - name: Daniel Sullivan
+          role: Travel Enthusiast
+          content: This travel website is very informative, well-structured, and easy to
+            navigate. The booking process was simple and hassle-free, and everything
+            we received matched the package exactly as described. The recommendations
+            provided were excellent, making it much easier to choose the right
+            experiences and plan our trip without any confusion. Overall, it felt
+            reliable, trustworthy, and customer-focused, which gave us a lot of
+            confidence while booking.
+          review_link: ""
+          avatar: ""
+        - name: Priya Sharma
+          role: Adventure Seeker
+          content: My Manali trip with Fly Maza was an unforgettable experience. The
+            entire journey, from browsing packages to finalizing the booking, was
+            effortless. What stood out most was the personalized guidance and
+            thoughtful suggestions that made the trip feel tailor-made for me. The
+            arrangements were well-organized, the stay was comfortable, and every
+            moment of the trip felt smooth and enjoyable. Fly Maza truly took care of
+            everything, allowing me to focus only on creating memories.
+          avatar: ""
+        - name: Vikrant singh
+          role: Family travel
+          content: We booked our Bali trip with Flymaza, and it was an amazing experience!
+            The team was professional, responsive, and made sure everything was
+            perfectly planned from transfers and hotels to sightseeing and local
+            experiences. The itinerary was well-balanced, the accommodations were
+            excellent, and local support made the trip completely stress-free. Highly
+            recommend them for a seamless and memorable vacation!
+      stats:
+        happy_travelers: 7000+
+        years_of_experience: 15+
+        destinations_covered: 50+
+        customer_rating: 4.7
+    data:
+      testimonials:
+        - name: Daniel Sullivan
+          role: Travel Enthusiast
+          content: This travel website is very informative, well-structured, and easy to
+            navigate. The booking process was simple and hassle-free, and
+            everything we received matched the package exactly as described. The
+            recommendations provided were excellent, making it much easier to
+            choose the right experiences and plan our trip without any confusion.
+            Overall, it felt reliable, trustworthy, and customer-focused, which
+            gave us a lot of confidence while booking.
+          review_link: ""
+          avatar: ""
+        - name: Priya Sharma
+          role: Adventure Seeker
+          content: My Manali trip with Fly Maza was an unforgettable experience. The
+            entire journey, from browsing packages to finalizing the booking, was
+            effortless. What stood out most was the personalized guidance and
+            thoughtful suggestions that made the trip feel tailor-made for me. The
+            arrangements were well-organized, the stay was comfortable, and every
+            moment of the trip felt smooth and enjoyable. Fly Maza truly took care
+            of everything, allowing me to focus only on creating memories.
+          avatar: ""
+        - name: Vikrant singh
+          role: Family travel
+          content: We booked our Bali trip with Flymaza, and it was an amazing experience!
+            The team was professional, responsive, and made sure everything was
+            perfectly planned from transfers and hotels to sightseeing and local
+            experiences. The itinerary was well-balanced, the accommodations were
+            excellent, and local support made the trip completely stress-free.
+            Highly recommend them for a seamless and memorable vacation!
+          review_link: https://share.google/Voy8hGmZUOK3vQtko
+      stats:
+        happy_travelers: 3000+
+        years_of_experience: 15+
+        destinations_covered: 50+
+        customer_rating: 4.7
+    author: ""
+    slug: site_data
+    newRecord: false
+    status: ""
+    mediaFiles:
+      - id: 44fea03f9a03fa2a00213aa2213797e6aba0af3d
+        name: 1-amarnath-yatra-pahalgam-jammu-kashmir-city-hero.jpg
+        size: 181138
+        displayURL:
+          id: 44fea03f9a03fa2a00213aa2213797e6aba0af3d
+          path: source/images/uploads/1-amarnath-yatra-pahalgam-jammu-kashmir-city-hero.jpg
+        path: source/images/uploads/1-amarnath-yatra-pahalgam-jammu-kashmir-city-hero.jpg
+      - id: 9e32185a17460f9241076b5f3c9f51106f9937ef
+        name: an1-2.webp
+        size: 157298
+        displayURL:
+          id: 9e32185a17460f9241076b5f3c9f51106f9937ef
+          path: source/images/uploads/an1-2.webp
+        path: source/images/uploads/an1-2.webp
+      - id: 26ab2055ac6d524ac6061d6d1641535782050a14
+        name: an1.jpg
+        size: 170643
+        displayURL:
+          id: 26ab2055ac6d524ac6061d6d1641535782050a14
+          path: source/images/uploads/an1.jpg
+        path: source/images/uploads/an1.jpg
+      - id: 0e89445972487d6a863ae3b9f0be857da882b1ed
+        name: an3.webp
+        size: 157042
+        displayURL:
+          id: 0e89445972487d6a863ae3b9f0be857da882b1ed
+          path: source/images/uploads/an3.webp
+        path: source/images/uploads/an3.webp
+      - id: 21518f0c54cc79959fd90bbe9df26285966892ad
+        name: an4.jpg
+        size: 703486
+        displayURL:
+          id: 21518f0c54cc79959fd90bbe9df26285966892ad
+          path: source/images/uploads/an4.jpg
+        path: source/images/uploads/an4.jpg
+      - id: a131bb8cef3c214f78daaaa15b0e2ea90756fd33
+        name: an5.png
+        size: 435932
+        displayURL:
+          id: a131bb8cef3c214f78daaaa15b0e2ea90756fd33
+          path: source/images/uploads/an5.png
+        path: source/images/uploads/an5.png
+      - id: 57854a05b960c8d766ee08ab4d677217e045c38a
+        name: an6.jpg
+        size: 175866
+        displayURL:
+          id: 57854a05b960c8d766ee08ab4d677217e045c38a
+          path: source/images/uploads/an6.jpg
+        path: source/images/uploads/an6.jpg
+      - id: 03a52ddb7e38d3c230830385eb046a671cbe1861
+        name: b1.jpg
+        size: 441293
+        displayURL:
+          id: 03a52ddb7e38d3c230830385eb046a671cbe1861
+          path: source/images/uploads/b1.jpg
+        path: source/images/uploads/b1.jpg
+      - id: c8b9e022df666d2360ca0f36adf90e9cf83a19b1
+        name: b2.webp
+        size: 374150
+        displayURL:
+          id: c8b9e022df666d2360ca0f36adf90e9cf83a19b1
+          path: source/images/uploads/b2.webp
+        path: source/images/uploads/b2.webp
+      - id: a96a2a5bfc01e796b970da9a456cc0ac7762d465
+        name: chatgpt-image-sep-6-2025-06_47_16-pm.png
+        size: 2559113
+        displayURL:
+          id: a96a2a5bfc01e796b970da9a456cc0ac7762d465
+          path: source/images/uploads/chatgpt-image-sep-6-2025-06_47_16-pm.png
+        path: source/images/uploads/chatgpt-image-sep-6-2025-06_47_16-pm.png
+      - id: 05ab09ef3dd6875433b9a35d37df0b9b298f70d5
+        name: chatgpt-image-sep-6-2025-09_04_23-pm.png
+        size: 2802338
+        displayURL:
+          id: 05ab09ef3dd6875433b9a35d37df0b9b298f70d5
+          path: source/images/uploads/chatgpt-image-sep-6-2025-09_04_23-pm.png
+        path: source/images/uploads/chatgpt-image-sep-6-2025-09_04_23-pm.png
+      - id: daa9fab79ab201ad77869f481a1cb42cb04fdae5
+        name: goa1.jpg
+        size: 1665806
+        displayURL:
+          id: daa9fab79ab201ad77869f481a1cb42cb04fdae5
+          path: source/images/uploads/goa1.jpg
+        path: source/images/uploads/goa1.jpg
+      - id: 576eeb550a9233f09b844f8a8f8a277d79270fba
+        name: goa2.jpg
+        size: 631930
+        displayURL:
+          id: 576eeb550a9233f09b844f8a8f8a277d79270fba
+          path: source/images/uploads/goa2.jpg
+        path: source/images/uploads/goa2.jpg
+      - id: 635a203ed636396493f54f2eff64712dc8d2fe1c
+        name: goa3.jpg
+        size: 145175
+        displayURL:
+          id: 635a203ed636396493f54f2eff64712dc8d2fe1c
+          path: source/images/uploads/goa3.jpg
+        path: source/images/uploads/goa3.jpg
+      - id: 919c082c12b100b79d6bfe2b6c6b3db9f005c406
+        name: goa4.jpg
+        size: 111173
+        displayURL:
+          id: 919c082c12b100b79d6bfe2b6c6b3db9f005c406
+          path: source/images/uploads/goa4.jpg
+        path: source/images/uploads/goa4.jpg
+      - id: ad2fd46895bff51005402e4ea697432dcf6c0bb9
+        name: goa5.png
+        size: 453398
+        displayURL:
+          id: ad2fd46895bff51005402e4ea697432dcf6c0bb9
+          path: source/images/uploads/goa5.png
+        path: source/images/uploads/goa5.png
+      - id: fec75335f5329bf3a3b04cb238586f17fe47e108
+        name: hm1.1.webp
+        size: 475902
+        displayURL:
+          id: fec75335f5329bf3a3b04cb238586f17fe47e108
+          path: source/images/uploads/hm1.1.webp
+        path: source/images/uploads/hm1.1.webp
+      - id: 1fcc963aeb4f83a796ae0deee46696c8d3a62e36
+        name: hm1.jpg
+        size: 15324
+        displayURL:
+          id: 1fcc963aeb4f83a796ae0deee46696c8d3a62e36
+          path: source/images/uploads/hm1.jpg
+        path: source/images/uploads/hm1.jpg
+      - id: 38ad1d600fa19fe1eda5a0a22bc7cec8f3064f10
+        name: hm2.webp
+        size: 155526
+        displayURL:
+          id: 38ad1d600fa19fe1eda5a0a22bc7cec8f3064f10
+          path: source/images/uploads/hm2.webp
+        path: source/images/uploads/hm2.webp
+      - id: c0267c1738a7be26affbd5ce115eb9fed265dfe1
+        name: hm3.jpg
+        size: 274725
+        displayURL:
+          id: c0267c1738a7be26affbd5ce115eb9fed265dfe1
+          path: source/images/uploads/hm3.jpg
+        path: source/images/uploads/hm3.jpg
+      - id: d68eeb7c78a46a9412bcdceaa55c90899e4bf3b1
+        name: hm4.webp
+        size: 544882
+        displayURL:
+          id: d68eeb7c78a46a9412bcdceaa55c90899e4bf3b1
+          path: source/images/uploads/hm4.webp
+        path: source/images/uploads/hm4.webp
+      - id: 152a6176fb5a93e78eb434b1c1bc0f67991a4859
+        name: hm5.jpg
+        size: 271399
+        displayURL:
+          id: 152a6176fb5a93e78eb434b1c1bc0f67991a4859
+          path: source/images/uploads/hm5.jpg
+        path: source/images/uploads/hm5.jpg
+      - id: 142146b9ddb378c4f7e23513d05d5abacf7604e7
+        name: hm6.webp
+        size: 1091792
+        displayURL:
+          id: 142146b9ddb378c4f7e23513d05d5abacf7604e7
+          path: source/images/uploads/hm6.webp
+        path: source/images/uploads/hm6.webp
+      - id: cde10244618657aed8f7edd7aa0dafbd136a760f
+        name: hm7.webp
+        size: 148728
+        displayURL:
+          id: cde10244618657aed8f7edd7aa0dafbd136a760f
+          path: source/images/uploads/hm7.webp
+        path: source/images/uploads/hm7.webp
+      - id: 221b222e64003854c63fe0718d573d0635c213ce
+        name: image_2025-08-25_200629222.png
+        size: 1008394
+        displayURL:
+          id: 221b222e64003854c63fe0718d573d0635c213ce
+          path: source/images/uploads/image_2025-08-25_200629222.png
+        path: source/images/uploads/image_2025-08-25_200629222.png
+      - id: ce2a8454d40e221e09c81209c1ca226d4c9a6ee3
+        name: k1.jpg
+        size: 703494
+        displayURL:
+          id: ce2a8454d40e221e09c81209c1ca226d4c9a6ee3
+          path: source/images/uploads/k1.jpg
+        path: source/images/uploads/k1.jpg
+      - id: 44fea03f9a03fa2a00213aa2213797e6aba0af3d
+        name: kash1.jpg
+        size: 181138
+        displayURL:
+          id: 44fea03f9a03fa2a00213aa2213797e6aba0af3d
+          path: source/images/uploads/kash1.jpg
+        path: source/images/uploads/kash1.jpg
+      - id: 105d4556c6ca45aca36488a88515f2cfcd03a870
+        name: l1.jpg
+        size: 719291
+        displayURL:
+          id: 105d4556c6ca45aca36488a88515f2cfcd03a870
+          path: source/images/uploads/l1.jpg
+        path: source/images/uploads/l1.jpg
+      - id: fca5b01d6deeecc28d4425228ec77b96ea29bdf6
+        name: l2.jpg
+        size: 312616
+        displayURL:
+          id: fca5b01d6deeecc28d4425228ec77b96ea29bdf6
+          path: source/images/uploads/l2.jpg
+        path: source/images/uploads/l2.jpg
+      - id: 7e2ae1a9553973c9417c5cfd59040b711579d851
+        name: l3.jpg
+        size: 9283
+        displayURL:
+          id: 7e2ae1a9553973c9417c5cfd59040b711579d851
+          path: source/images/uploads/l3.jpg
+        path: source/images/uploads/l3.jpg
+      - id: 1e3d62c882ff96755da17d399af3c1d68138f3d4
+        name: l4.jpg
+        size: 150891
+        displayURL:
+          id: 1e3d62c882ff96755da17d399af3c1d68138f3d4
+          path: source/images/uploads/l4.jpg
+        path: source/images/uploads/l4.jpg
+      - id: 20d5cb30946b6d912c8ec11e7c9056d5b19dc227
+        name: l5.jpg
+        size: 180428
+        displayURL:
+          id: 20d5cb30946b6d912c8ec11e7c9056d5b19dc227
+          path: source/images/uploads/l5.jpg
+        path: source/images/uploads/l5.jpg
+      - id: 547362235353bf815f4f0cea9c54a8c9ac19d486
+        name: l6.jpg
+        size: 109285
+        displayURL:
+          id: 547362235353bf815f4f0cea9c54a8c9ac19d486
+          path: source/images/uploads/l6.jpg
+        path: source/images/uploads/l6.jpg
+      - id: e1369f2ccc40a42f56ede25cf221da798412f62b
+        name: l7.jpg
+        size: 259059
+        displayURL:
+          id: e1369f2ccc40a42f56ede25cf221da798412f62b
+          path: source/images/uploads/l7.jpg
+        path: source/images/uploads/l7.jpg
+      - id: 43683020c6ede59083176ff78b86ae3c38231ff7
+        name: m-s1.jpg
+        size: 292260
+        displayURL:
+          id: 43683020c6ede59083176ff78b86ae3c38231ff7
+          path: source/images/uploads/m-s1.jpg
+        path: source/images/uploads/m-s1.jpg
+      - id: 169c0c3f55bd3c117d2004c9a731e7639f063541
+        name: m1.jpg
+        size: 388640
+        displayURL:
+          id: 169c0c3f55bd3c117d2004c9a731e7639f063541
+          path: source/images/uploads/m1.jpg
+        path: source/images/uploads/m1.jpg
+      - id: 8d9e65e0a88b05ae98c94a1fb6188c410d71005d
+        name: m1.webp
+        size: 212592
+        displayURL:
+          id: 8d9e65e0a88b05ae98c94a1fb6188c410d71005d
+          path: source/images/uploads/m1.webp
+        path: source/images/uploads/m1.webp
+      - id: 47f6929247fb7d72b6e9a982006c7b672f689324
+        name: s1.jpg
+        size: 10147
+        displayURL:
+          id: 47f6929247fb7d72b6e9a982006c7b672f689324
+          path: source/images/uploads/s1.jpg
+        path: source/images/uploads/s1.jpg
+      - id: a87db10243569478cc9865e106bbffa6f3b14f7f
+        name: sm1.jpg
+        size: 228858
+        displayURL:
+          id: a87db10243569478cc9865e106bbffa6f3b14f7f
+          path: source/images/uploads/sm1.jpg
+        path: source/images/uploads/sm1.jpg
+      - id: 5f58b836727af897eb73b9ff3af689c76ae640f3
+        name: sm2.webp
+        size: 498048
+        displayURL:
+          id: 5f58b836727af897eb73b9ff3af689c76ae640f3
+          path: source/images/uploads/sm2.webp
+        path: source/images/uploads/sm2.webp
+      - id: 5e695e15882d9dfeeb827e2a6d5737b8e252e5fa
+        name: sm3.jpg
+        size: 89491
+        displayURL:
+          id: 5e695e15882d9dfeeb827e2a6d5737b8e252e5fa
+          path: source/images/uploads/sm3.jpg
+        path: source/images/uploads/sm3.jpg
+      - id: 75695b9b5919fb6d521534afcb81c53bbf780e40
+        name: sm4.jpg
+        size: 110697
+        displayURL:
+          id: 75695b9b5919fb6d521534afcb81c53bbf780e40
+          path: source/images/uploads/sm4.jpg
+        path: source/images/uploads/sm4.jpg
+    label: Site Data
     testimonials:
-      - name: Daniel Sullivan
-        role: Travel Enthusiast
-        content: This travel website is very informative, well-structured, and easy to
-          navigate. The booking process was simple and hassle-free, and everything
-          we received matched the package exactly as described. The
-          recommendations provided were excellent, making it much easier to choose
-          the right experiences and plan our trip without any confusion. Overall,
-          it felt reliable, trustworthy, and customer-focused, which gave us a lot
-          of confidence while booking.
-        review_link: ""
-        avatar: ""
-      - name: Priya Sharma
-        role: Adventure Seeker
-        content: My Manali trip with Fly Maza was an unforgettable experience. The
-          entire journey, from browsing packages to finalizing the booking, was
-          effortless. What stood out most was the personalized guidance and
-          thoughtful suggestions that made the trip feel tailor-made for me. The
-          arrangements were well-organized, the stay was comfortable, and every
-          moment of the trip felt smooth and enjoyable. Fly Maza truly took care
-          of everything, allowing me to focus only on creating memories.
-        avatar: ""
       - name: Vikrant singh
-        role: Family travel
+        role: "Family travel "
         content: We booked our Bali trip with Flymaza, and it was an amazing experience!
           The team was professional, responsive, and made sure everything was
           perfectly planned from transfers and hotels to sightseeing and local
           experiences. The itinerary was well-balanced, the accommodations were
           excellent, and local support made the trip completely stress-free.
           Highly recommend them for a seamless and memorable vacation!
-        review_link: https://share.google/Voy8hGmZUOK3vQtko
+        review_link: https://share.google/6EJl5XZ0jLbEllxxb
+    updatedOn: ""
+    i18n: {}
+    collection: site_content
     stats:
       happy_travelers: 3000+
       years_of_experience: 15+
       destinations_covered: 50+
-      customer_rating: 4.7
+      customer_rating: "4.7"
   author: ""
 
   slug: site_data
@@ -402,78 +1118,796 @@ data:
     path: data/site.yml
   isModification: null
   raw: >
-    testimonials:
-      - name: Daniel Sullivan
-        role: Travel Enthusiast
-        content: This travel website is very informative, well-structured, and easy to
-          navigate. The booking process was simple and hassle-free, and everything
-          we received matched the package exactly as described. The recommendations
-          provided were excellent, making it much easier to choose the right
-          experiences and plan our trip without any confusion. Overall, it felt
-          reliable, trustworthy, and customer-focused, which gave us a lot of
-          confidence while booking.
-        review_link: ""
-        avatar: ""
-      - name: Priya Sharma
-        role: Adventure Seeker
-        content: My Manali trip with Fly Maza was an unforgettable experience. The
-          entire journey, from browsing packages to finalizing the booking, was
-          effortless. What stood out most was the personalized guidance and
-          thoughtful suggestions that made the trip feel tailor-made for me. The
-          arrangements were well-organized, the stay was comfortable, and every
-          moment of the trip felt smooth and enjoyable. Fly Maza truly took care of
-          everything, allowing me to focus only on creating memories.
-        avatar: ""
-      - name: Vikrant singh
-        role: Family travel
-        content: We booked our Bali trip with Flymaza, and it was an amazing experience!
-          The team was professional, responsive, and made sure everything was
-          perfectly planned from transfers and hotels to sightseeing and local
-          experiences. The itinerary was well-balanced, the accommodations were
-          excellent, and local support made the trip completely stress-free. Highly
-          recommend them for a seamless and memorable vacation!
-    stats:
-      happy_travelers: 7000+
-      years_of_experience: 15+
-      destinations_covered: 50+
-      customer_rating: 4.7
+    partial: false
+
+    path: data/site.yml
+
+    meta:
+      path: data/site.yml
+    isModification: null
+
+    raw: >
+      testimonials:
+        - name: Daniel Sullivan
+          role: Travel Enthusiast
+          content: This travel website is very informative, well-structured, and easy to
+            navigate. The booking process was simple and hassle-free, and everything
+            we received matched the package exactly as described. The recommendations
+            provided were excellent, making it much easier to choose the right
+            experiences and plan our trip without any confusion. Overall, it felt
+            reliable, trustworthy, and customer-focused, which gave us a lot of
+            confidence while booking.
+          review_link: ""
+          avatar: ""
+        - name: Priya Sharma
+          role: Adventure Seeker
+          content: My Manali trip with Fly Maza was an unforgettable experience. The
+            entire journey, from browsing packages to finalizing the booking, was
+            effortless. What stood out most was the personalized guidance and
+            thoughtful suggestions that made the trip feel tailor-made for me. The
+            arrangements were well-organized, the stay was comfortable, and every
+            moment of the trip felt smooth and enjoyable. Fly Maza truly took care of
+            everything, allowing me to focus only on creating memories.
+          avatar: ""
+        - name: Vikrant singh
+          role: Family travel
+          content: We booked our Bali trip with Flymaza, and it was an amazing experience!
+            The team was professional, responsive, and made sure everything was
+            perfectly planned from transfers and hotels to sightseeing and local
+            experiences. The itinerary was well-balanced, the accommodations were
+            excellent, and local support made the trip completely stress-free. Highly
+            recommend them for a seamless and memorable vacation!
+      stats:
+        happy_travelers: 7000+
+        years_of_experience: 15+
+        destinations_covered: 50+
+        customer_rating: 4.7
+    data:
+      testimonials:
+        - name: Daniel Sullivan
+          role: Travel Enthusiast
+          content: This travel website is very informative, well-structured, and easy to
+            navigate. The booking process was simple and hassle-free, and everything
+            we received matched the package exactly as described. The
+            recommendations provided were excellent, making it much easier to choose
+            the right experiences and plan our trip without any confusion. Overall,
+            it felt reliable, trustworthy, and customer-focused, which gave us a lot
+            of confidence while booking.
+          review_link: ""
+          avatar: ""
+        - name: Priya Sharma
+          role: Adventure Seeker
+          content: My Manali trip with Fly Maza was an unforgettable experience. The
+            entire journey, from browsing packages to finalizing the booking, was
+            effortless. What stood out most was the personalized guidance and
+            thoughtful suggestions that made the trip feel tailor-made for me. The
+            arrangements were well-organized, the stay was comfortable, and every
+            moment of the trip felt smooth and enjoyable. Fly Maza truly took care
+            of everything, allowing me to focus only on creating memories.
+          avatar: ""
+        - name: Vikrant singh
+          role: Family travel
+          content: We booked our Bali trip with Flymaza, and it was an amazing experience!
+            The team was professional, responsive, and made sure everything was
+            perfectly planned from transfers and hotels to sightseeing and local
+            experiences. The itinerary was well-balanced, the accommodations were
+            excellent, and local support made the trip completely stress-free.
+            Highly recommend them for a seamless and memorable vacation!
+          review_link: https://share.google/Voy8hGmZUOK3vQtko
+      stats:
+        happy_travelers: 3000+
+        years_of_experience: 15+
+        destinations_covered: 50+
+        customer_rating: 4.7
+    author: ""
+
+    slug: site_data
+
+    newRecord: false
+
+    status: ""
+
+    mediaFiles:
+      - id: 44fea03f9a03fa2a00213aa2213797e6aba0af3d
+        name: 1-amarnath-yatra-pahalgam-jammu-kashmir-city-hero.jpg
+        size: 181138
+        displayURL:
+          id: 44fea03f9a03fa2a00213aa2213797e6aba0af3d
+          path: source/images/uploads/1-amarnath-yatra-pahalgam-jammu-kashmir-city-hero.jpg
+        path: source/images/uploads/1-amarnath-yatra-pahalgam-jammu-kashmir-city-hero.jpg
+      - id: 9e32185a17460f9241076b5f3c9f51106f9937ef
+        name: an1-2.webp
+        size: 157298
+        displayURL:
+          id: 9e32185a17460f9241076b5f3c9f51106f9937ef
+          path: source/images/uploads/an1-2.webp
+        path: source/images/uploads/an1-2.webp
+      - id: 26ab2055ac6d524ac6061d6d1641535782050a14
+        name: an1.jpg
+        size: 170643
+        displayURL:
+          id: 26ab2055ac6d524ac6061d6d1641535782050a14
+          path: source/images/uploads/an1.jpg
+        path: source/images/uploads/an1.jpg
+      - id: 0e89445972487d6a863ae3b9f0be857da882b1ed
+        name: an3.webp
+        size: 157042
+        displayURL:
+          id: 0e89445972487d6a863ae3b9f0be857da882b1ed
+          path: source/images/uploads/an3.webp
+        path: source/images/uploads/an3.webp
+      - id: 21518f0c54cc79959fd90bbe9df26285966892ad
+        name: an4.jpg
+        size: 703486
+        displayURL:
+          id: 21518f0c54cc79959fd90bbe9df26285966892ad
+          path: source/images/uploads/an4.jpg
+        path: source/images/uploads/an4.jpg
+      - id: a131bb8cef3c214f78daaaa15b0e2ea90756fd33
+        name: an5.png
+        size: 435932
+        displayURL:
+          id: a131bb8cef3c214f78daaaa15b0e2ea90756fd33
+          path: source/images/uploads/an5.png
+        path: source/images/uploads/an5.png
+      - id: 57854a05b960c8d766ee08ab4d677217e045c38a
+        name: an6.jpg
+        size: 175866
+        displayURL:
+          id: 57854a05b960c8d766ee08ab4d677217e045c38a
+          path: source/images/uploads/an6.jpg
+        path: source/images/uploads/an6.jpg
+      - id: 03a52ddb7e38d3c230830385eb046a671cbe1861
+        name: b1.jpg
+        size: 441293
+        displayURL:
+          id: 03a52ddb7e38d3c230830385eb046a671cbe1861
+          path: source/images/uploads/b1.jpg
+        path: source/images/uploads/b1.jpg
+      - id: c8b9e022df666d2360ca0f36adf90e9cf83a19b1
+        name: b2.webp
+        size: 374150
+        displayURL:
+          id: c8b9e022df666d2360ca0f36adf90e9cf83a19b1
+          path: source/images/uploads/b2.webp
+        path: source/images/uploads/b2.webp
+      - id: a96a2a5bfc01e796b970da9a456cc0ac7762d465
+        name: chatgpt-image-sep-6-2025-06_47_16-pm.png
+        size: 2559113
+        displayURL:
+          id: a96a2a5bfc01e796b970da9a456cc0ac7762d465
+          path: source/images/uploads/chatgpt-image-sep-6-2025-06_47_16-pm.png
+        path: source/images/uploads/chatgpt-image-sep-6-2025-06_47_16-pm.png
+      - id: 05ab09ef3dd6875433b9a35d37df0b9b298f70d5
+        name: chatgpt-image-sep-6-2025-09_04_23-pm.png
+        size: 2802338
+        displayURL:
+          id: 05ab09ef3dd6875433b9a35d37df0b9b298f70d5
+          path: source/images/uploads/chatgpt-image-sep-6-2025-09_04_23-pm.png
+        path: source/images/uploads/chatgpt-image-sep-6-2025-09_04_23-pm.png
+      - id: daa9fab79ab201ad77869f481a1cb42cb04fdae5
+        name: goa1.jpg
+        size: 1665806
+        displayURL:
+          id: daa9fab79ab201ad77869f481a1cb42cb04fdae5
+          path: source/images/uploads/goa1.jpg
+        path: source/images/uploads/goa1.jpg
+      - id: 576eeb550a9233f09b844f8a8f8a277d79270fba
+        name: goa2.jpg
+        size: 631930
+        displayURL:
+          id: 576eeb550a9233f09b844f8a8f8a277d79270fba
+          path: source/images/uploads/goa2.jpg
+        path: source/images/uploads/goa2.jpg
+      - id: 635a203ed636396493f54f2eff64712dc8d2fe1c
+        name: goa3.jpg
+        size: 145175
+        displayURL:
+          id: 635a203ed636396493f54f2eff64712dc8d2fe1c
+          path: source/images/uploads/goa3.jpg
+        path: source/images/uploads/goa3.jpg
+      - id: 919c082c12b100b79d6bfe2b6c6b3db9f005c406
+        name: goa4.jpg
+        size: 111173
+        displayURL:
+          id: 919c082c12b100b79d6bfe2b6c6b3db9f005c406
+          path: source/images/uploads/goa4.jpg
+        path: source/images/uploads/goa4.jpg
+      - id: ad2fd46895bff51005402e4ea697432dcf6c0bb9
+        name: goa5.png
+        size: 453398
+        displayURL:
+          id: ad2fd46895bff51005402e4ea697432dcf6c0bb9
+          path: source/images/uploads/goa5.png
+        path: source/images/uploads/goa5.png
+      - id: fec75335f5329bf3a3b04cb238586f17fe47e108
+        name: hm1.1.webp
+        size: 475902
+        displayURL:
+          id: fec75335f5329bf3a3b04cb238586f17fe47e108
+          path: source/images/uploads/hm1.1.webp
+        path: source/images/uploads/hm1.1.webp
+      - id: 1fcc963aeb4f83a796ae0deee46696c8d3a62e36
+        name: hm1.jpg
+        size: 15324
+        displayURL:
+          id: 1fcc963aeb4f83a796ae0deee46696c8d3a62e36
+          path: source/images/uploads/hm1.jpg
+        path: source/images/uploads/hm1.jpg
+      - id: 38ad1d600fa19fe1eda5a0a22bc7cec8f3064f10
+        name: hm2.webp
+        size: 155526
+        displayURL:
+          id: 38ad1d600fa19fe1eda5a0a22bc7cec8f3064f10
+          path: source/images/uploads/hm2.webp
+        path: source/images/uploads/hm2.webp
+      - id: c0267c1738a7be26affbd5ce115eb9fed265dfe1
+        name: hm3.jpg
+        size: 274725
+        displayURL:
+          id: c0267c1738a7be26affbd5ce115eb9fed265dfe1
+          path: source/images/uploads/hm3.jpg
+        path: source/images/uploads/hm3.jpg
+      - id: d68eeb7c78a46a9412bcdceaa55c90899e4bf3b1
+        name: hm4.webp
+        size: 544882
+        displayURL:
+          id: d68eeb7c78a46a9412bcdceaa55c90899e4bf3b1
+          path: source/images/uploads/hm4.webp
+        path: source/images/uploads/hm4.webp
+      - id: 152a6176fb5a93e78eb434b1c1bc0f67991a4859
+        name: hm5.jpg
+        size: 271399
+        displayURL:
+          id: 152a6176fb5a93e78eb434b1c1bc0f67991a4859
+          path: source/images/uploads/hm5.jpg
+        path: source/images/uploads/hm5.jpg
+      - id: 142146b9ddb378c4f7e23513d05d5abacf7604e7
+        name: hm6.webp
+        size: 1091792
+        displayURL:
+          id: 142146b9ddb378c4f7e23513d05d5abacf7604e7
+          path: source/images/uploads/hm6.webp
+        path: source/images/uploads/hm6.webp
+      - id: cde10244618657aed8f7edd7aa0dafbd136a760f
+        name: hm7.webp
+        size: 148728
+        displayURL:
+          id: cde10244618657aed8f7edd7aa0dafbd136a760f
+          path: source/images/uploads/hm7.webp
+        path: source/images/uploads/hm7.webp
+      - id: 221b222e64003854c63fe0718d573d0635c213ce
+        name: image_2025-08-25_200629222.png
+        size: 1008394
+        displayURL:
+          id: 221b222e64003854c63fe0718d573d0635c213ce
+          path: source/images/uploads/image_2025-08-25_200629222.png
+        path: source/images/uploads/image_2025-08-25_200629222.png
+      - id: ce2a8454d40e221e09c81209c1ca226d4c9a6ee3
+        name: k1.jpg
+        size: 703494
+        displayURL:
+          id: ce2a8454d40e221e09c81209c1ca226d4c9a6ee3
+          path: source/images/uploads/k1.jpg
+        path: source/images/uploads/k1.jpg
+      - id: 44fea03f9a03fa2a00213aa2213797e6aba0af3d
+        name: kash1.jpg
+        size: 181138
+        displayURL:
+          id: 44fea03f9a03fa2a00213aa2213797e6aba0af3d
+          path: source/images/uploads/kash1.jpg
+        path: source/images/uploads/kash1.jpg
+      - id: 105d4556c6ca45aca36488a88515f2cfcd03a870
+        name: l1.jpg
+        size: 719291
+        displayURL:
+          id: 105d4556c6ca45aca36488a88515f2cfcd03a870
+          path: source/images/uploads/l1.jpg
+        path: source/images/uploads/l1.jpg
+      - id: fca5b01d6deeecc28d4425228ec77b96ea29bdf6
+        name: l2.jpg
+        size: 312616
+        displayURL:
+          id: fca5b01d6deeecc28d4425228ec77b96ea29bdf6
+          path: source/images/uploads/l2.jpg
+        path: source/images/uploads/l2.jpg
+      - id: 7e2ae1a9553973c9417c5cfd59040b711579d851
+        name: l3.jpg
+        size: 9283
+        displayURL:
+          id: 7e2ae1a9553973c9417c5cfd59040b711579d851
+          path: source/images/uploads/l3.jpg
+        path: source/images/uploads/l3.jpg
+      - id: 1e3d62c882ff96755da17d399af3c1d68138f3d4
+        name: l4.jpg
+        size: 150891
+        displayURL:
+          id: 1e3d62c882ff96755da17d399af3c1d68138f3d4
+          path: source/images/uploads/l4.jpg
+        path: source/images/uploads/l4.jpg
+      - id: 20d5cb30946b6d912c8ec11e7c9056d5b19dc227
+        name: l5.jpg
+        size: 180428
+        displayURL:
+          id: 20d5cb30946b6d912c8ec11e7c9056d5b19dc227
+          path: source/images/uploads/l5.jpg
+        path: source/images/uploads/l5.jpg
+      - id: 547362235353bf815f4f0cea9c54a8c9ac19d486
+        name: l6.jpg
+        size: 109285
+        displayURL:
+          id: 547362235353bf815f4f0cea9c54a8c9ac19d486
+          path: source/images/uploads/l6.jpg
+        path: source/images/uploads/l6.jpg
+      - id: e1369f2ccc40a42f56ede25cf221da798412f62b
+        name: l7.jpg
+        size: 259059
+        displayURL:
+          id: e1369f2ccc40a42f56ede25cf221da798412f62b
+          path: source/images/uploads/l7.jpg
+        path: source/images/uploads/l7.jpg
+      - id: 43683020c6ede59083176ff78b86ae3c38231ff7
+        name: m-s1.jpg
+        size: 292260
+        displayURL:
+          id: 43683020c6ede59083176ff78b86ae3c38231ff7
+          path: source/images/uploads/m-s1.jpg
+        path: source/images/uploads/m-s1.jpg
+      - id: 169c0c3f55bd3c117d2004c9a731e7639f063541
+        name: m1.jpg
+        size: 388640
+        displayURL:
+          id: 169c0c3f55bd3c117d2004c9a731e7639f063541
+          path: source/images/uploads/m1.jpg
+        path: source/images/uploads/m1.jpg
+      - id: 8d9e65e0a88b05ae98c94a1fb6188c410d71005d
+        name: m1.webp
+        size: 212592
+        displayURL:
+          id: 8d9e65e0a88b05ae98c94a1fb6188c410d71005d
+          path: source/images/uploads/m1.webp
+        path: source/images/uploads/m1.webp
+      - id: 47f6929247fb7d72b6e9a982006c7b672f689324
+        name: s1.jpg
+        size: 10147
+        displayURL:
+          id: 47f6929247fb7d72b6e9a982006c7b672f689324
+          path: source/images/uploads/s1.jpg
+        path: source/images/uploads/s1.jpg
+      - id: a87db10243569478cc9865e106bbffa6f3b14f7f
+        name: sm1.jpg
+        size: 228858
+        displayURL:
+          id: a87db10243569478cc9865e106bbffa6f3b14f7f
+          path: source/images/uploads/sm1.jpg
+        path: source/images/uploads/sm1.jpg
+      - id: 5f58b836727af897eb73b9ff3af689c76ae640f3
+        name: sm2.webp
+        size: 498048
+        displayURL:
+          id: 5f58b836727af897eb73b9ff3af689c76ae640f3
+          path: source/images/uploads/sm2.webp
+        path: source/images/uploads/sm2.webp
+      - id: 5e695e15882d9dfeeb827e2a6d5737b8e252e5fa
+        name: sm3.jpg
+        size: 89491
+        displayURL:
+          id: 5e695e15882d9dfeeb827e2a6d5737b8e252e5fa
+          path: source/images/uploads/sm3.jpg
+        path: source/images/uploads/sm3.jpg
+      - id: 75695b9b5919fb6d521534afcb81c53bbf780e40
+        name: sm4.jpg
+        size: 110697
+        displayURL:
+          id: 75695b9b5919fb6d521534afcb81c53bbf780e40
+          path: source/images/uploads/sm4.jpg
+        path: source/images/uploads/sm4.jpg
+    label: Site Data
+
+    updatedOn: ""
+
+    i18n: {}
+
+    collection: site_content
   data:
+    partial: false
+    path: data/site.yml
+    meta:
+      path: data/site.yml
+    isModification: null
+    raw: >
+      testimonials:
+        - name: Daniel Sullivan
+          role: Travel Enthusiast
+          content: This travel website is very informative, well-structured, and easy to
+            navigate. The booking process was simple and hassle-free, and everything
+            we received matched the package exactly as described. The recommendations
+            provided were excellent, making it much easier to choose the right
+            experiences and plan our trip without any confusion. Overall, it felt
+            reliable, trustworthy, and customer-focused, which gave us a lot of
+            confidence while booking.
+          review_link: ""
+          avatar: ""
+        - name: Priya Sharma
+          role: Adventure Seeker
+          content: My Manali trip with Fly Maza was an unforgettable experience. The
+            entire journey, from browsing packages to finalizing the booking, was
+            effortless. What stood out most was the personalized guidance and
+            thoughtful suggestions that made the trip feel tailor-made for me. The
+            arrangements were well-organized, the stay was comfortable, and every
+            moment of the trip felt smooth and enjoyable. Fly Maza truly took care of
+            everything, allowing me to focus only on creating memories.
+          avatar: ""
+        - name: Vikrant singh
+          role: Family travel
+          content: We booked our Bali trip with Flymaza, and it was an amazing experience!
+            The team was professional, responsive, and made sure everything was
+            perfectly planned from transfers and hotels to sightseeing and local
+            experiences. The itinerary was well-balanced, the accommodations were
+            excellent, and local support made the trip completely stress-free. Highly
+            recommend them for a seamless and memorable vacation!
+      stats:
+        happy_travelers: 7000+
+        years_of_experience: 15+
+        destinations_covered: 50+
+        customer_rating: 4.7
+    data:
+      testimonials:
+        - name: Daniel Sullivan
+          role: Travel Enthusiast
+          content: This travel website is very informative, well-structured, and easy to
+            navigate. The booking process was simple and hassle-free, and
+            everything we received matched the package exactly as described. The
+            recommendations provided were excellent, making it much easier to
+            choose the right experiences and plan our trip without any
+            confusion. Overall, it felt reliable, trustworthy, and
+            customer-focused, which gave us a lot of confidence while booking.
+          review_link: ""
+          avatar: ""
+        - name: Priya Sharma
+          role: Adventure Seeker
+          content: My Manali trip with Fly Maza was an unforgettable experience. The
+            entire journey, from browsing packages to finalizing the booking,
+            was effortless. What stood out most was the personalized guidance
+            and thoughtful suggestions that made the trip feel tailor-made for
+            me. The arrangements were well-organized, the stay was comfortable,
+            and every moment of the trip felt smooth and enjoyable. Fly Maza
+            truly took care of everything, allowing me to focus only on creating
+            memories.
+          avatar: ""
+        - name: Vikrant singh
+          role: Family travel
+          content: We booked our Bali trip with Flymaza, and it was an amazing experience!
+            The team was professional, responsive, and made sure everything was
+            perfectly planned from transfers and hotels to sightseeing and local
+            experiences. The itinerary was well-balanced, the accommodations
+            were excellent, and local support made the trip completely
+            stress-free. Highly recommend them for a seamless and memorable
+            vacation!
+          review_link: https://share.google/Voy8hGmZUOK3vQtko
+      stats:
+        happy_travelers: 3000+
+        years_of_experience: 15+
+        destinations_covered: 50+
+        customer_rating: 4.7
+    author: ""
+    slug: site_data
+    newRecord: false
+    status: ""
+    mediaFiles:
+      - id: 44fea03f9a03fa2a00213aa2213797e6aba0af3d
+        name: 1-amarnath-yatra-pahalgam-jammu-kashmir-city-hero.jpg
+        size: 181138
+        displayURL:
+          id: 44fea03f9a03fa2a00213aa2213797e6aba0af3d
+          path: source/images/uploads/1-amarnath-yatra-pahalgam-jammu-kashmir-city-hero.jpg
+        path: source/images/uploads/1-amarnath-yatra-pahalgam-jammu-kashmir-city-hero.jpg
+      - id: 9e32185a17460f9241076b5f3c9f51106f9937ef
+        name: an1-2.webp
+        size: 157298
+        displayURL:
+          id: 9e32185a17460f9241076b5f3c9f51106f9937ef
+          path: source/images/uploads/an1-2.webp
+        path: source/images/uploads/an1-2.webp
+      - id: 26ab2055ac6d524ac6061d6d1641535782050a14
+        name: an1.jpg
+        size: 170643
+        displayURL:
+          id: 26ab2055ac6d524ac6061d6d1641535782050a14
+          path: source/images/uploads/an1.jpg
+        path: source/images/uploads/an1.jpg
+      - id: 0e89445972487d6a863ae3b9f0be857da882b1ed
+        name: an3.webp
+        size: 157042
+        displayURL:
+          id: 0e89445972487d6a863ae3b9f0be857da882b1ed
+          path: source/images/uploads/an3.webp
+        path: source/images/uploads/an3.webp
+      - id: 21518f0c54cc79959fd90bbe9df26285966892ad
+        name: an4.jpg
+        size: 703486
+        displayURL:
+          id: 21518f0c54cc79959fd90bbe9df26285966892ad
+          path: source/images/uploads/an4.jpg
+        path: source/images/uploads/an4.jpg
+      - id: a131bb8cef3c214f78daaaa15b0e2ea90756fd33
+        name: an5.png
+        size: 435932
+        displayURL:
+          id: a131bb8cef3c214f78daaaa15b0e2ea90756fd33
+          path: source/images/uploads/an5.png
+        path: source/images/uploads/an5.png
+      - id: 57854a05b960c8d766ee08ab4d677217e045c38a
+        name: an6.jpg
+        size: 175866
+        displayURL:
+          id: 57854a05b960c8d766ee08ab4d677217e045c38a
+          path: source/images/uploads/an6.jpg
+        path: source/images/uploads/an6.jpg
+      - id: 03a52ddb7e38d3c230830385eb046a671cbe1861
+        name: b1.jpg
+        size: 441293
+        displayURL:
+          id: 03a52ddb7e38d3c230830385eb046a671cbe1861
+          path: source/images/uploads/b1.jpg
+        path: source/images/uploads/b1.jpg
+      - id: c8b9e022df666d2360ca0f36adf90e9cf83a19b1
+        name: b2.webp
+        size: 374150
+        displayURL:
+          id: c8b9e022df666d2360ca0f36adf90e9cf83a19b1
+          path: source/images/uploads/b2.webp
+        path: source/images/uploads/b2.webp
+      - id: a96a2a5bfc01e796b970da9a456cc0ac7762d465
+        name: chatgpt-image-sep-6-2025-06_47_16-pm.png
+        size: 2559113
+        displayURL:
+          id: a96a2a5bfc01e796b970da9a456cc0ac7762d465
+          path: source/images/uploads/chatgpt-image-sep-6-2025-06_47_16-pm.png
+        path: source/images/uploads/chatgpt-image-sep-6-2025-06_47_16-pm.png
+      - id: 05ab09ef3dd6875433b9a35d37df0b9b298f70d5
+        name: chatgpt-image-sep-6-2025-09_04_23-pm.png
+        size: 2802338
+        displayURL:
+          id: 05ab09ef3dd6875433b9a35d37df0b9b298f70d5
+          path: source/images/uploads/chatgpt-image-sep-6-2025-09_04_23-pm.png
+        path: source/images/uploads/chatgpt-image-sep-6-2025-09_04_23-pm.png
+      - id: daa9fab79ab201ad77869f481a1cb42cb04fdae5
+        name: goa1.jpg
+        size: 1665806
+        displayURL:
+          id: daa9fab79ab201ad77869f481a1cb42cb04fdae5
+          path: source/images/uploads/goa1.jpg
+        path: source/images/uploads/goa1.jpg
+      - id: 576eeb550a9233f09b844f8a8f8a277d79270fba
+        name: goa2.jpg
+        size: 631930
+        displayURL:
+          id: 576eeb550a9233f09b844f8a8f8a277d79270fba
+          path: source/images/uploads/goa2.jpg
+        path: source/images/uploads/goa2.jpg
+      - id: 635a203ed636396493f54f2eff64712dc8d2fe1c
+        name: goa3.jpg
+        size: 145175
+        displayURL:
+          id: 635a203ed636396493f54f2eff64712dc8d2fe1c
+          path: source/images/uploads/goa3.jpg
+        path: source/images/uploads/goa3.jpg
+      - id: 919c082c12b100b79d6bfe2b6c6b3db9f005c406
+        name: goa4.jpg
+        size: 111173
+        displayURL:
+          id: 919c082c12b100b79d6bfe2b6c6b3db9f005c406
+          path: source/images/uploads/goa4.jpg
+        path: source/images/uploads/goa4.jpg
+      - id: ad2fd46895bff51005402e4ea697432dcf6c0bb9
+        name: goa5.png
+        size: 453398
+        displayURL:
+          id: ad2fd46895bff51005402e4ea697432dcf6c0bb9
+          path: source/images/uploads/goa5.png
+        path: source/images/uploads/goa5.png
+      - id: fec75335f5329bf3a3b04cb238586f17fe47e108
+        name: hm1.1.webp
+        size: 475902
+        displayURL:
+          id: fec75335f5329bf3a3b04cb238586f17fe47e108
+          path: source/images/uploads/hm1.1.webp
+        path: source/images/uploads/hm1.1.webp
+      - id: 1fcc963aeb4f83a796ae0deee46696c8d3a62e36
+        name: hm1.jpg
+        size: 15324
+        displayURL:
+          id: 1fcc963aeb4f83a796ae0deee46696c8d3a62e36
+          path: source/images/uploads/hm1.jpg
+        path: source/images/uploads/hm1.jpg
+      - id: 38ad1d600fa19fe1eda5a0a22bc7cec8f3064f10
+        name: hm2.webp
+        size: 155526
+        displayURL:
+          id: 38ad1d600fa19fe1eda5a0a22bc7cec8f3064f10
+          path: source/images/uploads/hm2.webp
+        path: source/images/uploads/hm2.webp
+      - id: c0267c1738a7be26affbd5ce115eb9fed265dfe1
+        name: hm3.jpg
+        size: 274725
+        displayURL:
+          id: c0267c1738a7be26affbd5ce115eb9fed265dfe1
+          path: source/images/uploads/hm3.jpg
+        path: source/images/uploads/hm3.jpg
+      - id: d68eeb7c78a46a9412bcdceaa55c90899e4bf3b1
+        name: hm4.webp
+        size: 544882
+        displayURL:
+          id: d68eeb7c78a46a9412bcdceaa55c90899e4bf3b1
+          path: source/images/uploads/hm4.webp
+        path: source/images/uploads/hm4.webp
+      - id: 152a6176fb5a93e78eb434b1c1bc0f67991a4859
+        name: hm5.jpg
+        size: 271399
+        displayURL:
+          id: 152a6176fb5a93e78eb434b1c1bc0f67991a4859
+          path: source/images/uploads/hm5.jpg
+        path: source/images/uploads/hm5.jpg
+      - id: 142146b9ddb378c4f7e23513d05d5abacf7604e7
+        name: hm6.webp
+        size: 1091792
+        displayURL:
+          id: 142146b9ddb378c4f7e23513d05d5abacf7604e7
+          path: source/images/uploads/hm6.webp
+        path: source/images/uploads/hm6.webp
+      - id: cde10244618657aed8f7edd7aa0dafbd136a760f
+        name: hm7.webp
+        size: 148728
+        displayURL:
+          id: cde10244618657aed8f7edd7aa0dafbd136a760f
+          path: source/images/uploads/hm7.webp
+        path: source/images/uploads/hm7.webp
+      - id: 221b222e64003854c63fe0718d573d0635c213ce
+        name: image_2025-08-25_200629222.png
+        size: 1008394
+        displayURL:
+          id: 221b222e64003854c63fe0718d573d0635c213ce
+          path: source/images/uploads/image_2025-08-25_200629222.png
+        path: source/images/uploads/image_2025-08-25_200629222.png
+      - id: ce2a8454d40e221e09c81209c1ca226d4c9a6ee3
+        name: k1.jpg
+        size: 703494
+        displayURL:
+          id: ce2a8454d40e221e09c81209c1ca226d4c9a6ee3
+          path: source/images/uploads/k1.jpg
+        path: source/images/uploads/k1.jpg
+      - id: 44fea03f9a03fa2a00213aa2213797e6aba0af3d
+        name: kash1.jpg
+        size: 181138
+        displayURL:
+          id: 44fea03f9a03fa2a00213aa2213797e6aba0af3d
+          path: source/images/uploads/kash1.jpg
+        path: source/images/uploads/kash1.jpg
+      - id: 105d4556c6ca45aca36488a88515f2cfcd03a870
+        name: l1.jpg
+        size: 719291
+        displayURL:
+          id: 105d4556c6ca45aca36488a88515f2cfcd03a870
+          path: source/images/uploads/l1.jpg
+        path: source/images/uploads/l1.jpg
+      - id: fca5b01d6deeecc28d4425228ec77b96ea29bdf6
+        name: l2.jpg
+        size: 312616
+        displayURL:
+          id: fca5b01d6deeecc28d4425228ec77b96ea29bdf6
+          path: source/images/uploads/l2.jpg
+        path: source/images/uploads/l2.jpg
+      - id: 7e2ae1a9553973c9417c5cfd59040b711579d851
+        name: l3.jpg
+        size: 9283
+        displayURL:
+          id: 7e2ae1a9553973c9417c5cfd59040b711579d851
+          path: source/images/uploads/l3.jpg
+        path: source/images/uploads/l3.jpg
+      - id: 1e3d62c882ff96755da17d399af3c1d68138f3d4
+        name: l4.jpg
+        size: 150891
+        displayURL:
+          id: 1e3d62c882ff96755da17d399af3c1d68138f3d4
+          path: source/images/uploads/l4.jpg
+        path: source/images/uploads/l4.jpg
+      - id: 20d5cb30946b6d912c8ec11e7c9056d5b19dc227
+        name: l5.jpg
+        size: 180428
+        displayURL:
+          id: 20d5cb30946b6d912c8ec11e7c9056d5b19dc227
+          path: source/images/uploads/l5.jpg
+        path: source/images/uploads/l5.jpg
+      - id: 547362235353bf815f4f0cea9c54a8c9ac19d486
+        name: l6.jpg
+        size: 109285
+        displayURL:
+          id: 547362235353bf815f4f0cea9c54a8c9ac19d486
+          path: source/images/uploads/l6.jpg
+        path: source/images/uploads/l6.jpg
+      - id: e1369f2ccc40a42f56ede25cf221da798412f62b
+        name: l7.jpg
+        size: 259059
+        displayURL:
+          id: e1369f2ccc40a42f56ede25cf221da798412f62b
+          path: source/images/uploads/l7.jpg
+        path: source/images/uploads/l7.jpg
+      - id: 43683020c6ede59083176ff78b86ae3c38231ff7
+        name: m-s1.jpg
+        size: 292260
+        displayURL:
+          id: 43683020c6ede59083176ff78b86ae3c38231ff7
+          path: source/images/uploads/m-s1.jpg
+        path: source/images/uploads/m-s1.jpg
+      - id: 169c0c3f55bd3c117d2004c9a731e7639f063541
+        name: m1.jpg
+        size: 388640
+        displayURL:
+          id: 169c0c3f55bd3c117d2004c9a731e7639f063541
+          path: source/images/uploads/m1.jpg
+        path: source/images/uploads/m1.jpg
+      - id: 8d9e65e0a88b05ae98c94a1fb6188c410d71005d
+        name: m1.webp
+        size: 212592
+        displayURL:
+          id: 8d9e65e0a88b05ae98c94a1fb6188c410d71005d
+          path: source/images/uploads/m1.webp
+        path: source/images/uploads/m1.webp
+      - id: 47f6929247fb7d72b6e9a982006c7b672f689324
+        name: s1.jpg
+        size: 10147
+        displayURL:
+          id: 47f6929247fb7d72b6e9a982006c7b672f689324
+          path: source/images/uploads/s1.jpg
+        path: source/images/uploads/s1.jpg
+      - id: a87db10243569478cc9865e106bbffa6f3b14f7f
+        name: sm1.jpg
+        size: 228858
+        displayURL:
+          id: a87db10243569478cc9865e106bbffa6f3b14f7f
+          path: source/images/uploads/sm1.jpg
+        path: source/images/uploads/sm1.jpg
+      - id: 5f58b836727af897eb73b9ff3af689c76ae640f3
+        name: sm2.webp
+        size: 498048
+        displayURL:
+          id: 5f58b836727af897eb73b9ff3af689c76ae640f3
+          path: source/images/uploads/sm2.webp
+        path: source/images/uploads/sm2.webp
+      - id: 5e695e15882d9dfeeb827e2a6d5737b8e252e5fa
+        name: sm3.jpg
+        size: 89491
+        displayURL:
+          id: 5e695e15882d9dfeeb827e2a6d5737b8e252e5fa
+          path: source/images/uploads/sm3.jpg
+        path: source/images/uploads/sm3.jpg
+      - id: 75695b9b5919fb6d521534afcb81c53bbf780e40
+        name: sm4.jpg
+        size: 110697
+        displayURL:
+          id: 75695b9b5919fb6d521534afcb81c53bbf780e40
+          path: source/images/uploads/sm4.jpg
+        path: source/images/uploads/sm4.jpg
+    label: Site Data
     testimonials:
-      - name: Daniel Sullivan
-        role: Travel Enthusiast
-        content: This travel website is very informative, well-structured, and easy to
-          navigate. The booking process was simple and hassle-free, and
-          everything we received matched the package exactly as described. The
-          recommendations provided were excellent, making it much easier to
-          choose the right experiences and plan our trip without any confusion.
-          Overall, it felt reliable, trustworthy, and customer-focused, which
-          gave us a lot of confidence while booking.
-        review_link: ""
-        avatar: ""
-      - name: Priya Sharma
-        role: Adventure Seeker
-        content: My Manali trip with Fly Maza was an unforgettable experience. The
-          entire journey, from browsing packages to finalizing the booking, was
-          effortless. What stood out most was the personalized guidance and
-          thoughtful suggestions that made the trip feel tailor-made for me. The
-          arrangements were well-organized, the stay was comfortable, and every
-          moment of the trip felt smooth and enjoyable. Fly Maza truly took care
-          of everything, allowing me to focus only on creating memories.
-        avatar: ""
       - name: Vikrant singh
-        role: Family travel
+        role: "Family travel "
         content: We booked our Bali trip with Flymaza, and it was an amazing experience!
           The team was professional, responsive, and made sure everything was
           perfectly planned from transfers and hotels to sightseeing and local
           experiences. The itinerary was well-balanced, the accommodations were
           excellent, and local support made the trip completely stress-free.
           Highly recommend them for a seamless and memorable vacation!
-        review_link: https://share.google/Voy8hGmZUOK3vQtko
+        review_link: https://share.google/6EJl5XZ0jLbEllxxb
+    updatedOn: ""
+    i18n: {}
+    collection: site_content
     stats:
       happy_travelers: 3000+
       years_of_experience: 15+
       destinations_covered: 50+
-      customer_rating: 4.7
+      customer_rating: "4.7"
   author: ""
   slug: site_data
   newRecord: false
@@ -774,24 +2208,14 @@ data:
         path: source/images/uploads/sm4.jpg
       path: source/images/uploads/sm4.jpg
   label: Site Data
-  testimonials:
-    - name: Vikrant singh
-      role: "Family travel "
-      content: We booked our Bali trip with Flymaza, and it was an amazing experience!
-        The team was professional, responsive, and made sure everything was
-        perfectly planned from transfers and hotels to sightseeing and local
-        experiences. The itinerary was well-balanced, the accommodations were
-        excellent, and local support made the trip completely stress-free.
-        Highly recommend them for a seamless and memorable vacation!
-      review_link: https://share.google/6EJl5XZ0jLbEllxxb
   updatedOn: ""
   i18n: {}
   collection: site_content
   stats:
-    happy_travelers: 3000+
-    years_of_experience: 15+
+    happy_travelers: 8000+
+    years_of_experience: 16+
     destinations_covered: 50+
-    customer_rating: "4.7"
+    customer_rating: "4.8"
 author: ""
 slug: site_data
 newRecord: false
